@@ -124,28 +124,24 @@ def generateClauses(string, k, positionsOfOnes):
     clauses = list()
 
     for j in range(1, n * n + 1):
-        C_j = n * n * n + n * n + j
-        T_j = C_j - n * n
+        C_jr = n * n * n + n * n + j
+        C_jd = C_jr + n * n
+        T_j = C_jr - n * n
+        T_jr = T_j + 1
+        T_jd = T_j + n
 
-        if j == 1:
-            clauses.extend([[-1 * C_j, T_j], [-1 * C_j, T_j + 1, T_j + n], [C_j, -1 * T_j, -1 * T_j - 1], [C_j, -1 * T_j, -1 * T_j - n]])
-        elif j == n:
-            clauses.extend([[-1 * C_j, T_j], [-1 * C_j, T_j - 1, T_j + n], [C_j, -1 * T_j, -1 * T_j + 1], [C_j, -1 * T_j, -1 * T_j - n]])
-        elif j == n * n - n + 1:
-            clauses.extend([[-1 * C_j, T_j], [-1 * C_j, T_j + 1, T_j - n], [C_j, -1 * T_j, -1 * T_j - 1], [C_j, -1 * T_j, -1 * T_j + n]])
-        elif j == n * n:
-            clauses.extend([[-1 * C_j, T_j], [-1 * C_j, T_j + 1, T_j + n], [C_j, -1 * T_j, -1 * T_j + 1], [C_j, -1 * T_j, -1 * T_j + n]])
-        elif j > 1 and j < n:
-            clauses.extend([[-1 * C_j, T_j], [-1 * C_j, T_j + 1, T_j - 1, T_j + n], [C_j, -1 * T_j, -1 * T_j - 1], [C_j, -1 * T_j, -1 * T_j + 1], [C_j, -1 * T_j, -1 * T_j - n]])
-        elif j > n * n - n + 1 and j < n * n:
-            clauses.extend([[-1 * C_j, T_j], [-1 * C_j, T_j + 1, T_j -1, T_j - n], [C_j, -1 * T_j, -1 * T_j - 1], [C_j, -1 * T_j, -1 * T_j + 1], [C_j, -1 * T_j, -1 * T_j - n]])
-        elif j % n == 1:
-            clauses.extend([[-1 * C_j, T_j], [-1 * C_j, T_j + 1, T_j + n, T_j - n], [C_j, -1 * T_j, -1 * T_j - 1], [C_j, -1 * T_j, -1 * T_j - n], [C_j, -1 * T_j, -1 * T_j + n]])
+        if j == n * n:
+            clauses.extend([[-1 * C_jr]])
+            clauses.extend([[-1 * C_jd]])
+        elif j >= n * n - n + 1:
+            clauses.extend([[-1 * C_jr, T_j], [-1 * C_jr, T_jr], [C_jr, -1 * T_j, -1 * T_jr]])
+            clauses.extend([[-1 * C_jd]])
         elif j % n == 0:
-            clauses.extend([[-1 * C_j, T_j], [-1 * C_j, T_j - 1, T_j + n, T_j - n], [C_j, -1 * T_j, -1 * T_j + 1], [C_j, -1 * T_j, -1 * T_j - n], [C_j, -1 * T_j, -1 * T_j + n]])
+            clauses.extend([[-1 * C_jr]])
+            clauses.extend([[-1 * C_jd, T_j], [-1 * C_jd, T_jd], [C_jd, -1 * T_j, -1 * T_jd]]) 
         else:
-            clauses.extend([[-1 * C_j, T_j], [-1 * C_j, T_j + 1, T_j - 1, T_j + n, T_j - n], [C_j, -1 * T_j, -1 * T_j - 1], [C_j, -1 * T_j, -1 * T_j + 1], [C_j, -1 * T_j, -1 * T_j - n], [C_j, -1 * T_j, -1 * T_j + n]])
-        
+            clauses.extend([[-1 * C_jr, T_j], [-1 * C_jr, T_jr], [C_jr, -1 * T_j, -1 * T_jr]])
+            clauses.extend([[-1 * C_jd, T_j], [-1 * C_jd, T_jd], [C_jd, -1 * T_j, -1 * T_jd]])      
     contactCondition2 = Condition(clauses)
 
     conditions.append(contactCondition2)
@@ -190,7 +186,7 @@ def main(argv):
         r = numExistingOnes + k
         conditions = generateClauses(testStr, r, positionsOfOnes)
         numContactCondition2Clauses = len(conditions[5].clauses)
-        numVars = n * n * n + n * n + 2 * n * n
+        numVars = n * n * n + 3 * n * n
         numClauses = n + n * n * n * (n * n - 1)//2 + n * n * n * (n - 1)//2 + n * n * (n - 1) + n * n * (numExistingOnes + 1) + numContactCondition2Clauses
 
         with open(outfile, "w") as f:
@@ -203,4 +199,6 @@ def main(argv):
         return conditions
 
 
-main(sys.argv) #["main.py", "test.txt", "1010", "2", "-s"])
+main(sys.argv) # ["main.py", "test.txt", "11", "2", "-s"])
+
+# TODO: Change contact loop. shouldn't check for contacts on all sides, only one horizontal and one vertical. This will prevent overcounting
