@@ -1,1 +1,1 @@
-# prototein-problem-SAT
+# prototein-problem
