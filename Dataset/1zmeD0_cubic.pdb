@@ -1,0 +1,85 @@
+REMARK
+REMARK Native sequence of the protein
+REMARK SVACLSCRKRHIKCPGGNPCQKCVTSNAICEYLEPSKKIVVSTKYLQQLQKDLNDKTEEN
+REMARK NRLKALLLE
+REMARK
+REMARK Lattice sequence to generate lattice model
+REMARK with: L: (1,0,0), R (-1,0,0), F: (0,1,0)
+REMARK with: B: (0,-1,0), U (0,0,1), D: (0,0,1)
+REMARK and edge length set to :    3.800
+REMARK
+REMARK *RFDRFUBRFULLDLLDDRUFRDFURDBBLBBBBUBUBUBBBDBLDBLFDBLFDBLDBLF
+REMARK DBLFDBLFD
+REMARK
+REMARK cRMS compared to real structure:    2.192
+REMARK
+ATOM      2  CA  SER D   1       0.000   0.000   0.000
+ATOM      8  CA  VAL D   2       3.800   0.000   0.000
+ATOM     15  CA  ALA D   3       3.800   3.800   0.000
+ATOM     20  CA  CYS D   4       3.800   3.800  -3.800
+ATOM     26  CA  LEU D   5       7.600   3.800  -3.800
+ATOM     34  CA  SER D   6       7.600   7.600  -3.800
+ATOM     40  CA  CYS D   7       7.600   7.600   0.000
+ATOM     46  CA  ARG D   8       7.600   3.800   0.000
+ATOM     57  CA  LYS D   9      11.400   3.800   0.000
+ATOM     66  CA  ARG D  10      11.400   7.600   0.000
+ATOM     77  CA  HIS D  11      11.400   7.600   3.800
+ATOM     87  CA  ILE D  12       7.600   7.600   3.800
+ATOM     95  CA  LYS D  13       3.800   7.600   3.800
+ATOM    104  CA  CYS D  14       3.800   7.600   0.000
+ATOM    111  CA  PRO D  15      -0.000   7.600   0.000
+ATOM    117  CA  GLY D  16      -3.800   7.600   0.000
+ATOM    121  CA  GLY D  17      -3.800   7.600  -3.800
+ATOM    125  CA  ASN D  18      -3.800   7.600  -7.600
+ATOM    134  CA  PRO D  19      -0.000   7.600  -7.600
+ATOM    140  CA  CYS D  20      -0.000   7.600  -3.800
+ATOM    146  CA  GLN D  21      -0.000  11.400  -3.800
+ATOM    155  CA  LYS D  22       3.800  11.400  -3.800
+ATOM    164  CA  CYS D  23       3.800  11.400  -7.600
+ATOM    170  CA  VAL D  24       3.800  15.200  -7.600
+ATOM    177  CA  THR D  25       3.800  15.200  -3.800
+ATOM    184  CA  SER D  26       7.600  15.200  -3.800
+ATOM    190  CA  ASN D  27       7.600  15.200  -7.600
+ATOM    198  CA  ALA D  28       7.600  11.400  -7.600
+ATOM    203  CA  ILE D  29       7.600   7.600  -7.600
+ATOM    211  CA  CYS D  30       3.800   7.600  -7.600
+ATOM    217  CA  GLU D  31       3.800   3.800  -7.600
+ATOM    226  CA  TYR D  32       3.800  -0.000  -7.600
+ATOM    238  CA  LEU D  33       3.800  -3.800  -7.600
+ATOM    246  CA  GLU D  34       3.800  -7.600  -7.600
+ATOM    256  CA  PRO D  35       3.800  -7.600  -3.800
+ATOM    262  CA  SER D  36       3.800 -11.400  -3.800
+ATOM    268  CA  LYS D  37       3.800 -11.400   0.000
+ATOM    277  CA  LYS D  38       3.800 -15.200   0.000
+ATOM    286  CA  ILE D  39       3.800 -15.200   3.800
+ATOM    294  CA  VAL D  40       3.800 -19.000   3.800
+ATOM    301  CA  VAL D  41       3.800 -22.800   3.800
+ATOM    308  CA  SER D  42       3.800 -26.600   3.800
+ATOM    314  CA  THR D  43       3.800 -26.600   0.000
+ATOM    321  CA  LYS D  44       3.800 -30.400   0.000
+ATOM    330  CA  TYR D  45      -0.000 -30.400   0.000
+ATOM    342  CA  LEU D  46      -0.000 -30.400  -3.800
+ATOM    350  CA  GLN D  47      -0.000 -34.200  -3.800
+ATOM    359  CA  GLN D  48      -3.800 -34.200  -3.800
+ATOM    368  CA  LEU D  49      -3.800 -30.400  -3.800
+ATOM    376  CA  GLN D  50      -3.800 -30.400  -7.600
+ATOM    385  CA  LYS D  51      -3.800 -34.200  -7.600
+ATOM    394  CA  ASP D  52      -7.600 -34.200  -7.600
+ATOM    402  CA  LEU D  53      -7.600 -30.400  -7.600
+ATOM    410  CA  ASN D  54      -7.600 -30.400 -11.400
+ATOM    418  CA  ASP D  55      -7.600 -34.200 -11.400
+ATOM    426  CA  LYS D  56     -11.400 -34.200 -11.400
+ATOM    435  CA  THR D  57     -11.400 -34.200 -15.200
+ATOM    442  CA  GLU D  58     -11.400 -38.000 -15.200
+ATOM    451  CA  GLU D  59     -15.200 -38.000 -15.200
+ATOM    460  CA  ASN D  60     -15.200 -34.200 -15.200
+ATOM    468  CA  ASN D  61     -15.200 -34.200 -19.000
+ATOM    476  CA  ARG D  62     -15.200 -38.000 -19.000
+ATOM    487  CA  LEU D  63     -19.000 -38.000 -19.000
+ATOM    495  CA  LYS D  64     -19.000 -34.200 -19.000
+ATOM    504  CA  ALA D  65     -19.000 -34.200 -22.800
+ATOM    509  CA  LEU D  66     -19.000 -38.000 -22.800
+ATOM    517  CA  LEU D  67     -22.800 -38.000 -22.800
+ATOM    525  CA  LEU D  68     -22.800 -34.200 -22.800
+ATOM    533  CA  GLU D  69     -22.800 -34.200 -26.600
+ATOM    542  CA  ARG D  70     -26.600 -34.200 -26.600

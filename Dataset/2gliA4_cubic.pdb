@@ -1,0 +1,44 @@
+REMARK
+REMARK Native sequence of the protein
+REMARK KPYMCEHEGCSKAFSNASDRAKHQNRTHSN
+REMARK
+REMARK Lattice sequence to generate lattice model
+REMARK with: L: (1,0,0), R (-1,0,0), F: (0,1,0)
+REMARK with: B: (0,-1,0), U (0,0,1), D: (0,0,1)
+REMARK and edge length set to :    3.800
+REMARK
+REMARK *RFFDFFFLBBBBRBRFDDUFDLFRDLFDF
+REMARK
+REMARK cRMS compared to real structure:    1.936
+REMARK
+ATOM      2  CA  LYS A   1       0.000   0.000   0.000
+ATOM     12  CA  PRO A   2       3.800   0.000   0.000
+ATOM     18  CA  TYR A   3       3.800   3.800   0.000
+ATOM     30  CA  MET A   4       3.800   7.600   0.000
+ATOM     38  CA  CYS A   5       3.800   7.600  -3.800
+ATOM     44  CA  GLU A   6       3.800  11.400  -3.800
+ATOM     53  CA  HIS A   7       3.800  15.200  -3.800
+ATOM     63  CA  GLU A   8       3.800  19.000  -3.800
+ATOM     72  CA  GLY A   9       0.000  19.000  -3.800
+ATOM     76  CA  CYS A  10       0.000  15.200  -3.800
+ATOM     82  CA  SER A  11       0.000  11.400  -3.800
+ATOM     88  CA  LYS A  12       0.000   7.600  -3.800
+ATOM     97  CA  ALA A  13       0.000   3.800  -3.800
+ATOM    102  CA  PHE A  14       3.800   3.800  -3.800
+ATOM    113  CA  SER A  15       3.800  -0.000  -3.800
+ATOM    119  CA  ASN A  16       7.600  -0.000  -3.800
+ATOM    127  CA  ALA A  17       7.600   3.800  -3.800
+ATOM    132  CA  SER A  18       7.600   3.800  -7.600
+ATOM    138  CA  ASP A  19       7.600   3.800 -11.400
+ATOM    146  CA  ARG A  20       7.600   3.800  -7.600
+ATOM    157  CA  ALA A  21       7.600   7.600  -7.600
+ATOM    162  CA  LYS A  22       7.600   7.600 -11.400
+ATOM    171  CA  HIS A  23       3.800   7.600 -11.400
+ATOM    181  CA  GLN A  24       3.800  11.400 -11.400
+ATOM    190  CA  ASN A  25       7.600  11.400 -11.400
+ATOM    198  CA  ARG A  26       7.600  11.400 -15.200
+ATOM    209  CA  THR A  27       3.800  11.400 -15.200
+ATOM    216  CA  HIS A  28       3.800  15.200 -15.200
+ATOM    226  CA  SER A  29       3.800  15.200 -19.000
+ATOM    232  CA  ASN A  30       3.800  19.000 -19.000
+ATOM    240  CA  GLU A  31       7.600  19.000 -19.000

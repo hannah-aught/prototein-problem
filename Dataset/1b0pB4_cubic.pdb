@@ -1,0 +1,54 @@
+REMARK
+REMARK Native sequence of the protein
+REMARK ETKAEPMTNEFFKNVVKPILTQQGDKLPVSAFEADGRFPL
+REMARK
+REMARK Lattice sequence to generate lattice model
+REMARK with: L: (1,0,0), R (-1,0,0), F: (0,1,0)
+REMARK with: B: (0,-1,0), U (0,0,1), D: (0,0,1)
+REMARK and edge length set to :    3.800
+REMARK
+REMARK *RFDFFFLFLDBULDDBLDRBLLFLUFUFFRDFFDBRRRR
+REMARK
+REMARK cRMS compared to real structure:    1.995
+REMARK
+ATOM      2  CA  GLU B   1       0.000   0.000   0.000
+ATOM     11  CA  THR B   2       3.800   0.000   0.000
+ATOM     18  CA  LYS B   3       3.800   3.800   0.000
+ATOM     27  CA  ALA B   4       3.800   3.800  -3.800
+ATOM     32  CA  GLU B   5       3.800   7.600  -3.800
+ATOM     42  CA  PRO B   6       3.800  11.400  -3.800
+ATOM     48  CA  MET B   7       3.800  15.200  -3.800
+ATOM     56  CA  THR B   8       0.000  15.200  -3.800
+ATOM     63  CA  ASN B   9       0.000  19.000  -3.800
+ATOM     71  CA  GLU B  10      -3.800  19.000  -3.800
+ATOM     80  CA  PHE B  11      -3.800  19.000  -7.600
+ATOM     91  CA  PHE B  12      -3.800  15.200  -7.600
+ATOM    102  CA  LYS B  13      -3.800  15.200  -3.800
+ATOM    111  CA  ASN B  14      -7.600  15.200  -3.800
+ATOM    119  CA  VAL B  15      -7.600  15.200  -7.600
+ATOM    126  CA  VAL B  16      -7.600  15.200 -11.400
+ATOM    133  CA  LYS B  17      -7.600  11.400 -11.400
+ATOM    143  CA  PRO B  18     -11.400  11.400 -11.400
+ATOM    149  CA  ILE B  19     -11.400  11.400 -15.200
+ATOM    157  CA  LEU B  20      -7.600  11.400 -15.200
+ATOM    165  CA  THR B  21      -7.600   7.600 -15.200
+ATOM    172  CA  GLN B  22     -11.400   7.600 -15.200
+ATOM    181  CA  GLN B  23     -15.200   7.600 -15.200
+ATOM    190  CA  GLY B  24     -15.200  11.400 -15.200
+ATOM    194  CA  ASP B  25     -19.000  11.400 -15.200
+ATOM    202  CA  LYS B  26     -19.000  11.400 -11.400
+ATOM    211  CA  LEU B  27     -19.000  15.200 -11.400
+ATOM    220  CA  PRO B  28     -19.000  15.200  -7.600
+ATOM    226  CA  VAL B  29     -19.000  19.000  -7.600
+ATOM    233  CA  SER B  30     -19.000  22.800  -7.600
+ATOM    239  CA  ALA B  31     -15.200  22.800  -7.600
+ATOM    244  CA  PHE B  32     -15.200  22.800 -11.400
+ATOM    255  CA  GLU B  33     -15.200  26.600 -11.400
+ATOM    264  CA  ALA B  34     -15.200  30.400 -11.400
+ATOM    269  CA  ASP B  35     -15.200  30.400 -15.200
+ATOM    277  CA  GLY B  36     -15.200  26.600 -15.200
+ATOM    281  CA  ARG B  37     -11.400  26.600 -15.200
+ATOM    292  CA  PHE B  38      -7.600  26.600 -15.200
+ATOM    304  CA  PRO B  39      -3.800  26.600 -15.200
+ATOM    310  CA  LEU B  40       0.000  26.600 -15.200
+ATOM    318  CA  GLY B  41       0.000  22.800 -15.200

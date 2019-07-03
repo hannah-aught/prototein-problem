@@ -1,0 +1,79 @@
+REMARK
+REMARK Native sequence of the protein
+REMARK QRITLKDYAMRFGQTKTAKDLGVYQSAINKAIHAGRKIFLTINADGSVYAEEVKDGEVKP
+REMARK FPS
+REMARK
+REMARK Lattice sequence to generate lattice model
+REMARK with: L: (1,0,0), R (-1,0,0), F: (0,1,0)
+REMARK with: B: (0,-1,0), U (0,0,1), D: (0,0,1)
+REMARK and edge length set to :    3.800
+REMARK
+REMARK *RFRRFLURFUBRRBLBRBLDRRFFDBLFDLFDBLBLUUULUBUURDDDDDDDBDLUURU
+REMARK RRB
+REMARK
+REMARK cRMS compared to real structure:    2.167
+REMARK
+ATOM      2  CA  GLN     1       0.000   0.000   0.000
+ATOM     11  CA  ARG     2       3.800   0.000   0.000
+ATOM     22  CA  ILE     3       3.800   3.800   0.000
+ATOM     30  CA  THR     4       7.600   3.800   0.000
+ATOM     37  CA  LEU     5      11.400   3.800   0.000
+ATOM     45  CA  LYS     6      11.400   7.600   0.000
+ATOM     54  CA  ASP     7       7.600   7.600   0.000
+ATOM     62  CA  TYR     8       7.600   7.600   3.800
+ATOM     74  CA  ALA     9      11.400   7.600   3.800
+ATOM     79  CA  MET    10      11.400  11.400   3.800
+ATOM     87  CA  ARG    11      11.400  11.400   7.600
+ATOM     98  CA  PHE    12      11.400   7.600   7.600
+ATOM    109  CA  GLY    13      15.200   7.600   7.600
+ATOM    113  CA  GLN    14      19.000   7.600   7.600
+ATOM    122  CA  THR    15      19.000   3.800   7.600
+ATOM    129  CA  LYS    16      15.200   3.800   7.600
+ATOM    138  CA  THR    17      15.200  -0.000   7.600
+ATOM    145  CA  ALA    18      19.000  -0.000   7.600
+ATOM    150  CA  LYS    19      19.000  -3.800   7.600
+ATOM    155  CA  ASP    20      15.200  -3.800   7.600
+ATOM    163  CA  LEU    21      15.200  -3.800   3.800
+ATOM    171  CA  GLY    22      19.000  -3.800   3.800
+ATOM    175  CA  VAL    23      22.800  -3.800   3.800
+ATOM    182  CA  TYR    24      22.800  -0.000   3.800
+ATOM    194  CA  GLN    25      22.800   3.800   3.800
+ATOM    203  CA  SER    26      22.800   3.800   0.000
+ATOM    209  CA  ALA    27      22.800  -0.000   0.000
+ATOM    214  CA  ILE    28      19.000  -0.000   0.000
+ATOM    222  CA  ASN    29      19.000   3.800   0.000
+ATOM    230  CA  LYS    30      19.000   3.800  -3.800
+ATOM    239  CA  ALA    31      15.200   3.800  -3.800
+ATOM    244  CA  ILE    32      15.200   7.600  -3.800
+ATOM    252  CA  HIS    33      15.200   7.600  -7.600
+ATOM    262  CA  ALA    34      15.200   3.800  -7.600
+ATOM    267  CA  GLY    35      11.400   3.800  -7.600
+ATOM    271  CA  ARG    36      11.400  -0.000  -7.600
+ATOM    282  CA  LYS    37       7.600  -0.000  -7.600
+ATOM    291  CA  ILE    38       7.600  -0.000  -3.800
+ATOM    299  CA  PHE    39       7.600  -0.000   0.000
+ATOM    310  CA  LEU    40       7.600  -0.000   3.800
+ATOM    318  CA  THR    41       3.800  -0.000   3.800
+ATOM    325  CA  ILE    42       3.800  -0.000   7.600
+ATOM    333  CA  ASN    43       3.800  -3.800   7.600
+ATOM    341  CA  ALA    44       3.800  -3.800  11.400
+ATOM    346  CA  ASP    45       3.800  -3.800  15.200
+ATOM    354  CA  GLY    46       7.600  -3.800  15.200
+ATOM    358  CA  SER    47       7.600  -3.800  11.400
+ATOM    364  CA  VAL    48       7.600  -3.800   7.600
+ATOM    371  CA  TYR    49       7.600  -3.800   3.800
+ATOM    383  CA  ALA    50       7.600  -3.800  -0.000
+ATOM    388  CA  GLU    51       7.600  -3.800  -3.800
+ATOM    397  CA  GLU    52       7.600  -3.800  -7.600
+ATOM    406  CA  VAL    53       7.600  -3.800 -11.400
+ATOM    413  CA  LYS    54       7.600  -7.600 -11.400
+ATOM    422  CA  ASP    55       7.600  -7.600 -15.200
+ATOM    430  CA  GLY    56       3.800  -7.600 -15.200
+ATOM    434  CA  GLU    57       3.800  -7.600 -11.400
+ATOM    443  CA  VAL    58       3.800  -7.600  -7.600
+ATOM    450  CA  LYS    59       7.600  -7.600  -7.600
+ATOM    460  CA  PRO    60       7.600  -7.600  -3.800
+ATOM    466  CA  PHE    61      11.400  -7.600  -3.800
+ATOM    478  CA  PRO    62      15.200  -7.600  -3.800
+ATOM    484  CA  SER    63      15.200 -11.400  -3.800
+ATOM    490  CA  ASN    64      19.000 -11.400  -3.800

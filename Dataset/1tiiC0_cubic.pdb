@@ -1,0 +1,49 @@
+REMARK
+REMARK Native sequence of the protein
+REMARK TTCASLTNKLSQHDLADFKKYIKRKFTLMTLLSIN
+REMARK
+REMARK Lattice sequence to generate lattice model
+REMARK with: L: (1,0,0), R (-1,0,0), F: (0,1,0)
+REMARK with: B: (0,-1,0), U (0,0,1), D: (0,0,1)
+REMARK and edge length set to :    3.800
+REMARK
+REMARK *RRFLURFLUFLURFLURFLUFLURFLURFLUFLU
+REMARK
+REMARK cRMS compared to real structure:    1.758
+REMARK
+ATOM      2  CA  THR C   1       0.000   0.000   0.000
+ATOM      9  CA  THR C   2       3.800   0.000   0.000
+ATOM     16  CA  CYS C   3       7.600   0.000   0.000
+ATOM     22  CA  ALA C   4       7.600   3.800   0.000
+ATOM     27  CA  SER C   5       3.800   3.800   0.000
+ATOM     33  CA  LEU C   6       3.800   3.800   3.800
+ATOM     41  CA  THR C   7       7.600   3.800   3.800
+ATOM     48  CA  ASN C   8       7.600   7.600   3.800
+ATOM     56  CA  LYS C   9       3.800   7.600   3.800
+ATOM     65  CA  LEU C  10       3.800   7.600   7.600
+ATOM     73  CA  SER C  11       3.800  11.400   7.600
+ATOM     79  CA  GLN C  12       0.000  11.400   7.600
+ATOM     88  CA  HIS C  13       0.000  11.400  11.400
+ATOM     98  CA  ASP C  14       3.800  11.400  11.400
+ATOM    106  CA  LEU C  15       3.800  15.200  11.400
+ATOM    114  CA  ALA C  16       0.000  15.200  11.400
+ATOM    119  CA  ASP C  17       0.000  15.200  15.200
+ATOM    127  CA  PHE C  18       3.800  15.200  15.200
+ATOM    138  CA  LYS C  19       3.800  19.000  15.200
+ATOM    147  CA  LYS C  20       0.000  19.000  15.200
+ATOM    156  CA  TYR C  21       0.000  19.000  19.000
+ATOM    168  CA  ILE C  22       0.000  22.800  19.000
+ATOM    176  CA  LYS C  23      -3.800  22.800  19.000
+ATOM    185  CA  ARG C  24      -3.800  22.800  22.800
+ATOM    196  CA  LYS C  25       0.000  22.800  22.800
+ATOM    205  CA  PHE C  26       0.000  26.600  22.800
+ATOM    216  CA  THR C  27      -3.800  26.600  22.800
+ATOM    223  CA  LEU C  28      -3.800  26.600  26.600
+ATOM    231  CA  MET C  29       0.000  26.600  26.600
+ATOM    239  CA  THR C  30       0.000  30.400  26.600
+ATOM    246  CA  LEU C  31      -3.800  30.400  26.600
+ATOM    254  CA  LEU C  32      -3.800  30.400  30.400
+ATOM    262  CA  SER C  33      -3.800  34.200  30.400
+ATOM    268  CA  ILE C  34      -7.600  34.200  30.400
+ATOM    276  CA  ASN C  35      -7.600  34.200  34.200
+ATOM    284  CA  ASN C  36     -11.400  34.200  34.200

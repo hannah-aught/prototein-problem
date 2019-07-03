@@ -1,0 +1,64 @@
+REMARK
+REMARK Native sequence of the protein
+REMARK PICTNCCAGYKGCNYYSANGAFICEGQSDPKKPKACPLNCDPHIAYSKCP
+REMARK
+REMARK Lattice sequence to generate lattice model
+REMARK with: L: (1,0,0), R (-1,0,0), F: (0,1,0)
+REMARK with: B: (0,-1,0), U (0,0,1), D: (0,0,1)
+REMARK and edge length set to :    3.800
+REMARK
+REMARK *RFRFFRBDRDDLLULLLDRFRURRURRBBRFULULULLDLLDDBDRDRD
+REMARK
+REMARK cRMS compared to real structure:    2.319
+REMARK
+ATOM      3  CA  PRO I   1       0.000   0.000   0.000
+ATOM      9  CA  ILE I   2       3.800   0.000   0.000
+ATOM     17  CA  CYS I   3       3.800   3.800   0.000
+ATOM     23  CA  THR I   4       7.600   3.800   0.000
+ATOM     30  CA  ASN I   5       7.600   7.600   0.000
+ATOM     38  CA  CYS I   6       7.600  11.400   0.000
+ATOM     44  CA  CYS I   7      11.400  11.400   0.000
+ATOM     50  CA  ALA I   8      11.400   7.600   0.000
+ATOM     55  CA  GLY I   9      11.400   7.600  -3.800
+ATOM     59  CA  TYR I  10      15.200   7.600  -3.800
+ATOM     71  CA  LYS I  11      15.200   7.600  -7.600
+ATOM     80  CA  GLY I  12      15.200   7.600 -11.400
+ATOM     84  CA  CYS I  13      11.400   7.600 -11.400
+ATOM     90  CA  ASN I  14       7.600   7.600 -11.400
+ATOM     98  CA  TYR I  15       7.600   7.600  -7.600
+ATOM    110  CA  TYR I  16       3.800   7.600  -7.600
+ATOM    122  CA  SER I  17      -0.000   7.600  -7.600
+ATOM    128  CA  ALA I  18      -3.800   7.600  -7.600
+ATOM    133  CA  ASN I  19      -3.800   7.600 -11.400
+ATOM    141  CA  GLY I  20      -0.000   7.600 -11.400
+ATOM    145  CA  ALA I  21      -0.000  11.400 -11.400
+ATOM    150  CA  PHE I  22       3.800  11.400 -11.400
+ATOM    161  CA  ILE I  23       3.800  11.400  -7.600
+ATOM    169  CA  CYS I  24       7.600  11.400  -7.600
+ATOM    175  CA  GLU I  25      11.400  11.400  -7.600
+ATOM    184  CA  GLY I  26      11.400  11.400  -3.800
+ATOM    188  CA  GLN I  27      15.200  11.400  -3.800
+ATOM    197  CA  SER I  28      19.000  11.400  -3.800
+ATOM    203  CA  ASP I  29      19.000   7.600  -3.800
+ATOM    212  CA  PRO I  30      19.000   3.800  -3.800
+ATOM    218  CA  LYS I  31      22.800   3.800  -3.800
+ATOM    227  CA  LYS I  32      22.800   7.600  -3.800
+ATOM    237  CA  PRO I  33      22.800   7.600   0.000
+ATOM    243  CA  LYS I  34      19.000   7.600   0.000
+ATOM    252  CA  ALA I  35      19.000   7.600   3.800
+ATOM    257  CA  CYS I  36      15.200   7.600   3.800
+ATOM    264  CA  PRO I  37      15.200   7.600   7.600
+ATOM    270  CA  LEU I  38      11.400   7.600   7.600
+ATOM    278  CA  ASN I  39       7.600   7.600   7.600
+ATOM    286  CA  CYS I  40       7.600   7.600   3.800
+ATOM    292  CA  ASP I  41       3.800   7.600   3.800
+ATOM    301  CA  PRO I  42      -0.000   7.600   3.800
+ATOM    307  CA  HIS I  43      -0.000   7.600   0.000
+ATOM    317  CA  ILE I  44      -0.000   7.600  -3.800
+ATOM    325  CA  ALA I  45      -0.000   3.800  -3.800
+ATOM    330  CA  TYR I  46      -0.000   3.800  -7.600
+ATOM    342  CA  SER I  47       3.800   3.800  -7.600
+ATOM    348  CA  LYS I  48       3.800   3.800 -11.400
+ATOM    357  CA  CYS I  49       7.600   3.800 -11.400
+ATOM    364  CA  PRO I  50       7.600   3.800 -15.200
+ATOM    370  CA  ARG I  51      11.400   3.800 -15.200

@@ -1,0 +1,45 @@
+REMARK
+REMARK Native sequence of the protein
+REMARK EFVCHWGGCSRELRPFKAQYMLVVHMRRHTG
+REMARK
+REMARK Lattice sequence to generate lattice model
+REMARK with: L: (1,0,0), R (-1,0,0), F: (0,1,0)
+REMARK with: B: (0,-1,0), U (0,0,1), D: (0,0,1)
+REMARK and edge length set to :    3.800
+REMARK
+REMARK *RFRFRFDBDLULBBBBUURDFRRFURDFUR
+REMARK
+REMARK cRMS compared to real structure:    1.955
+REMARK
+ATOM      2  CA  GLU A   1       0.000   0.000   0.000
+ATOM     11  CA  PHE A   2       3.800   0.000   0.000
+ATOM     22  CA  VAL A   3       3.800   3.800   0.000
+ATOM     29  CA  CYS A   4       7.600   3.800   0.000
+ATOM     35  CA  HIS A   5       7.600   7.600   0.000
+ATOM     45  CA  TRP A   6      11.400   7.600   0.000
+ATOM     59  CA  GLY A   7      11.400  11.400   0.000
+ATOM     63  CA  GLY A   8      11.400  11.400  -3.800
+ATOM     67  CA  CYS A   9      11.400   7.600  -3.800
+ATOM     73  CA  SER A  10      11.400   7.600  -7.600
+ATOM     79  CA  ARG A  11       7.600   7.600  -7.600
+ATOM     90  CA  GLU A  12       7.600   7.600  -3.800
+ATOM     99  CA  LEU A  13       3.800   7.600  -3.800
+ATOM    107  CA  ARG A  14       3.800   3.800  -3.800
+ATOM    119  CA  PRO A  15       3.800  -0.000  -3.800
+ATOM    125  CA  PHE A  16       3.800  -3.800  -3.800
+ATOM    136  CA  LYS A  17       3.800  -7.600  -3.800
+ATOM    145  CA  ALA A  18       3.800  -7.600   0.000
+ATOM    150  CA  GLN A  19       3.800  -7.600   3.800
+ATOM    159  CA  TYR A  20       7.600  -7.600   3.800
+ATOM    171  CA  MET A  21       7.600  -7.600   0.000
+ATOM    179  CA  LEU A  22       7.600  -3.800   0.000
+ATOM    187  CA  VAL A  23      11.400  -3.800   0.000
+ATOM    194  CA  VAL A  24      15.200  -3.800   0.000
+ATOM    201  CA  HIS A  25      15.200  -0.000   0.000
+ATOM    211  CA  MET A  26      15.200  -0.000   3.800
+ATOM    219  CA  ARG A  27      19.000  -0.000   3.800
+ATOM    230  CA  ARG A  28      19.000  -0.000   0.000
+ATOM    241  CA  HIS A  29      19.000   3.800   0.000
+ATOM    251  CA  THR A  30      19.000   3.800   3.800
+ATOM    258  CA  GLY A  31      22.800   3.800   3.800
+ATOM    262  CA  GLU A  32      22.800  -0.000   3.800

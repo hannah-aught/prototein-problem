@@ -1,0 +1,117 @@
+REMARK
+REMARK Native sequence of the protein
+REMARK EYKPRLLHISGDKNAKVAEVPLATSSLNSGDCFLLDAGLTIYQFNGSKSSPQEKNKAAEV
+REMARK ARAIDAERKGLPKVEVFGETDSDIPAEFWKLLGGKGAIAAK
+REMARK
+REMARK Lattice sequence to generate lattice model
+REMARK with: L: (1,0,0), R (-1,0,0), F: (0,1,0)
+REMARK with: B: (0,-1,0), U (0,0,1), D: (0,0,1)
+REMARK and edge length set to :    3.800
+REMARK
+REMARK *RFUFUUUUFUUBLDDDDFDRRFRLURUULBBDDDBDBRUUFUFUFRULUBLDBLDRBLD
+REMARK RBLDBLDRBRFRFURFFUFRRRDLDDLLFDLUFRUFUULUL
+REMARK
+REMARK cRMS compared to real structure:    2.477
+REMARK
+ATOM      2  CA  GLU     1       0.000   0.000   0.000
+ATOM     11  CA  TYR     2       3.800   0.000   0.000
+ATOM     23  CA  LYS     3       3.800   3.800   0.000
+ATOM     33  CA  PRO     4       3.800   3.800   3.800
+ATOM     39  CA  ARG     5       3.800   7.600   3.800
+ATOM     50  CA  LEU     6       3.800   7.600   7.600
+ATOM     58  CA  LEU     7       3.800   7.600  11.400
+ATOM     66  CA  HIS     8       3.800   7.600  15.200
+ATOM     76  CA  ILE     9       3.800   7.600  19.000
+ATOM     84  CA  SER    10       3.800  11.400  19.000
+ATOM     90  CA  GLY    11       3.800  11.400  22.800
+ATOM     94  CA  ASP    12       3.800  11.400  26.600
+ATOM    102  CA  LYS    13       3.800   7.600  26.600
+ATOM    111  CA  ASN    14       0.000   7.600  26.600
+ATOM    119  CA  ALA    15       0.000   7.600  22.800
+ATOM    124  CA  LYS    16       0.000   7.600  19.000
+ATOM    133  CA  VAL    17       0.000   7.600  15.200
+ATOM    140  CA  ALA    18       0.000   7.600  11.400
+ATOM    145  CA  GLU    19       0.000  11.400  11.400
+ATOM    154  CA  VAL    20       0.000  11.400   7.600
+ATOM    162  CA  PRO    21       3.800  11.400   7.600
+ATOM    168  CA  LEU    22       7.600  11.400   7.600
+ATOM    176  CA  ALA    23       7.600  15.200   7.600
+ATOM    181  CA  THR    24      11.400  15.200   7.600
+ATOM    188  CA  SER    25       7.600  15.200   7.600
+ATOM    194  CA  SER    26       7.600  15.200  11.400
+ATOM    200  CA  LEU    27      11.400  15.200  11.400
+ATOM    208  CA  ASN    28      11.400  15.200  15.200
+ATOM    216  CA  SER    29      11.400  15.200  19.000
+ATOM    222  CA  GLY    30       7.600  15.200  19.000
+ATOM    226  CA  ASP    31       7.600  11.400  19.000
+ATOM    234  CA  CYS    32       7.600   7.600  19.000
+ATOM    240  CA  PHE    33       7.600   7.600  15.200
+ATOM    251  CA  LEU    34       7.600   7.600  11.400
+ATOM    259  CA  LEU    35       7.600   7.600   7.600
+ATOM    267  CA  ASP    36       7.600   3.800   7.600
+ATOM    275  CA  ALA    37       7.600   3.800   3.800
+ATOM    280  CA  GLY    38       7.600  -0.000   3.800
+ATOM    284  CA  LEU    39      11.400  -0.000   3.800
+ATOM    292  CA  THR    40      11.400  -0.000   7.600
+ATOM    299  CA  ILE    41      11.400  -0.000  11.400
+ATOM    307  CA  TYR    42      11.400   3.800  11.400
+ATOM    319  CA  GLN    43      11.400   3.800  15.200
+ATOM    328  CA  PHE    44      11.400   7.600  15.200
+ATOM    339  CA  ASN    45      11.400   7.600  19.000
+ATOM    347  CA  GLY    46      11.400  11.400  19.000
+ATOM    351  CA  SER    47      15.200  11.400  19.000
+ATOM    357  CA  LYS    48      15.200  11.400  22.800
+ATOM    366  CA  SER    49      11.400  11.400  22.800
+ATOM    372  CA  SER    50      11.400  11.400  26.600
+ATOM    379  CA  PRO    51      11.400   7.600  26.600
+ATOM    385  CA  GLN    52       7.600   7.600  26.600
+ATOM    394  CA  GLU    53       7.600   7.600  22.800
+ATOM    403  CA  LYS    54       7.600   3.800  22.800
+ATOM    412  CA  ASN    55       3.800   3.800  22.800
+ATOM    420  CA  LYS    56       3.800   3.800  19.000
+ATOM    429  CA  ALA    57       7.600   3.800  19.000
+ATOM    434  CA  ALA    58       7.600  -0.000  19.000
+ATOM    439  CA  GLU    59       3.800  -0.000  19.000
+ATOM    448  CA  VAL    60       3.800  -0.000  15.200
+ATOM    455  CA  ALA    61       7.600  -0.000  15.200
+ATOM    460  CA  ARG    62       7.600  -3.800  15.200
+ATOM    471  CA  ALA    63       3.800  -3.800  15.200
+ATOM    476  CA  ILE    64       3.800  -3.800  11.400
+ATOM    484  CA  ASP    65       3.800  -7.600  11.400
+ATOM    492  CA  ALA    66      -0.000  -7.600  11.400
+ATOM    497  CA  GLU    67      -0.000  -7.600   7.600
+ATOM    506  CA  ARG    68       3.800  -7.600   7.600
+ATOM    517  CA  LYS    69       3.800 -11.400   7.600
+ATOM    526  CA  GLY    70       7.600 -11.400   7.600
+ATOM    530  CA  LEU    71       7.600  -7.600   7.600
+ATOM    539  CA  PRO    72      11.400  -7.600   7.600
+ATOM    545  CA  LYS    73      11.400  -3.800   7.600
+ATOM    554  CA  VAL    74      11.400  -3.800  11.400
+ATOM    561  CA  GLU    75      15.200  -3.800  11.400
+ATOM    570  CA  VAL    76      15.200  -0.000  11.400
+ATOM    577  CA  PHE    77      15.200   3.800  11.400
+ATOM    588  CA  GLY    78      15.200   3.800  15.200
+ATOM    592  CA  GLU    79      15.200   7.600  15.200
+ATOM    601  CA  THR    80      19.000   7.600  15.200
+ATOM    608  CA  ASP    81      22.800   7.600  15.200
+ATOM    616  CA  SER    82      26.600   7.600  15.200
+ATOM    622  CA  ASP    83      26.600   7.600  11.400
+ATOM    630  CA  ILE    84      22.800   7.600  11.400
+ATOM    639  CA  PRO    85      22.800   7.600   7.600
+ATOM    645  CA  ALA    86      22.800   7.600   3.800
+ATOM    650  CA  GLU    87      19.000   7.600   3.800
+ATOM    659  CA  PHE    88      15.200   7.600   3.800
+ATOM    670  CA  TRP    89      15.200  11.400   3.800
+ATOM    684  CA  LYS    90      15.200  11.400  -0.000
+ATOM    693  CA  LEU    91      11.400  11.400  -0.000
+ATOM    701  CA  LEU    92      11.400  11.400   3.800
+ATOM    709  CA  GLY    93      11.400  15.200   3.800
+ATOM    713  CA  GLY    94      15.200  15.200   3.800
+ATOM    717  CA  LYS    95      15.200  15.200   7.600
+ATOM    726  CA  GLY    96      15.200  19.000   7.600
+ATOM    730  CA  ALA    97      15.200  19.000  11.400
+ATOM    735  CA  ILE    98      15.200  19.000  15.200
+ATOM    743  CA  ALA    99      11.400  19.000  15.200
+ATOM    748  CA  ALA   100      11.400  19.000  19.000
+ATOM    753  CA  LYS   101       7.600  19.000  19.000
+ATOM    762  CA  HIS   102       3.800  19.000  19.000

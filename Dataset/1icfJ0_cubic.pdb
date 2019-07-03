@@ -1,0 +1,80 @@
+REMARK
+REMARK Native sequence of the protein
+REMARK LTKCQEEVSHIPAVHPGSFRPKCDENGNYLPLQCYGSIGYCWCVFPNGTEVPNTRSRGHH
+REMARK NCSE
+REMARK
+REMARK Lattice sequence to generate lattice model
+REMARK with: L: (1,0,0), R (-1,0,0), F: (0,1,0)
+REMARK with: B: (0,-1,0), U (0,0,1), D: (0,0,1)
+REMARK and edge length set to :    3.800
+REMARK
+REMARK *RFDLFRDLFDDDRFRUUBBUBBBLUFRRDRFDFFDFRBUBUBUULLFRRRRDDLDDBBU
+REMARK UBUL
+REMARK
+REMARK cRMS compared to real structure:    2.189
+REMARK
+ATOM      2  CA  LEU J   1       0.000   0.000   0.000
+ATOM     10  CA  THR J   2       3.800   0.000   0.000
+ATOM     17  CA  LYS J   3       3.800   3.800   0.000
+ATOM     26  CA  CYS J   4       3.800   3.800  -3.800
+ATOM     32  CA  GLN J   5       0.000   3.800  -3.800
+ATOM     41  CA  GLU J   6       0.000   7.600  -3.800
+ATOM     50  CA  GLU J   7       3.800   7.600  -3.800
+ATOM     59  CA  VAL J   8       3.800   7.600  -7.600
+ATOM     66  CA  SER J   9       0.000   7.600  -7.600
+ATOM     72  CA  HIS J  10       0.000  11.400  -7.600
+ATOM     82  CA  ILE J  11       0.000  11.400 -11.400
+ATOM     91  CA  PRO J  12       0.000  11.400 -15.200
+ATOM     97  CA  ALA J  13       0.000  11.400 -19.000
+ATOM    102  CA  VAL J  14       3.800  11.400 -19.000
+ATOM    109  CA  HIS J  15       3.800  15.200 -19.000
+ATOM    120  CA  PRO J  16       7.600  15.200 -19.000
+ATOM    126  CA  GLY J  17       7.600  15.200 -15.200
+ATOM    130  CA  SER J  18       7.600  15.200 -11.400
+ATOM    136  CA  PHE J  19       7.600  11.400 -11.400
+ATOM    147  CA  ARG J  20       7.600   7.600 -11.400
+ATOM    159  CA  PRO J  21       7.600   7.600  -7.600
+ATOM    165  CA  LYS J  22       7.600   3.800  -7.600
+ATOM    174  CA  CYS J  23       7.600  -0.000  -7.600
+ATOM    180  CA  ASP J  24       7.600  -3.800  -7.600
+ATOM    188  CA  GLU J  25       3.800  -3.800  -7.600
+ATOM    197  CA  ASN J  26       3.800  -3.800  -3.800
+ATOM    205  CA  GLY J  27       3.800  -0.000  -3.800
+ATOM    209  CA  ASN J  28       7.600  -0.000  -3.800
+ATOM    217  CA  TYR J  29      11.400  -0.000  -3.800
+ATOM    229  CA  LEU J  30      11.400  -0.000  -7.600
+ATOM    238  CA  PRO J  31      15.200  -0.000  -7.600
+ATOM    244  CA  LEU J  32      15.200   3.800  -7.600
+ATOM    252  CA  GLN J  33      15.200   3.800 -11.400
+ATOM    261  CA  CYS J  34      15.200   7.600 -11.400
+ATOM    267  CA  TYR J  35      15.200  11.400 -11.400
+ATOM    279  CA  GLY J  36      15.200  11.400 -15.200
+ATOM    283  CA  SER J  37      15.200  15.200 -15.200
+ATOM    289  CA  ILE J  38      19.000  15.200 -15.200
+ATOM    297  CA  GLY J  39      19.000  11.400 -15.200
+ATOM    301  CA  TYR J  40      19.000  11.400 -11.400
+ATOM    313  CA  CYS J  41      19.000   7.600 -11.400
+ATOM    319  CA  TRP J  42      19.000   7.600  -7.600
+ATOM    333  CA  CYS J  43      19.000   3.800  -7.600
+ATOM    339  CA  VAL J  44      19.000   3.800  -3.800
+ATOM    346  CA  PHE J  45      19.000   3.800   0.000
+ATOM    358  CA  PRO J  46      15.200   3.800   0.000
+ATOM    364  CA  ASN J  47      11.400   3.800   0.000
+ATOM    372  CA  GLY J  48      11.400   7.600   0.000
+ATOM    376  CA  THR J  49      15.200   7.600   0.000
+ATOM    383  CA  GLU J  50      19.000   7.600   0.000
+ATOM    392  CA  VAL J  51      22.800   7.600   0.000
+ATOM    400  CA  PRO J  52      26.600   7.600   0.000
+ATOM    406  CA  ASN J  53      26.600   7.600  -3.800
+ATOM    414  CA  THR J  54      26.600   7.600  -7.600
+ATOM    421  CA  ARG J  55      22.800   7.600  -7.600
+ATOM    432  CA  SER J  56      22.800   7.600 -11.400
+ATOM    438  CA  ARG J  57      22.800   7.600 -15.200
+ATOM    449  CA  GLY J  58      22.800   3.800 -15.200
+ATOM    453  CA  HIS J  59      22.800  -0.000 -15.200
+ATOM    463  CA  HIS J  60      22.800  -0.000 -11.400
+ATOM    473  CA  ASN J  61      22.800  -0.000  -7.600
+ATOM    481  CA  CYS J  62      22.800  -3.800  -7.600
+ATOM    487  CA  SER J  63      22.800  -3.800  -3.800
+ATOM    493  CA  GLU J  64      19.000  -3.800  -3.800
+ATOM    502  CA  SER J  65      19.000  -3.800   0.000

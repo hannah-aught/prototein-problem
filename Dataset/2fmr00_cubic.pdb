@@ -1,0 +1,80 @@
+REMARK
+REMARK Native sequence of the protein
+REMARK ASRFHEQFIVREDLMGLAIGTHGANIQQARKVPGVTAIDLDEDTCTFHIYGEDQDAVKKA
+REMARK RSFL
+REMARK
+REMARK Lattice sequence to generate lattice model
+REMARK with: L: (1,0,0), R (-1,0,0), F: (0,1,0)
+REMARK with: B: (0,-1,0), U (0,0,1), D: (0,0,1)
+REMARK and edge length set to :    3.800
+REMARK
+REMARK *RFURRRRRBRRULBBUBBULLFDFDLULLUFLDDDRRDRRRDFULULLLLUFUURDRBR
+REMARK FUBR
+REMARK
+REMARK cRMS compared to real structure:    2.371
+REMARK
+ATOM      2  CA  ALA     1       0.000   0.000   0.000
+ATOM      8  CA  SER     2       3.800   0.000   0.000
+ATOM     15  CA  ARG     3       3.800   3.800   0.000
+ATOM     28  CA  PHE     4       3.800   3.800   3.800
+ATOM     45  CA  HIS     5       7.600   3.800   3.800
+ATOM     59  CA  GLU     6      11.400   3.800   3.800
+ATOM     69  CA  GLN     7      15.200   3.800   3.800
+ATOM     79  CA  PHE     8      19.000   3.800   3.800
+ATOM     96  CA  ILE     9      22.800   3.800   3.800
+ATOM    106  CA  VAL    10      22.800   0.000   3.800
+ATOM    115  CA  ARG    11      26.600   0.000   3.800
+ATOM    128  CA  GLU    12      30.400   0.000   3.800
+ATOM    138  CA  ASP    13      30.400   0.000   7.600
+ATOM    147  CA  LEU    14      26.600   0.000   7.600
+ATOM    157  CA  MET    15      26.600  -3.800   7.600
+ATOM    166  CA  GLY    16      26.600  -7.600   7.600
+ATOM    170  CA  LEU    17      26.600  -7.600  11.400
+ATOM    180  CA  ALA    18      26.600 -11.400  11.400
+ATOM    186  CA  ILE    19      26.600 -15.200  11.400
+ATOM    196  CA  GLY    20      26.600 -15.200  15.200
+ATOM    200  CA  THR    21      22.800 -15.200  15.200
+ATOM    210  CA  HIS    22      19.000 -15.200  15.200
+ATOM    224  CA  GLY    23      19.000 -11.400  15.200
+ATOM    228  CA  ALA    24      19.000 -11.400  11.400
+ATOM    234  CA  ASN    25      19.000  -7.600  11.400
+ATOM    243  CA  ILE    26      19.000  -7.600   7.600
+ATOM    253  CA  GLN    27      15.200  -7.600   7.600
+ATOM    263  CA  GLN    28      15.200  -7.600  11.400
+ATOM    273  CA  ALA    29      11.400  -7.600  11.400
+ATOM    279  CA  ARG    30       7.600  -7.600  11.400
+ATOM    292  CA  LYS    31       7.600  -7.600  15.200
+ATOM    302  CA  VAL    32       7.600  -3.800  15.200
+ATOM    312  CA  PRO    33       3.800  -3.800  15.200
+ATOM    319  CA  GLY    34       3.800  -3.800  11.400
+ATOM    323  CA  VAL    35       3.800  -3.800   7.600
+ATOM    332  CA  THR    36       3.800  -3.800   3.800
+ATOM    342  CA  ALA    37       7.600  -3.800   3.800
+ATOM    348  CA  ILE    38      11.400  -3.800   3.800
+ATOM    358  CA  ASP    39      11.400  -3.800  -0.000
+ATOM    367  CA  LEU    40      15.200  -3.800  -0.000
+ATOM    377  CA  ASP    41      19.000  -3.800  -0.000
+ATOM    386  CA  GLU    42      22.800  -3.800  -0.000
+ATOM    396  CA  ASP    43      22.800  -3.800  -3.800
+ATOM    405  CA  THR    44      22.800   0.000  -3.800
+ATOM    415  CA  CYS    45      22.800   0.000  -0.000
+ATOM    422  CA  THR    46      19.000   0.000  -0.000
+ATOM    432  CA  PHE    47      19.000   0.000   3.800
+ATOM    449  CA  HIS    48      15.200   0.000   3.800
+ATOM    463  CA  ILE    49      11.400   0.000   3.800
+ATOM    473  CA  TYR    50       7.600   0.000   3.800
+ATOM    491  CA  GLY    51       3.800   0.000   3.800
+ATOM    495  CA  GLU    52       3.800   0.000   7.600
+ATOM    505  CA  ASP    53       3.800   3.800   7.600
+ATOM    514  CA  GLN    54       3.800   3.800  11.400
+ATOM    524  CA  ASP    55       3.800   3.800  15.200
+ATOM    533  CA  ALA    56       7.600   3.800  15.200
+ATOM    539  CA  VAL    57       7.600   3.800  11.400
+ATOM    548  CA  LYS    58      11.400   3.800  11.400
+ATOM    558  CA  LYS    59      11.400   0.000  11.400
+ATOM    568  CA  ALA    60      15.200   0.000  11.400
+ATOM    574  CA  ARG    61      15.200   3.800  11.400
+ATOM    587  CA  SER    62      15.200   3.800  15.200
+ATOM    594  CA  PHE    63      15.200   0.000  15.200
+ATOM    611  CA  LEU    64      19.000   0.000  15.200
+ATOM    621  CA  GLU    65      19.000   0.000  11.400

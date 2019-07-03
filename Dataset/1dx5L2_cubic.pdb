@@ -1,0 +1,46 @@
+REMARK
+REMARK Native sequence of the protein
+REMARK CNQTACPADCDPNTQASCECPEGYILDDGFIC
+REMARK
+REMARK Lattice sequence to generate lattice model
+REMARK with: L: (1,0,0), R (-1,0,0), F: (0,1,0)
+REMARK with: B: (0,-1,0), U (0,0,1), D: (0,0,1)
+REMARK and edge length set to :    3.800
+REMARK
+REMARK *RRFLFLLLFLFLURRBBBRBURFFFRFDLBB
+REMARK
+REMARK cRMS compared to real structure:    1.980
+REMARK
+ATOM      2  CA  CYS L   1       0.000   0.000   0.000
+ATOM      8  CA  ASN L   2       3.800   0.000   0.000
+ATOM     16  CA  GLN L   3       7.600   0.000   0.000
+ATOM     25  CA  THR L   4       7.600   3.800   0.000
+ATOM     32  CA  ALA L   5       3.800   3.800   0.000
+ATOM     37  CA  CYS L   6       3.800   7.600   0.000
+ATOM     44  CA  PRO L   7       0.000   7.600   0.000
+ATOM     50  CA  ALA L   8      -3.800   7.600   0.000
+ATOM     55  CA  ASP L   9      -7.600   7.600   0.000
+ATOM     63  CA  CYS L  10      -7.600  11.400   0.000
+ATOM     69  CA  ASP L  11     -11.400  11.400   0.000
+ATOM     78  CA  PRO L  12     -11.400  15.200   0.000
+ATOM     84  CA  ASN L  13     -15.200  15.200   0.000
+ATOM     92  CA  THR L  14     -15.200  15.200   3.800
+ATOM     99  CA  GLN L  15     -11.400  15.200   3.800
+ATOM    108  CA  ALA L  16      -7.600  15.200   3.800
+ATOM    113  CA  SER L  17      -7.600  11.400   3.800
+ATOM    119  CA  CYS L  18      -7.600   7.600   3.800
+ATOM    125  CA  GLU L  19      -7.600   3.800   3.800
+ATOM    134  CA  CYS L  20      -3.800   3.800   3.800
+ATOM    141  CA  PRO L  21      -3.800  -0.000   3.800
+ATOM    147  CA  GLU L  22      -3.800  -0.000   7.600
+ATOM    156  CA  GLY L  23       0.000  -0.000   7.600
+ATOM    160  CA  TYR L  24       0.000   3.800   7.600
+ATOM    172  CA  ILE L  25       0.000   7.600   7.600
+ATOM    180  CA  LEU L  26       0.000  11.400   7.600
+ATOM    188  CA  ASP L  27       3.800  11.400   7.600
+ATOM    196  CA  ASP L  28       3.800  15.200   7.600
+ATOM    204  CA  GLY L  29       3.800  15.200   3.800
+ATOM    208  CA  PHE L  30       0.000  15.200   3.800
+ATOM    219  CA  ILE L  31       0.000  11.400   3.800
+ATOM    227  CA  CYS L  32       0.000   7.600   3.800
+ATOM    233  CA  THR L  33       3.800   7.600   3.800

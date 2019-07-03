@@ -1,0 +1,53 @@
+REMARK
+REMARK Native sequence of the protein
+REMARK MPQVNLRWPREVLDLVRKVAEENGRSVNSEIYQRVMESF
+REMARK
+REMARK Lattice sequence to generate lattice model
+REMARK with: L: (1,0,0), R (-1,0,0), F: (0,1,0)
+REMARK with: B: (0,-1,0), U (0,0,1), D: (0,0,1)
+REMARK and edge length set to :    3.800
+REMARK
+REMARK *RRFRRRFRUFLBUFLUFLBUFLBDBDLFRDLFRDLFDL
+REMARK
+REMARK cRMS compared to real structure:    1.968
+REMARK
+ATOM      2  CA  MET D   1       0.000   0.000   0.000
+ATOM     11  CA  PRO D   2       3.800   0.000   0.000
+ATOM     17  CA  GLN D   3       7.600   0.000   0.000
+ATOM     26  CA  VAL D   4       7.600   3.800   0.000
+ATOM     33  CA  ASN D   5      11.400   3.800   0.000
+ATOM     41  CA  LEU D   6      15.200   3.800   0.000
+ATOM     49  CA  ARG D   7      19.000   3.800   0.000
+ATOM     60  CA  TRP D   8      19.000   7.600   0.000
+ATOM     75  CA  PRO D   9      22.800   7.600   0.000
+ATOM     81  CA  ARG D  10      22.800   7.600   3.800
+ATOM     92  CA  GLU D  11      22.800  11.400   3.800
+ATOM    101  CA  VAL D  12      19.000  11.400   3.800
+ATOM    108  CA  LEU D  13      19.000   7.600   3.800
+ATOM    116  CA  ASP D  14      19.000   7.600   7.600
+ATOM    124  CA  LEU D  15      19.000  11.400   7.600
+ATOM    132  CA  VAL D  16      15.200  11.400   7.600
+ATOM    139  CA  ARG D  17      15.200  11.400  11.400
+ATOM    150  CA  LYS D  18      15.200  15.200  11.400
+ATOM    159  CA  VAL D  19      11.400  15.200  11.400
+ATOM    166  CA  ALA D  20      11.400  11.400  11.400
+ATOM    171  CA  GLU D  21      11.400  11.400  15.200
+ATOM    180  CA  GLU D  22      11.400  15.200  15.200
+ATOM    189  CA  ASN D  23       7.600  15.200  15.200
+ATOM    197  CA  GLY D  24       7.600  11.400  15.200
+ATOM    201  CA  ARG D  25       7.600  11.400  11.400
+ATOM    212  CA  SER D  26       7.600   7.600  11.400
+ATOM    218  CA  VAL D  27       7.600   7.600   7.600
+ATOM    225  CA  ASN D  28       3.800   7.600   7.600
+ATOM    233  CA  SER D  29       3.800  11.400   7.600
+ATOM    239  CA  GLU D  30       7.600  11.400   7.600
+ATOM    248  CA  ILE D  31       7.600  11.400   3.800
+ATOM    256  CA  TYR D  32       3.800  11.400   3.800
+ATOM    268  CA  GLN D  33       3.800  15.200   3.800
+ATOM    277  CA  ARG D  34       7.600  15.200   3.800
+ATOM    288  CA  VAL D  35       7.600  15.200  -0.000
+ATOM    295  CA  MET D  36       3.800  15.200  -0.000
+ATOM    303  CA  GLU D  37       3.800  19.000  -0.000
+ATOM    312  CA  SER D  38       3.800  19.000  -3.800
+ATOM    318  CA  PHE D  39      -0.000  19.000  -3.800
+ATOM    329  CA  LYS D  40      -0.000  22.800  -3.800

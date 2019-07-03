@@ -1,0 +1,24 @@
+REMARK
+REMARK Native sequence of the protein
+REMARK TQVVTLKELH
+REMARK
+REMARK Lattice sequence to generate lattice model
+REMARK with: L: (1,0,0), R (-1,0,0), F: (0,1,0)
+REMARK with: B: (0,-1,0), U (0,0,1), D: (0,0,1)
+REMARK and edge length set to :    3.800
+REMARK
+REMARK *RFUBRFUBR
+REMARK
+REMARK cRMS compared to real structure:    1.181
+REMARK
+ATOM      2  CA  THR J   1       0.000   0.000   0.000
+ATOM      7  CA  GLN J   2       3.800   0.000   0.000
+ATOM     16  CA  VAL J   3       3.800   3.800   0.000
+ATOM     21  CA  VAL J   4       3.800   3.800   3.800
+ATOM     26  CA  THR J   5       3.800   0.000   3.800
+ATOM     31  CA  LEU J   6       7.600   0.000   3.800
+ATOM     39  CA  LYS J   7       7.600   3.800   3.800
+ATOM     44  CA  GLU J   8       7.600   3.800   7.600
+ATOM     49  CA  LEU J   9       7.600   0.000   7.600
+ATOM     54  CA  HIS J  10      11.400   0.000   7.600
+ATOM     59  CA  SER J  11      11.400   0.000  11.400

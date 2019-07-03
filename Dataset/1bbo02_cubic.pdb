@@ -1,0 +1,44 @@
+REMARK
+REMARK Native sequence of the protein
+REMARK VRPYHCTYCNFSFKTKGNLTKHMKSKAHSK
+REMARK
+REMARK Lattice sequence to generate lattice model
+REMARK with: L: (1,0,0), R (-1,0,0), F: (0,1,0)
+REMARK with: B: (0,-1,0), U (0,0,1), D: (0,0,1)
+REMARK and edge length set to :    3.800
+REMARK
+REMARK *RFRDRDDBLUUUURRBDFRBDFRDDLFRF
+REMARK
+REMARK cRMS compared to real structure:    1.801
+REMARK
+ATOM      2  CA  VAL     1       0.000   0.000   0.000
+ATOM     11  CA  ARG     2       3.800   0.000   0.000
+ATOM     25  CA  PRO     3       3.800   3.800   0.000
+ATOM     32  CA  TYR     4       7.600   3.800   0.000
+ATOM     50  CA  HIS     5       7.600   3.800  -3.800
+ATOM     64  CA  CYS     6      11.400   3.800  -3.800
+ATOM     71  CA  THR     7      11.400   3.800  -7.600
+ATOM     81  CA  TYR     8      11.400   3.800 -11.400
+ATOM     99  CA  CYS     9      11.400   0.000 -11.400
+ATOM    106  CA  ASN    10       7.600   0.000 -11.400
+ATOM    115  CA  PHE    11       7.600   0.000  -7.600
+ATOM    132  CA  SER    12       7.600   0.000  -3.800
+ATOM    139  CA  PHE    13       7.600   0.000   0.000
+ATOM    156  CA  LYS    14       7.600   0.000   3.800
+ATOM    166  CA  THR    15      11.400   0.000   3.800
+ATOM    176  CA  LYS    16      15.200   0.000   3.800
+ATOM    186  CA  GLY    17      15.200  -3.800   3.800
+ATOM    190  CA  ASN    18      15.200  -3.800   0.000
+ATOM    199  CA  LEU    19      15.200   0.000   0.000
+ATOM    209  CA  THR    20      19.000   0.000   0.000
+ATOM    219  CA  LYS    21      19.000  -3.800   0.000
+ATOM    229  CA  HIS    22      19.000  -3.800  -3.800
+ATOM    243  CA  MET    23      19.000   0.000  -3.800
+ATOM    252  CA  LYS    24      22.800   0.000  -3.800
+ATOM    262  CA  SER    25      22.800   0.000  -7.600
+ATOM    269  CA  LYS    26      22.800   0.000 -11.400
+ATOM    279  CA  ALA    27      19.000   0.000 -11.400
+ATOM    285  CA  HIS    28      19.000   3.800 -11.400
+ATOM    299  CA  SER    29      22.800   3.800 -11.400
+ATOM    306  CA  LYS    30      22.800   7.600 -11.400
+ATOM    316  CA  LYS    31      22.800   7.600  -7.600

@@ -1,0 +1,81 @@
+REMARK
+REMARK Native sequence of the protein
+REMARK MNQASVVANQLIPINTALTLVMMRSEVVTPVGIPAEDIPRLVSMQVNRAVPLGTTLMPDM
+REMARK VKGYA
+REMARK
+REMARK Lattice sequence to generate lattice model
+REMARK with: L: (1,0,0), R (-1,0,0), F: (0,1,0)
+REMARK with: B: (0,-1,0), U (0,0,1), D: (0,0,1)
+REMARK and edge length set to :    3.800
+REMARK
+REMARK *RFFFFUFUFLFFDDRRBRBULBBBLBLLDDFRRRDFUFDFUFLLULUUBBRBLDDDFLF
+REMARK RDDRB
+REMARK
+REMARK cRMS compared to real structure:    2.196
+REMARK
+ATOM      2  CA  MET A   1       0.000   0.000   0.000
+ATOM     10  CA  ASN A   2       3.800   0.000   0.000
+ATOM     18  CA  GLN A   3       3.800   3.800   0.000
+ATOM     27  CA  ALA A   4       3.800   7.600   0.000
+ATOM     32  CA  SER A   5       3.800  11.400   0.000
+ATOM     38  CA  VAL A   6       3.800  15.200   0.000
+ATOM     45  CA  VAL A   7       3.800  15.200   3.800
+ATOM     52  CA  ALA A   8       3.800  19.000   3.800
+ATOM     57  CA  ASN A   9       3.800  19.000   7.600
+ATOM     65  CA  GLN A  10       3.800  22.800   7.600
+ATOM     74  CA  LEU A  11       0.000  22.800   7.600
+ATOM     82  CA  ILE A  12       0.000  26.600   7.600
+ATOM     91  CA  PRO A  13       0.000  30.400   7.600
+ATOM     97  CA  ILE A  14       0.000  30.400   3.800
+ATOM    105  CA  ASN A  15       0.000  30.400   0.000
+ATOM    113  CA  THR A  16       3.800  30.400   0.000
+ATOM    120  CA  ALA A  17       7.600  30.400   0.000
+ATOM    125  CA  LEU A  18       7.600  26.600   0.000
+ATOM    133  CA  THR A  19      11.400  26.600   0.000
+ATOM    140  CA  LEU A  20      11.400  22.800   0.000
+ATOM    148  CA  VAL A  21      11.400  22.800   3.800
+ATOM    155  CA  MET A  22       7.600  22.800   3.800
+ATOM    163  CA  MET A  23       7.600  19.000   3.800
+ATOM    171  CA  ARG A  24       7.600  15.200   3.800
+ATOM    182  CA  SER A  25       7.600  11.400   3.800
+ATOM    188  CA  GLU A  26       3.800  11.400   3.800
+ATOM    197  CA  VAL A  27       3.800   7.600   3.800
+ATOM    204  CA  VAL A  28      -0.000   7.600   3.800
+ATOM    211  CA  THR A  29      -3.800   7.600   3.800
+ATOM    219  CA  PRO A  30      -3.800   7.600   0.000
+ATOM    225  CA  VAL A  31      -3.800   7.600  -3.800
+ATOM    232  CA  GLY A  32      -3.800  11.400  -3.800
+ATOM    236  CA  ILE A  33      -0.000  11.400  -3.800
+ATOM    245  CA  PRO A  34       3.800  11.400  -3.800
+ATOM    251  CA  ALA A  35       7.600  11.400  -3.800
+ATOM    256  CA  GLU A  36       7.600  11.400  -7.600
+ATOM    265  CA  ASP A  37       7.600  15.200  -7.600
+ATOM    273  CA  ILE A  38       7.600  15.200  -3.800
+ATOM    282  CA  PRO A  39       7.600  19.000  -3.800
+ATOM    288  CA  ARG A  40       7.600  19.000  -7.600
+ATOM    299  CA  LEU A  41       7.600  22.800  -7.600
+ATOM    307  CA  VAL A  42       7.600  22.800  -3.800
+ATOM    314  CA  SER A  43       7.600  26.600  -3.800
+ATOM    320  CA  MET A  44       3.800  26.600  -3.800
+ATOM    328  CA  GLN A  45      -0.000  26.600  -3.800
+ATOM    337  CA  VAL A  46      -0.000  26.600   0.000
+ATOM    344  CA  ASN A  47      -3.800  26.600   0.000
+ATOM    352  CA  ARG A  48      -3.800  26.600   3.800
+ATOM    363  CA  ALA A  49      -3.800  26.600   7.600
+ATOM    368  CA  VAL A  50      -3.800  22.800   7.600
+ATOM    376  CA  PRO A  51      -3.800  19.000   7.600
+ATOM    382  CA  LEU A  52      -0.000  19.000   7.600
+ATOM    390  CA  GLY A  53      -0.000  15.200   7.600
+ATOM    394  CA  THR A  54      -3.800  15.200   7.600
+ATOM    401  CA  THR A  55      -3.800  15.200   3.800
+ATOM    408  CA  LEU A  56      -3.800  15.200   0.000
+ATOM    416  CA  MET A  57      -3.800  15.200  -3.800
+ATOM    425  CA  PRO A  58      -3.800  19.000  -3.800
+ATOM    431  CA  ASP A  59      -7.600  19.000  -3.800
+ATOM    439  CA  MET A  60      -7.600  22.800  -3.800
+ATOM    447  CA  VAL A  61      -3.800  22.800  -3.800
+ATOM    454  CA  LYS A  62      -3.800  22.800  -7.600
+ATOM    463  CA  GLY A  63      -3.800  22.800 -11.400
+ATOM    467  CA  TYR A  64      -0.000  22.800 -11.400
+ATOM    479  CA  ALA A  65      -0.000  19.000 -11.400
+ATOM    484  CA  ALA A  66      -0.000  15.200 -11.400

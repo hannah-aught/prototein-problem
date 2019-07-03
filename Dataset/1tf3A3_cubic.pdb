@@ -1,0 +1,45 @@
+REMARK
+REMARK Native sequence of the protein
+REMARK EKNFTCDSDGCDLRFTTKANMKKHFNRFHNI
+REMARK
+REMARK Lattice sequence to generate lattice model
+REMARK with: L: (1,0,0), R (-1,0,0), F: (0,1,0)
+REMARK with: B: (0,-1,0), U (0,0,1), D: (0,0,1)
+REMARK and edge length set to :    3.800
+REMARK
+REMARK *RRFRURRBULDLLFLFFUBRFUBRFUBRFU
+REMARK
+REMARK cRMS compared to real structure:    1.913
+REMARK
+ATOM      2  CA  GLU A   1       0.000   0.000   0.000
+ATOM     12  CA  LYS A   2       3.800   0.000   0.000
+ATOM     22  CA  ASN A   3       7.600   0.000   0.000
+ATOM     31  CA  PHE A   4       7.600   3.800   0.000
+ATOM     48  CA  THR A   5      11.400   3.800   0.000
+ATOM     58  CA  CYS A   6      11.400   3.800   3.800
+ATOM     65  CA  ASP A   7      15.200   3.800   3.800
+ATOM     74  CA  SER A   8      19.000   3.800   3.800
+ATOM     81  CA  ASP A   9      19.000   0.000   3.800
+ATOM     90  CA  GLY A  10      19.000   0.000   7.600
+ATOM     94  CA  CYS A  11      15.200   0.000   7.600
+ATOM    101  CA  ASP A  12      15.200   0.000   3.800
+ATOM    110  CA  LEU A  13      11.400   0.000   3.800
+ATOM    120  CA  ARG A  14       7.600   0.000   3.800
+ATOM    133  CA  PHE A  15       7.600   3.800   3.800
+ATOM    150  CA  THR A  16       3.800   3.800   3.800
+ATOM    160  CA  THR A  17       3.800   7.600   3.800
+ATOM    170  CA  LYS A  18       3.800  11.400   3.800
+ATOM    180  CA  ALA A  19       3.800  11.400   7.600
+ATOM    186  CA  ASN A  20       3.800   7.600   7.600
+ATOM    195  CA  MET A  21       7.600   7.600   7.600
+ATOM    204  CA  LYS A  22       7.600  11.400   7.600
+ATOM    214  CA  LYS A  23       7.600  11.400  11.400
+ATOM    224  CA  HIS A  24       7.600   7.600  11.400
+ATOM    238  CA  PHE A  25      11.400   7.600  11.400
+ATOM    255  CA  ASN A  26      11.400  11.400  11.400
+ATOM    264  CA  ARG A  27      11.400  11.400  15.200
+ATOM    277  CA  PHE A  28      11.400   7.600  15.200
+ATOM    294  CA  HIS A  29      15.200   7.600  15.200
+ATOM    308  CA  ASN A  30      15.200  11.400  15.200
+ATOM    317  CA  ILE A  31      15.200  11.400  19.000
+ATOM    327  CA  LYS A  32      15.200  15.200  19.000

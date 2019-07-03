@@ -1,0 +1,44 @@
+REMARK
+REMARK Native sequence of the protein
+REMARK KCRTGCPRGMVKVGDCTPWSDIECVHKESG
+REMARK
+REMARK Lattice sequence to generate lattice model
+REMARK with: L: (1,0,0), R (-1,0,0), F: (0,1,0)
+REMARK with: B: (0,-1,0), U (0,0,1), D: (0,0,1)
+REMARK and edge length set to :    3.800
+REMARK
+REMARK *RRRRBURBDDLDLFLLLBRURRBRUBRRR
+REMARK
+REMARK cRMS compared to real structure:    1.940
+REMARK
+ATOM      2  CA  LYS A   1       0.000   0.000   0.000
+ATOM     11  CA  CYS A   2       3.800   0.000   0.000
+ATOM     17  CA  ARG A   3       7.600   0.000   0.000
+ATOM     28  CA  THR A   4      11.400   0.000   0.000
+ATOM     35  CA  GLY A   5      15.200   0.000   0.000
+ATOM     39  CA  CYS A   6      15.200  -3.800   0.000
+ATOM     46  CA  PRO A   7      15.200  -3.800   3.800
+ATOM     52  CA  ARG A   8      19.000  -3.800   3.800
+ATOM     63  CA  GLY A   9      19.000  -7.600   3.800
+ATOM     67  CA  MET A  10      19.000  -7.600   0.000
+ATOM     75  CA  VAL A  11      19.000  -7.600  -3.800
+ATOM     82  CA  LYS A  12      15.200  -7.600  -3.800
+ATOM     91  CA  VAL A  13      15.200  -7.600  -7.600
+ATOM     98  CA  GLY A  14      11.400  -7.600  -7.600
+ATOM    102  CA  ASP A  15      11.400  -3.800  -7.600
+ATOM    110  CA  CYS A  16       7.600  -3.800  -7.600
+ATOM    116  CA  THR A  17       3.800  -3.800  -7.600
+ATOM    124  CA  PRO A  18      -0.000  -3.800  -7.600
+ATOM    130  CA  TRP A  19      -0.000  -7.600  -7.600
+ATOM    144  CA  SER A  20       3.800  -7.600  -7.600
+ATOM    150  CA  ASP A  21       3.800  -7.600  -3.800
+ATOM    158  CA  ILE A  22       7.600  -7.600  -3.800
+ATOM    166  CA  GLU A  23      11.400  -7.600  -3.800
+ATOM    175  CA  CYS A  24      11.400 -11.400  -3.800
+ATOM    181  CA  VAL A  25      15.200 -11.400  -3.800
+ATOM    188  CA  HIS A  26      15.200 -11.400   0.000
+ATOM    198  CA  LYS A  27      15.200 -15.200   0.000
+ATOM    207  CA  GLU A  28      19.000 -15.200   0.000
+ATOM    216  CA  SER A  29      22.800 -15.200   0.000
+ATOM    222  CA  GLY A  30      26.600 -15.200   0.000
+ATOM    226  CA  ASP A  31      26.600 -11.400   0.000
