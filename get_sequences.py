@@ -2,9 +2,9 @@ import sys
 from pathlib import Path
 import os
 
-def get_original_sequence_and_coords(read_file, output_file):
-    with open(file, "w") as out:
-        file_contents = file.read_text()
+def write_binary_sequence_and_coords(read_file, output_file):
+    with open(output_file, "w") as f:
+        file_contents = read_file.read_text()
         remarks = file_contents.split("REMARK")
 
         for i, x in enumerate(remarks):
@@ -29,8 +29,8 @@ def get_original_sequence_and_coords(read_file, output_file):
         binary_sequence = get_binary_sequence(original_sequence)
         coords = get_coordinates(coord_str)
         num_contacts = count_contacts(coords, binary_sequence)
-        print(binary_sequence, file=out)
-        print(num_contacts, file=out)
+        print(binary_sequence, file=f)
+        print(num_contacts, file=f)
 
 def get_binary_sequence(amino_acid_sequence):
     ONES = ['A', 'C','G', 'I', 'L', 'M', 'F', 'P', 'W', 'Y', 'V']
@@ -92,30 +92,33 @@ def count_contacts(coords, string):
     return contacts
 
 def main(argv):
-    if (len(argv) < 2):
-        raise Exception("ERROR: Usage\n\tpython3 get_sequences.py {path to file to read from}")
-    elif len(argv) == 3:
+    if (len(argv) < 2 or len == 3):
+        raise Exception("ERROR: Usage\n\tpython3 get_sequences.py {file/directory to read from} {flag (-d(irectory) or -f(ile))} {file type (if flag = -d)}")
+    elif len(argv) == 4:
+        filter = argv[3]
         flag = argv[2]
         directory = Path(argv[1])
     else:
         flag = "-f"
         file = Path("./Dataset/" + argv[1] + "_cubic.pdb")
-
-    out_file = Path("./input/" + argv[1] + ".txt")
+        out_file = Path("./input/" + argv[1] + ".txt")
 
     if flag == "-d": # loop through directory
         directory_contents = os.listdir(directory)
 
         for x in directory_contents:
-            with open(x, "w") as f:
-                write_binary_sequence_and_contact_number(x)
+            if x.find(filter) != -1:
+                print(x)
+            #write_binary_sequence_and_contact_number(x, )
     else:
-        with open(file, "w")
+        print(file)
+        print(out_file)
+        # write_binary_sequence_and_contact_number(file, out_file)
 
     # parse the remarks and assign original_sequence and coordinates
 
 
-main(sys.argv)
+main(sys.argv) # ["get_sequences.py", "Dataset", "-d", ".pdb"])
 
 
 """
