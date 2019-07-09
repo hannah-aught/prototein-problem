@@ -2,7 +2,7 @@ import sys
 from pathlib import Path
 import os
 
-def write_binary_sequence_and_coords(read_file, output_file):
+def write_binary_sequence_and_contact_number(read_file, output_file):
     with open(output_file, "w") as f:
         file_contents = read_file.read_text()
         remarks = file_contents.split("REMARK")
@@ -108,8 +108,13 @@ def main(argv):
 
         for x in directory_contents:
             if x.find(filter) != -1:
+                extension_index = x.rfind(".")
+                if extension_index != -1:
+                    out_file = Path("output/" + x[:extension_index] + ".txt")
+                else:
+                    out_file = Path("output/" + x + ".txt")
                 print(x)
-            #write_binary_sequence_and_contact_number(x, )
+                write_binary_sequence_and_contact_number(directory / Path(x), out_file)
     else:
         print(file)
         print(out_file)
@@ -118,7 +123,7 @@ def main(argv):
     # parse the remarks and assign original_sequence and coordinates
 
 
-main(sys.argv) # ["get_sequences.py", "Dataset", "-d", ".pdb"])
+main(sys.argv) # ["get_sequences.py", "test", "-d", ".pdb"])
 
 
 """

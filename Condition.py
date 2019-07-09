@@ -3,10 +3,10 @@ from enum import Enum
 class Condition:
     clauses = list() # this should now be a list of numbers to allow for easier printing
     repeat = False
-    num_repeats = 0
+    num_repeats = 1
     increment = 0
 
-    def __init__(self, clauses = list(), repeat = False,  num_repeats = 0, increment = 0):
+    def __init__(self, clauses = list(), repeat = False,  num_repeats = 1, increment = 0):
         self.clauses = clauses
         self.repeat = repeat
         self.num_repeats = num_repeats
