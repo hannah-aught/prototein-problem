@@ -185,8 +185,10 @@ def generate_clauses(string, r, positions_of_ones):
                         b_j_2k = num_vars + repeats * t_k + t_ki + j # vars number is the existing vars + the number of variables at level k + the number of variables under node i + j
 
                     b_rk = num_vars + i + j - 1 # existing vars + whatever k value we're on (k is the highest node in question for all clauses)
-                    count_condition_l.add_clause([b_i_2k, b_j_2k, -1 * b_rk])
-        
+                    clause = [b_i_2k, b_j_2k, -1 * b_rk]
+                    if clause not in count_condition_l.clauses:
+                        count_condition_l.add_clause(clause)
+
         if l < num_tree_levels - 1:
             num_vars += t_k * repeats
         conditions.append(count_condition_l)
@@ -260,6 +262,6 @@ def main(argv):
         return conditions
 
 
-main(["main.py", "test.txt", "11", "1", "-s"])
+main(["main.py", "test.txt", "11", "0", "-s"])
 
 # TODO: Change contact loop. shouldn't check for contacts on all sides, only one horizontal and one vertical. This will prevent overcounting
