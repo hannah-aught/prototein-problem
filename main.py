@@ -172,7 +172,7 @@ def generate_clauses(string, r, positions_of_ones):
             # i and j are the two children of node k.
             for i in range(1, t_ki + 1):
                 if l == num_tree_levels - 1:
-                    b_i_2k = n * n * n + i
+                    b_i_2k = n * n * n + n * n + i
                 else:
                     b_i_2k = num_vars + repeats * t_k + i  # var number will be the existing number of variables + the number of variables at level k + i
 
@@ -180,7 +180,7 @@ def generate_clauses(string, r, positions_of_ones):
                     if (i + j) > (t_ki +  1):
                         break
                     if l == num_tree_levels - 1:
-                        b_j_2k = n * n * n + t_ki + j 
+                        b_j_2k = n * n * n + n * n + t_ki + j 
                     else:
                         b_j_2k = num_vars + repeats * t_k + t_ki + j # vars number is the existing vars + the number of variables at level k + the number of variables under node i + j
 
@@ -250,6 +250,8 @@ def main(argv):
         num_counting_condition_clauses = 0
         for i in range(6, len(conditions)):
             num_counting_condition_clauses += conditions[i].num_repeats * len(conditions[i].clauses)
+
+        #TODO: make get_num_clauses function instead
         num_clauses = n + n * n * n * (n * n - 1)//2 + n * n * n * (n - 1)//2 + n * n * (n - 1) + n * n * (num_existing_ones + 1) + numcontact_condition_2_clauses + num_counting_condition_clauses
 
         with open(outfile, "w") as f:
@@ -262,6 +264,6 @@ def main(argv):
         return conditions
 
 
-main(["main.py", "test.txt", "11", "0", "-s"])
+main(["main.py", "test.txt", "11", "1", "-s"])
 
 # TODO: Change contact loop. shouldn't check for contacts on all sides, only one horizontal and one vertical. This will prevent overcounting
