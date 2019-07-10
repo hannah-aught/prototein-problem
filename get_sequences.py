@@ -30,10 +30,10 @@ def write_binary_sequence_and_contact_number(read_file, output_file):
         coords = get_coordinates(coord_str)
         num_contacts = count_contacts(coords, binary_sequence)
         print(binary_sequence, file=f)
-        print(num_contacts, file=f)
+        print("\n" + str(num_contacts), file=f)
 
 def get_binary_sequence(amino_acid_sequence):
-    ONES = ['A', 'C','G', 'I', 'L', 'M', 'F', 'P', 'W', 'Y', 'V']
+    ONES = ['A', 'C', 'G', 'I', 'L', 'M', 'F', 'P', 'W', 'Y', 'V']
     ZEROS = ['R', 'N', 'D', 'Q', 'E', 'H', 'K', 'S', 'T']
 
     sequence = ""
@@ -80,8 +80,8 @@ def count_contacts(coords, string):
     for i, x in enumerate(coords):
         if string[i] == "0":
             continue
-        for j, y in enumerate(coords[i+2:]):
-            if string[i+2+j] == "0":
+        for j, y in enumerate(coords[i+3:]):
+            if string[i+3+j] == "0":
                 continue
             if x[0] == y[0] and x[1] == y[1] and abs(x[2] - y[2]) == 1:
                 contacts += 1
@@ -110,9 +110,9 @@ def main(argv):
             if x.find(filter) != -1:
                 extension_index = x.rfind(".")
                 if extension_index != -1:
-                    out_file = Path("output/" + x[:extension_index] + ".txt")
+                    out_file = Path("input/" + x[:extension_index] + ".txt")
                 else:
-                    out_file = Path("output/" + x + ".txt")
+                    out_file = Path("input/" + x + ".txt")
                 print(x)
                 write_binary_sequence_and_contact_number(directory / Path(x), out_file)
     else:
@@ -123,7 +123,7 @@ def main(argv):
     # parse the remarks and assign original_sequence and coordinates
 
 
-main(sys.argv) # ["get_sequences.py", "test", "-d", ".pdb"])
+main(["get_sequences.py", "Dataset", "-d", ".pdb"])
 
 
 """
