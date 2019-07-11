@@ -170,6 +170,8 @@ def generate_clauses(string, r, positions_of_ones):
     # make one condition per level w/ appropriate # of repeats
     num_tree_levels = 2 * math.ceil(math.log(n, 2)) + 1
     num_vars = n*n*n + 3*n*n
+    conditions.append(Condition(list([[num_vars + 1]]), False))
+    num_vars = num_vars + 1
 
     for l in range(1, num_tree_levels):
         t_k = min(r, pow(2, num_tree_levels - l))
@@ -183,13 +185,13 @@ def generate_clauses(string, r, positions_of_ones):
                 if l == num_tree_levels - 1:
                     b_i_2k = n * n * n + n * n + i
                 else:
-                    b_i_2k = num_vars + repeats * t_k + i  # var number will be the existing number of variables + the number of variables at level k + i
+                    b_i_2k = num_vars + repeats * t_k + i # var number will be the existing number of variables + the number of variables at level k + i
 
                 for j in range(1, t_ki + 1):
                     if (i + j) > (t_ki +  1):
                         break
                     if l == num_tree_levels - 1:
-                        b_j_2k = n * n * n + n * n + t_ki + j 
+                        b_j_2k = n * n * n + n * n + t_ki + j
                     else:
                         b_j_2k = num_vars + repeats * t_k + t_ki + j # vars number is the existing vars + the number of variables at level k + the number of variables under node i + j
 
@@ -204,13 +206,14 @@ def generate_clauses(string, r, positions_of_ones):
 
     num_vars += t_k * repeats
     t_2 = min(r, pow(2, num_tree_levels - 1)) # node 2 is at level 1
-    existing_vars = n * n * n + 3 * n * n
+    existing_vars = n * n * n + 3 * n * n + 1
     count_condition_2 = Condition(list(), False)
     for i in range(1, t_2 + 1):
         j = t_2 + 1 - i
-        count_condition_2.add_clause([existing_vars + i, existing_vars + t_2 + j ])
+        count_condition_2.add_clause([existing_vars + i, existing_vars + t_2 + j, -1 * existing_vars])
 
     conditions.append(count_condition_2)
+
 
     return list([conditions, num_vars])
 
