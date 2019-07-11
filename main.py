@@ -4,6 +4,15 @@ import math
 from functools import reduce
 from Condition import Condition
 
+
+# Speedup for optimization. Don't use n^2 grid, use n^2/16 for suitably large proteins
+# Speedup for 3d. look at email for size of grid
+# Speedup: speedup. Have clause that puts left or right end in center of grid. Possible that it'll result in impossible solution.
+# might have to increase grid size if we do this
+# Speedup: keep solver from looking @ symmetric solutions. If you put left end in middle, position of second one is equivalent no
+# matter where it goes. Set position of 2nd (e.g. set to 1 above/below/left/right)
+# Speedup: implement a better bound for k based on string
+
 def nCr(n, r): # Source: https://stackoverflow.com/questions/4941753/is-there-a-math-ncr-function - in - python
     r = min(r, n - r)
     mult = lambda x, y: x*y
