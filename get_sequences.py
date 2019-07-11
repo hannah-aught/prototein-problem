@@ -118,12 +118,12 @@ def main(argv):
     else:
         print(file)
         print(out_file)
-        # write_binary_sequence_and_contact_number(file, out_file)
+        write_binary_sequence_and_contact_number(file, out_file)
 
     # parse the remarks and assign original_sequence and coordinates
 
 
-main(["get_sequences.py", "Dataset", "-d", ".pdb"])
+main(["get_sequences.py", "1cbn00", "-f"])
 
 
 """
