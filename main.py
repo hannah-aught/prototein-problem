@@ -170,8 +170,6 @@ def generate_clauses(string, r, positions_of_ones):
     # make one condition per level w/ appropriate # of repeats
     num_tree_levels = 2 * math.ceil(math.log(n, 2)) + 1
     num_vars = n*n*n + 3*n*n
-    conditions.append(Condition(list([[num_vars + 1]]), False))
-    num_vars = num_vars + 1
 
     for l in range(1, num_tree_levels):
         t_k = min(r, pow(2, num_tree_levels - l))
@@ -179,26 +177,37 @@ def generate_clauses(string, r, positions_of_ones):
         repeats = pow(2, l)
         count_condition_l = Condition(list(), True, repeats, t_k)
 
-        for k in range(1, t_k + 1):
-            # i and j are the two children of node k.
-            for i in range(1, t_ki + 1):
+        # i and j are the two children of node k.
+        for j in range(0, t_ki + 1):
+            if l == num_tree_levels - 1:
+                b_j_2k =  -1 * (n * n * n + n * n + t_ki + j)
+            else:
+                b_j_2k = num_vars + repeats * t_k + t_ki + j # var number will be the existing number of variables + the number of variables at level k + i
+
+            for i in range(0, t_ki + 1):
+                clause = list()
+
+                if (i + j) > (t_ki + 1):
+                    break
+                elif i + j < 1:
+                    continue
+
                 if l == num_tree_levels - 1:
-                    b_i_2k = n * n * n + n * n + i
+                    b_i_2k = -1 * (n * n * n + n * n + i)
                 else:
-                    b_i_2k = num_vars + repeats * t_k + i # var number will be the existing number of variables + the number of variables at level k + i
+                    b_i_2k = num_vars + repeats * t_k + i # vars number is the existing vars + the number of variables at level k + the number of variables under node i + j
 
-                for j in range(1, t_ki + 1):
-                    if (i + j) > (t_ki +  1):
-                        break
-                    if l == num_tree_levels - 1:
-                        b_j_2k = n * n * n + n * n + t_ki + j
-                    else:
-                        b_j_2k = num_vars + repeats * t_k + t_ki + j # vars number is the existing vars + the number of variables at level k + the number of variables under node i + j
+                if not(i == 0 or (l == num_tree_levels -1 and i > n*n)):
+                    clause.append(-1 * b_i_2k)
 
-                    b_rk = num_vars + i + j - 1 # existing vars + whatever k value we're on (k is the highest node in question for all clauses)
-                    clause = [b_i_2k, b_j_2k, -1 * b_rk]
-                    if clause not in count_condition_l.clauses:
-                        count_condition_l.add_clause(clause)
+                if not(j == 0 or (l == num_tree_levels - 1 and j > 2*n*n)):   
+                    clause.append(-1 * b_j_2k)
+
+                b_rk = num_vars + i + j # existing vars + whatever k value we're on (k is the highest node in question for all clauses)
+                clause.append(b_rk)
+
+                if clause not in count_condition_l.clauses:
+                    count_condition_l.add_clause(clause)
 
         if l < num_tree_levels - 1:
             num_vars += t_k * repeats
@@ -206,11 +215,24 @@ def generate_clauses(string, r, positions_of_ones):
 
     num_vars += t_k * repeats
     t_2 = min(r, pow(2, num_tree_levels - 1)) # node 2 is at level 1
-    existing_vars = n * n * n + 3 * n * n + 1
+    existing_vars = n * n * n + 3 * n * n
     count_condition_2 = Condition(list(), False)
-    for i in range(1, t_2 + 1):
-        j = t_2 + 1 - i
-        count_condition_2.add_clause([existing_vars + i, existing_vars + t_2 + j, -1 * existing_vars])
+
+    # there's another way to do this beside doing two nested loops, but is it better?
+    for i in range(0, t_2 + 1):
+        for j in range(0, t_2 + 1):
+            count_clause = list()
+            if i + j < r:
+                continue
+            elif i + j > r:
+                break
+            if i != 0:
+                count_clause.append(-1 * (existing_vars + i))
+            if j != 0:
+                count_clause.append(-1 * (existing_vars + t_2 + j))
+            if len(count_clause) > 0:
+                count_condition_2.add_clause(count_clause)
+            
 
     conditions.append(count_condition_2)
 
@@ -253,13 +275,19 @@ def main(argv):
         positions_of_ones = get_positions_of_ones(test_str)
         num_existing_ones = len(positions_of_ones)
         num_adjacent_ones = get_num_adjacent_ones(positions_of_ones)
-        r = num_adjacent_ones + k
+        r = 2 * n * n - (num_adjacent_ones + k)
+
+        """if (k >= 2*num_existing_ones):
+            conditions = list([Condition(list([[-1],[1]]), False)])
+            num_vars = 1
+            num_clauses = 2"""
+        #else:
         conditions_num_vars = generate_clauses(test_str, r, positions_of_ones)
         conditions = conditions_num_vars[0]
         num_vars = conditions_num_vars[1] # n * n * n + 3 * n * n
-        
         numcontact_condition_2_clauses = len(conditions[5].clauses)
         num_counting_condition_clauses = 0
+
         for i in range(6, len(conditions)):
             num_counting_condition_clauses += conditions[i].num_repeats * len(conditions[i].clauses)
 
@@ -276,6 +304,6 @@ def main(argv):
         return conditions
 
 
-main(["main.py", "test.txt", "11", "1", "-s"])
+main(["main.py", "test.txt", "00", "1", "-s"])
 
 # TODO: Change contact loop. shouldn't check for contacts on all sides, only one horizontal and one vertical. This will prevent overcounting
