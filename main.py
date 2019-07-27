@@ -135,9 +135,9 @@ def gen_contact_conditions(n, positions_of_ones):
     contact_condition_1 = Condition(list(), True, n * n, 1)
 
     for x in positions_of_ones:
-        contact_condition_1.add_clause([n * n * n + 1, (-1 * x * n * n) - 1])
+        contact_condition_1.add_clause([offset + 1, (-1 * x * n * n) - 1])
 
-    last_clause = [-1 * n * n * n - 1]
+    last_clause = [-1 * offset - 1]
     last_clause.extend(map(lambda x: (x * n * n) + 1, positions_of_ones))
     contact_condition_1.add_clause(last_clause)
 
@@ -147,7 +147,7 @@ def gen_contact_conditions(n, positions_of_ones):
     clauses = list()
 
     for j in range(1, n * n + 1):
-        C_jr = n * n * n + n * n + j
+        C_jr = offset + n * n + j
         C_jd = C_jr + n * n
         T_j = C_jr - n * n
         T_jr = T_j + 1
@@ -310,7 +310,8 @@ def gen_cnf_file(string, k, embedding_conditions, contact_conditions, outfile):
     write_conditions(num_vars, num_clauses, conditions, outfile)
 
 def bin_search(string, min_k, max_k, embedding_conditions, contact_conditions, outfile, time_elapsed, k_vals_tried = dict()):
-    k = (min_k + max_k) // 2
+    k = math.ceil((min_k + max_k) / 2)
+
 
     if k == 0:
         return 0
@@ -324,7 +325,9 @@ def bin_search(string, min_k, max_k, embedding_conditions, contact_conditions, o
             return bin_search(string, min_k, k - 1, embedding_conditions, contact_conditions, time_elapsed, k_vals_tried)
 
     else:
+        print("Trying with k =", k)
         gen_cnf_file(string, k, embedding_conditions, contact_conditions, outfile)
+        print("Calling lingeling")
         start = time.time()
         result = subprocess.run(["./lingeling/lingeling", outfile], capture_output=True)
         end = time.time()
@@ -349,7 +352,9 @@ def maximize_contacts(string, k, embedding_conditions, contact_conditions, outfi
     if k == 0:
         return 0
 
+    print("Generating file with k =", k)
     gen_cnf_file(string, k, embedding_conditions, contact_conditions, outfile)
+    print("File generated")
     start = time.time()
     result = subprocess.run(["./lingeling/lingeling", outfile], capture_output=True)
     end = time.time()
@@ -373,7 +378,7 @@ def maximize_with_gurobi(file, time_elapsed):
     lp_file = "./input/" + file + ".lp"
     subprocess.run(["perl", "./HPb.pl", "./input/" + file])
     start = time.time()
-    result = subprocess.run(["gurobi_cl", "ResultFile=./gurobi_output/" + sol_file, "./input/" + lp_file], capture_output=True)
+    result = subprocess.run(["gurobi_cl", "ResultFile=" + sol_file, lp_file], capture_output=True)
     end = time.time()
 
     if (result.returncode == 1):
@@ -420,10 +425,13 @@ def main(argv):
         lingeling_max_contacts = maximize_contacts(string, k, embedding_conditions, contact_conditions, ling_output_file, ling_time_elapsed)
         gurobi_max_contacts = maximize_with_gurobi(file_name, gurobi_time_elapsed)
 
+
         print("Maximum contacts found for", string, "using Lingeling:", lingeling_max_contacts)
         print("Lingeling time taken:", ling_time_elapsed[0])
         print("Lingeling runs required:", ling_time_elapsed[1])
         print("Maximum contacts found for", string, "using gurobi:", gurobi_max_contacts)
         print("Gurobi time taken:", gurobi_time_elapsed[0])
 
-main(["main.py", ["1pspB1"]])
+
+
+main(["main.py", ["1pspA1","1pspB1", "1gd2J0", "2bbvF0", "1i4oD0", "1f8vF0", "1byyA0"]])
