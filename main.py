@@ -1,6 +1,9 @@
 import random
 import sys
 import math
+import subprocess
+import re
+import time
 from functools import reduce
 from Condition import Condition
 
@@ -13,13 +16,12 @@ from Condition import Condition
 # matter where it goes. Set position of 2nd (e.g. set to 1 above/below/left/right)
 # Speedup: implement a better bound for k based on string
 
-def nCr(n, r): # Source: https://stackoverflow.com/questions/4941753/is-there-a-math-ncr-function - in - python
-    r = min(r, n - r)
-    mult = lambda x, y: x*y
-    numerator = reduce(mult, range(n, n - r, -1), 1)
-    denominator = reduce(mult, range(1, r + 1), 1)
+def read_data(file):
+    with open(file) as f:
+        data = f.readlines()
+        
+        return data[0].strip()
 
-    return numerator // denominator
 
 def get_positions_of_ones(s):
     positions_of_ones = list()
@@ -47,7 +49,7 @@ def is_binary_string(string):
     return True
 
 #n is the length for the binary string that will be produced
-def gen_test_str(n):
+"""def gen_test_str(n):
     if n <= 0 or n == None:
         raise Exception("String length must be > 0. Please try again")
     else:
@@ -56,14 +58,10 @@ def gen_test_str(n):
             test_str += str(random.randint(0, 1))
 
         return test_str
+"""
 
-#str is the binary string, r is the goal number of contacts
-def generate_clauses(string, r, positions_of_ones):
-    if not is_binary_string(string):        
-        raise Exception("{string} is not a valid binary string")
-
-    n = len(string)
-    conditions = list()
+def gen_embedding_conditions(n):
+    embedding_conditions = list()
 
     # embedding condition 1 (every x_ij is somewhere)
     clause_1 = list()
@@ -72,7 +70,7 @@ def generate_clauses(string, r, positions_of_ones):
         clause_1.append(x)
 
     embed_condition_1 = Condition([clause_1], True, n, n * n)
-    conditions.append(embed_condition_1)
+    embedding_conditions.append(embed_condition_1)
 
     # embedding condition 2 (every x_ij can only be true for one j)
     embed_condition_2 = Condition(list(), True, n, n * n)
@@ -81,7 +79,7 @@ def generate_clauses(string, r, positions_of_ones):
         for j in range (i+1, n * n + 1):
             embed_condition_2.add_clause([-1 * i,-1 * j])
     
-    conditions.append(embed_condition_2)
+    embedding_conditions.append(embed_condition_2)
 
     # embedding condition 3 (every x_ij can only be true for one i)
     embed_condition_3 = Condition(list(), True, n * n, 1)
@@ -92,7 +90,7 @@ def generate_clauses(string, r, positions_of_ones):
         for i in range(j+n * n, stop+1, n * n):
             embed_condition_3.add_clause([-1 * j, -1 * i])
     
-    conditions.append(embed_condition_3)
+    embedding_conditions.append(embed_condition_3)
 
     # embedding condition 4
     embed_condition_4 = Condition(list(), True, n - 1, n * n)
@@ -125,8 +123,14 @@ def generate_clauses(string, r, positions_of_ones):
         else:
             embed_condition_4.add_clause([-1 * i, i + n * n + 1, i + n * n - 1, i + n * n + n, i + n * n - n])
 
-    conditions.append(embed_condition_4)
+    embedding_conditions.append(embed_condition_4)
 
+    return embedding_conditions
+
+def gen_contact_conditions(n, positions_of_ones):
+    offset = pow(n, 3) #existing vars from X_ij conditions
+    contact_conditions = list()
+    
     # contact condition 1
     contact_condition_1 = Condition(list(), True, n * n, 1)
 
@@ -137,7 +141,7 @@ def generate_clauses(string, r, positions_of_ones):
     last_clause.extend(map(lambda x: (x * n * n) + 1, positions_of_ones))
     contact_condition_1.add_clause(last_clause)
 
-    conditions.append(contact_condition_1)
+    contact_conditions.append(contact_condition_1)
 
     # contact condition 2
     clauses = list()
@@ -163,13 +167,18 @@ def generate_clauses(string, r, positions_of_ones):
             clauses.extend([[-1 * C_jd, T_j], [-1 * C_jd, T_jd], [C_jd, -1 * T_j, -1 * T_jd]])
 
     contact_condition_2 = Condition(clauses)
-    conditions.append(contact_condition_2)
+    contact_conditions.append(contact_condition_2)
 
+    return contact_conditions
 
+def gen_counting_conditions(n, r, positions_of_ones):
     # counting conditions 1 and 2
     # make one condition per level w/ appropriate # of repeats
-    num_tree_levels = math.ceil(math.log(2*n*n, 2))
-    num_vars = n*n*n + 3*n*n
+    num_contact_conditions = 2 * pow(n, 2)
+    num_tree_levels = math.ceil(math.log(num_contact_conditions, 2))
+    counting_conditions = list()
+    num_existing_vars = pow(n, 3) + pow(n, 2) + num_contact_conditions
+    num_vars = num_existing_vars
 
     for l in range(1, num_tree_levels - 1):
         t_k = min(r, pow(2, num_tree_levels - l))
@@ -214,12 +223,11 @@ def generate_clauses(string, r, positions_of_ones):
 
         if l < num_tree_levels - 1:
             num_vars += t_k * repeats
-        conditions.append(count_condition_l)
+        counting_conditions.append(count_condition_l)
 
     last_level_condition = Condition(list(), False)
     t_k = min(r, 2) # only two nodes below each node on the second to last level
     repeats = pow(2, num_tree_levels - 1)
-    non_count_vars = n * n * n + 3 * n * n
 
     for k in range(0, repeats):
         for j in range(0, 2): #only two leaves per pre-terminal node
@@ -234,12 +242,12 @@ def generate_clauses(string, r, positions_of_ones):
                 if i + j == 0:
                     continue
 
-                if (i > 0 and b_i_2k >= -1 * non_count_vars):
+                if (i > 0 and b_i_2k >= -1 * num_existing_vars):
                     last_level_clause.append(-1 * b_i_2k)
-                if (j > 0 and b_j_2k >= -1 * non_count_vars):
+                if (j > 0 and b_j_2k >= -1 * num_existing_vars):
                     last_level_clause.append(-1 * b_j_2k)
 
-                if (b_i_2k < -1 * non_count_vars or b_j_2k < -1 * non_count_vars):
+                if (b_i_2k < -1 * num_existing_vars or b_j_2k < -1 * num_existing_vars):
                     last_level_clause.append(-1 * b_r_k)
                 else:
                     last_level_clause.append(b_r_k)
@@ -247,7 +255,7 @@ def generate_clauses(string, r, positions_of_ones):
                 if len(last_level_clause) > 0 and last_level_clause not in last_level_condition.clauses:
                     last_level_condition.add_clause(last_level_clause)
     
-    conditions.append(last_level_condition)
+    counting_conditions.append(last_level_condition)
     num_vars += t_k *repeats
     t_2 = min(r, pow(2, num_tree_levels - 1)) # node 2 is at level 1
     count_condition_2 = Condition(list(), False)
@@ -261,81 +269,161 @@ def generate_clauses(string, r, positions_of_ones):
             elif i + j > r + 1:
                 break
             if i != 0:
-                count_clause.append(-1 * (non_count_vars + i))
+                count_clause.append(-1 * (num_existing_vars + i))
             if j != 0:
-                count_clause.append(-1 * (non_count_vars + t_2 + j))
+                count_clause.append(-1 * (num_existing_vars + t_2 + j))
             if len(count_clause) > 0:
                 count_condition_2.add_clause(count_clause)
             
-    conditions.append(count_condition_2)
+    counting_conditions.append(count_condition_2)
 
-    return list([conditions, num_vars])
+    return list([counting_conditions, num_vars])
 
-def print_clauses(clauseArray):
-    for x in clauseArray:
-        print(x)
+def get_num_clauses(n, conditions):
+    num_clauses = 0
+    #n +  pow(n, 3) * (pow(n, 2) - 1)//2 +  pow(n, 3) * (n - 1)//2 + pow(n, 2) * (n - 1) + pow(n, 2) * (num_existing_ones + 1)
 
-def main(argv):
-    flag = str()
+    for i in range(0, len(conditions)):
+        num_clauses += conditions[i].num_repeats * len(conditions[i].clauses)
 
-    if len(argv) < 4 or len(argv) > 5:
-        print("ERROR: wrong number of arguments.\n\tUsage: main.py {outfile } {string or length} {goal # of contacts} {-s, -l}")
-        print("-s for passing a string, -l for a length, -a for an array")
+    return num_clauses
+
+def write_conditions(num_vars, num_clauses, conditions, file):
+    with open(file, "w") as f:
+        print("c " + file, file=f)
+        print("c", file=f)
+        print("p cnf " + str(num_vars) + " " + str(num_clauses), file=f)
+        for c in conditions:
+            c.write_condition(f)
+
+def gen_cnf_file(string, k, embedding_conditions, contact_conditions, outfile):
+    n = len(string)
+
+    positions_of_ones = get_positions_of_ones(string)
+    num_adjacent_ones = get_num_adjacent_ones(positions_of_ones)
+    r = 2 * pow(n, 2) - (num_adjacent_ones + k)
+    counting_conditions_num_vars = gen_counting_conditions(n, r, positions_of_ones)
+    counting_conditions = counting_conditions_num_vars[0]
+    num_vars = counting_conditions_num_vars[1]
+    conditions = embedding_conditions + contact_conditions + counting_conditions
+    num_clauses = get_num_clauses(n, conditions)
+    write_conditions(num_vars, num_clauses, conditions, outfile)
+
+def bin_search(string, min_k, max_k, embedding_conditions, contact_conditions, outfile, time_elapsed, k_vals_tried = dict()):
+    k = (min_k + max_k) // 2
+
+    if k == 0:
+        return 0
+
+    if k in k_vals_tried:
+        if k_vals_tried[k]:
+            if min_k == max_k:
+                return k
+            return bin_search(string, k, max_k, embedding_conditions, contact_conditions, time_elapsed, k_vals_tried)
+        else:
+            return bin_search(string, min_k, k - 1, embedding_conditions, contact_conditions, time_elapsed, k_vals_tried)
+
+    else:
+        gen_cnf_file(string, k, embedding_conditions, contact_conditions, outfile)
+        start = time.time()
+        result = subprocess.run(["./lingeling/lingeling", outfile], capture_output=True)
+        end = time.time()
+        time_elapsed[0] += end - start
+        time_elapsed[1] += 1 #another try
+
+        if result.returncode < 10:
+            print(result.stderr)
+            return 0
+        elif result.returncode == 10:
+            if (min_k == max_k):
+                return k
+            k_vals_tried[k] = True
+            return bin_search(string, k, max_k, embedding_conditions, contact_conditions, outfile, time_elapsed, k_vals_tried)
+        elif result.returncode == 20:
+            k_vals_tried[k] = False
+            return bin_search(string, min_k, k-1, embedding_conditions, contact_conditions, outfile, time_elapsed, k_vals_tried)
+        else:
+            print("I found a bug! Unaccounted for return code: " + result.returncode)
+    
+def maximize_contacts(string, k, embedding_conditions, contact_conditions, outfile, time_elapsed, k_vals_tried=dict()):
+    if k == 0:
+        return 0
+
+    gen_cnf_file(string, k, embedding_conditions, contact_conditions, outfile)
+    start = time.time()
+    result = subprocess.run(["./lingeling/lingeling", outfile], capture_output=True)
+    end = time.time()
+    time_elapsed[0] += end - start
+    time_elapsed[1] += 1
+
+    if result.returncode < 10:
+        print(result.stderr)
+        return
+    elif result.returncode == 10:
+        k_vals_tried[k] = True
+        return maximize_contacts(string, 2 * k, embedding_conditions, contact_conditions, outfile, time_elapsed, k_vals_tried)
+    elif result.returncode == 20:
+        k_vals_tried[k] = False
+        return bin_search(string, k // 2, k-1, embedding_conditions, contact_conditions, outfile, time_elapsed, k_vals_tried)
+    else:
+        print("I found a bug! Unaccounted for return code: " + result.returncode)
+
+def maximize_with_gurobi(file, time_elapsed):
+    sol_file = "./gurobi_output/" + file + ".sol"
+    lp_file = "./input/" + file + ".lp"
+    subprocess.run(["perl", "./HPb.pl", "./input/" + file])
+    start = time.time()
+    result = subprocess.run(["gurobi_cl", "ResultFile=./gurobi_output/" + sol_file, "./input/" + lp_file], capture_output=True)
+    end = time.time()
+
+    if (result.returncode == 1):
+        print(str(result.stdout))
         return
     else:
-        outfile = "./lingeling/input/" + argv[1]
-        s = argv[2]
-        k = int(argv[3])
-        flag = argv[4] if len(argv) == 5 else "-l"
+        with open("./gurobi_output/" + file + ".sol") as f:
+            lines = f.readlines()
+            if "value =" in lines[0]:
+                contacts_found = re.search(r"\d+", lines[0]).group()
+            else:
+                contacts_found = 0
+                
+            time_elapsed[0] = end - start
+            return contacts_found
 
-        if flag == "-l":
-            n = int(s)
+def main(argv):
+    if len(argv) < 2 or len(argv) > 3:
+        print("ERROR: wrong number of arguments given\n\tUsage: main.py {list of input files} {output directory}")
+        return
+    elif len(argv) == 2:
+        outdir = "./lingeling/output/"
 
-            try:
-                test_str = gen_test_str(int(s))
-            except Exception as e:
-                print(e)
-        elif flag == "-s":
-            #we were given a binary string
-            n = len(s)
-            test_str = s
-        else:
-            print("ERROR: unknown flag.\n\tUsage: main.py {outFile } {string or length} {goal # of contacts} {-s, -l}")
-            print("-s for passing a string, -l for a length")
-            return
+    else:
+        outdir = argv[2]
+    
+    files = argv[1]
 
-        positions_of_ones = get_positions_of_ones(test_str)
-        num_existing_ones = len(positions_of_ones)
-        num_adjacent_ones = get_num_adjacent_ones(positions_of_ones)
-        r = 2 * n * n - (num_adjacent_ones + k)
+    for file_name in files:
+        string = read_data("./input/" + file_name)
 
-        """if (k >= 2*num_existing_ones):
-            conditions = list([Condition(list([[-1],[1]]), False)])
-            num_vars = 1
-            num_clauses = 2"""
-        #else:
-        conditions_num_vars = generate_clauses(test_str, r, positions_of_ones)
-        conditions = conditions_num_vars[0]
-        num_vars = conditions_num_vars[1] # n * n * n + 3 * n * n
-        numcontact_condition_2_clauses = len(conditions[5].clauses)
-        num_counting_condition_clauses = 0
+        if not is_binary_string(string):
+            print("Error:", string, " is not a binary string")
+            continue
 
-        for i in range(6, len(conditions)):
-            num_counting_condition_clauses += conditions[i].num_repeats * len(conditions[i].clauses)
+        n = len(string)
+        k = 1 # start by looking for only one contact
+        ling_output_file = "./lingeling/input/" + file_name + ".cnf"
+        embedding_conditions = gen_embedding_conditions(n)
+        positions_of_ones = get_positions_of_ones(string)
+        contact_conditions = gen_contact_conditions(n, positions_of_ones)
+        ling_time_elapsed = [0,0]
+        gurobi_time_elapsed = [0]
+        lingeling_max_contacts = maximize_contacts(string, k, embedding_conditions, contact_conditions, ling_output_file, ling_time_elapsed)
+        gurobi_max_contacts = maximize_with_gurobi(file_name, gurobi_time_elapsed)
 
-        #TODO: make get_num_clauses function instead
-        num_clauses = n + n * n * n * (n * n - 1)//2 + n * n * n * (n - 1)//2 + n * n * (n - 1) + n * n * (num_existing_ones + 1) + numcontact_condition_2_clauses + num_counting_condition_clauses
+        print("Maximum contacts found for", string, "using Lingeling:", lingeling_max_contacts)
+        print("Lingeling time taken:", ling_time_elapsed[0])
+        print("Lingeling runs required:", ling_time_elapsed[1])
+        print("Maximum contacts found for", string, "using gurobi:", gurobi_max_contacts)
+        print("Gurobi time taken:", gurobi_time_elapsed[0])
 
-        with open(outfile, "w") as f:
-            print("c " + outfile + ".cnf\nc\np cnf " + str(num_vars) + " " + str(num_clauses), file=f)
-
-            for x in conditions:
-                x.write_condition(f)
-
-
-        return conditions
-
-
-main(["main.py", "test.txt", "00101001110", "3", "-s"])
-
-# TODO: Change contact loop. shouldn't check for contacts on all sides, only one horizontal and one vertical. This will prevent overcounting
+main(["main.py", ["1pspB1"]])

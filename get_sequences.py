@@ -30,7 +30,7 @@ def write_binary_sequence_and_contact_number(read_file, output_file):
         coords = get_coordinates(coord_str)
         num_contacts = count_contacts(coords, binary_sequence)
         print(binary_sequence, file=f)
-        print("\n" + str(num_contacts), file=f)
+        #print("\n" + str(num_contacts), file=f)
 
 def get_binary_sequence(amino_acid_sequence):
     ONES = ['A', 'C', 'G', 'I', 'L', 'M', 'F', 'P', 'W', 'Y', 'V']
@@ -101,18 +101,18 @@ def main(argv):
     else:
         flag = "-f"
         file = Path("./Dataset/" + argv[1] + "_cubic.pdb")
-        out_file = Path("./input/" + argv[1] + ".txt")
+        out_file = Path("./input/" + argv[1])
 
     if flag == "-d": # loop through directory
         directory_contents = os.listdir(directory)
 
         for x in directory_contents:
             if x.find(filter) != -1:
-                extension_index = x.rfind(".")
-                if extension_index != -1:
-                    out_file = Path("input/" + x[:extension_index] + ".txt")
+                dash_index = x.rfind("_")
+                if dash_index != -1:
+                    out_file = Path("input/" + x[:dash_index])
                 else:
-                    out_file = Path("input/" + x + ".txt")
+                    out_file = Path("input/" + x)
                 print(x)
                 write_binary_sequence_and_contact_number(directory / Path(x), out_file)
     else:
@@ -123,7 +123,7 @@ def main(argv):
     # parse the remarks and assign original_sequence and coordinates
 
 
-main(["get_sequences.py", "1cbn00", "-f"])
+main(["get_sequences.py", "Dataset", "-d", ".pdb"])
 
 
 """
