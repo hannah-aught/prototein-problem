@@ -60,85 +60,113 @@ def is_binary_string(string):
         return test_str
 """
 
-def gen_embedding_conditions(n):
+def repeat_count_condition(count_condition, t_ki, t_k, repeats):
+    clauses = list(count_condition.clauses)
+
+    for i in range(1, repeats):
+        for c in count_condition.clauses:
+            new_clause = list()
+            last_el = c[len(c) - 1]
+
+            if (len(c) > 1):
+                for v in c[:len(c)-1]:
+                    if v > 0:
+                        v += 2 * i * t_ki
+                    else:
+                        v -= 2 * i * t_ki
+                    new_clause.append(v)
+
+            if last_el > 0:   
+                last_el += i * t_k
+            else:
+                last_el -= i * t_k
+
+            new_clause.append(last_el)
+            clauses.append(new_clause)
+
+    count_condition.set_clauses(clauses)
+
+def gen_embedding_conditions(n, grid_width):
     embedding_conditions = list()
+    grid_size = pow(grid_width, 2)
 
     # embedding condition 1 (every x_ij is somewhere)
     clause_1 = list()
 
-    for x in range(1, n * n + 1):
+    for x in range(1, grid_size + 1):
         clause_1.append(x)
 
-    embed_condition_1 = Condition([clause_1], True, n, n * n)
+    embed_condition_1 = Condition([clause_1], True, n, grid_size )
     embedding_conditions.append(embed_condition_1)
 
     # embedding condition 2 (every x_ij can only be true for one j)
-    embed_condition_2 = Condition(list(), True, n, n * n)
+    embed_condition_2 = Condition(list(), True, n, grid_size )
 
-    for i in range(1, n * n):
-        for j in range (i+1, n * n + 1):
+    for i in range(1, grid_size ):
+        for j in range (i+1, grid_size + 1):
             embed_condition_2.add_clause([-1 * i,-1 * j])
     
     embedding_conditions.append(embed_condition_2)
 
     # embedding condition 3 (every x_ij can only be true for one i)
-    embed_condition_3 = Condition(list(), True, n * n, 1)
+    embed_condition_3 = Condition(list(), True, grid_size, 1)
 
-    stop = (n - 1) * n * n + 1
+    stop = (n - 1) * grid_size + 1
 
-    for j in range(1, stop, n * n):
-        for i in range(j+n * n, stop+1, n * n):
+    for j in range(1, stop, grid_size ):
+        for i in range(j+grid_size , stop+1, grid_size ):
             embed_condition_3.add_clause([-1 * j, -1 * i])
     
     embedding_conditions.append(embed_condition_3)
 
     # embedding condition 4
-    embed_condition_4 = Condition(list(), True, n - 1, n * n)
+    embed_condition_4 = Condition(list(), True, n - 1, grid_size)
     
-    for i in range(1, n * n + 1):
+    for i in range(1, grid_size + 1):
         if i == 1:
             # condition 4f
-            embed_condition_4.add_clause([-1 * i, i + n * n + 1, i + n * n + n])
-        elif i == n:
+            embed_condition_4.add_clause([-1 * i, i + grid_size + 1, i + grid_size + grid_width])
+        elif i == grid_width:
             # conditin 4g
-            embed_condition_4.add_clause([-1 * i, i + n * n - 1, i + n * n + n])
-        elif i == n * n - n + 1:
+            embed_condition_4.add_clause([-1 * i, i + grid_size - 1, i + grid_size + grid_width])
+        elif i == grid_size - grid_width + 1:
             # condition 4h
-            embed_condition_4.add_clause([-1 * i, i + n * n + 1, i + n * n - n])
-        elif i == n * n:
+            embed_condition_4.add_clause([-1 * i, i + grid_size + 1, i + grid_size - grid_width])
+        elif i == grid_size:
             # condition 4i
-            embed_condition_4.add_clause([-1 * i, i + n * n - 1, i + n * n - n])
-        elif i % n == 1:
+            embed_condition_4.add_clause([-1 * i, i + grid_size - 1, i + grid_size - grid_width])
+        elif i % grid_width == 1:
             # condition 4d
-            embed_condition_4.add_clause([-1 * i, i + n * n + 1, i + n * n + n, i + n * n - n])
-        elif i % n == 0:
+            embed_condition_4.add_clause([-1 * i, i + grid_size + 1, i + grid_size + grid_width, i + grid_size - grid_width])
+        elif i % grid_width == 0:
             # condition 4e
-            embed_condition_4.add_clause([-1 * i, i + n * n - 1, i + n * n + n, i + n * n - n])
-        elif i > 1 and i < n:
+            embed_condition_4.add_clause([-1 * i, i + grid_size - 1, i + grid_size + grid_width, i + grid_size - grid_width])
+        elif i > 1 and i < grid_width:
             # condition 4b
-            embed_condition_4.add_clause([-1 * i, i + n * n + 1, i + n * n - 1, i + n * n + n])
-        elif i > n * n - n + 1 and i < n * n:
+            embed_condition_4.add_clause([-1 * i, i + grid_size + 1, i + grid_size - 1, i + grid_size + grid_width])
+        elif i > (grid_size - grid_width + 1) and i < grid_size:
             # condition 4c
-            embed_condition_4.add_clause([-1 * i, i + n * n + 1, i + n * n - 1, i + n * n - n])
+            embed_condition_4.add_clause([-1 * i, i + grid_size + 1, i + grid_size - 1, i + grid_size - grid_width])
         else:
-            embed_condition_4.add_clause([-1 * i, i + n * n + 1, i + n * n - 1, i + n * n + n, i + n * n - n])
+            embed_condition_4.add_clause([-1 * i, i + grid_size + 1, i + grid_size - 1, i + grid_size + grid_width, i + grid_size - grid_width])
 
     embedding_conditions.append(embed_condition_4)
 
     return embedding_conditions
 
-def gen_contact_conditions(n, positions_of_ones):
-    offset = pow(n, 3) #existing vars from X_ij conditions
+def gen_contact_conditions(n, grid_width, positions_of_ones):
+    grid_size = pow(grid_width, 2)
+    offset = grid_size * n #existing vars from X_ij conditions
     contact_conditions = list()
     
     # contact condition 1
-    contact_condition_1 = Condition(list(), True, n * n, 1)
+    contact_condition_1 = Condition(list(), True, grid_size, 1)
 
     for x in positions_of_ones:
-        contact_condition_1.add_clause([offset + 1, (-1 * x * n * n) - 1])
+        contact_condition_1.add_clause([offset + 1, (-1 * x * grid_size ) - 1])
 
-    last_clause = [-1 * offset - 1]
-    last_clause.extend(map(lambda x: (x * n * n) + 1, positions_of_ones))
+    last_clause = [(-1 * offset) - 1]
+    last_clause.extend(map(lambda x: (x * grid_size) + 1, positions_of_ones))
     contact_condition_1.add_clause(last_clause)
 
     contact_conditions.append(contact_condition_1)
@@ -146,20 +174,20 @@ def gen_contact_conditions(n, positions_of_ones):
     # contact condition 2
     clauses = list()
 
-    for j in range(1, n * n + 1):
-        C_jr = offset + n * n + j
-        C_jd = C_jr + n * n
-        T_j = C_jr - n * n
+    for j in range(1, grid_size + 1):
+        C_jr = offset + grid_size + j
+        C_jd = C_jr + grid_size 
+        T_j = C_jr - grid_size 
         T_jr = T_j + 1
-        T_jd = T_j + n
+        T_jd = T_j + grid_width
 
-        if j == n * n:
+        if j == grid_size:
             clauses.extend([[-1 * C_jr]])
             clauses.extend([[-1 * C_jd]])
-        elif j >= n * n - n + 1:
+        elif j >= grid_size - grid_width + 1:
             clauses.extend([[-1 * C_jr, T_j], [-1 * C_jr, T_jr], [C_jr, -1 * T_j, -1 * T_jr]])
             clauses.extend([[-1 * C_jd]])
-        elif j % n == 0:
+        elif j % grid_width == 0:
             clauses.extend([[-1 * C_jr]])
             clauses.extend([[-1 * C_jd, T_j], [-1 * C_jd, T_jd], [C_jd, -1 * T_j, -1 * T_jd]]) 
         else:
@@ -171,20 +199,22 @@ def gen_contact_conditions(n, positions_of_ones):
 
     return contact_conditions
 
-def gen_counting_conditions(n, r, positions_of_ones):
+def gen_counting_conditions(n, grid_width, r):
     # counting conditions 1 and 2
     # make one condition per level w/ appropriate # of repeats
-    num_contact_conditions = 2 * pow(n, 2)
-    num_tree_levels = math.ceil(math.log(num_contact_conditions, 2))
+    grid_size = pow(grid_width, 2)
+    num_contact_condition_vars = 2 * grid_size 
+    num_tree_levels = math.ceil(math.log(num_contact_condition_vars, 2))
     counting_conditions = list()
-    num_existing_vars = pow(n, 3) + pow(n, 2) + num_contact_conditions
+    num_existing_vars = grid_size * n + grid_size + num_contact_condition_vars
     num_vars = num_existing_vars
 
     for l in range(1, num_tree_levels - 1):
         t_k = min(r, pow(2, num_tree_levels - l))
         t_ki = min(r, pow(2, num_tree_levels - l - 1))
         repeats = pow(2, l)
-        if l < num_tree_levels - 1:
+
+        if l < num_tree_levels - 1 and t_k == 2 * t_ki:
             count_condition_l = Condition(list(), True, repeats, t_k)
         else:
             count_condition_l = Condition(list(), False)
@@ -192,7 +222,7 @@ def gen_counting_conditions(n, r, positions_of_ones):
         # i and j are the two children of node k.
         for j in range(0, t_ki + 1):
             if l == num_tree_levels - 1:
-                b_j_2k =  -1 * (n * n * n + n * n + t_ki + j)
+                b_j_2k =  -1 * (grid_size * n + grid_size + t_ki + j)
             else:
                 b_j_2k = num_vars + repeats * t_k + t_ki + j # var number will be the existing number of variables + the number of variables at level k + i
 
@@ -205,7 +235,7 @@ def gen_counting_conditions(n, r, positions_of_ones):
                     continue
 
                 if l == num_tree_levels - 1:
-                    b_i_2k = -1 * (n * n * n + n * n + i)
+                    b_i_2k = -1 * (grid_size * n + grid_size + i)
                 else:
                     b_i_2k = num_vars + repeats * t_k + i # vars number is the existing vars + the number of variables at level k + the number of variables under node i + j
 
@@ -214,7 +244,7 @@ def gen_counting_conditions(n, r, positions_of_ones):
 
                 if not(j == 0):   
                     clause.append(-1 * b_j_2k)
-                if i > 0 or j > 0:
+                if (i > 0 or j > 0) and i + j < t_k + 1:
                     b_r_k = num_vars + i + j # existing vars + whatever k value we're on (k is the highest node in question for all clauses)
                     clause.append(b_r_k)
 
@@ -223,7 +253,12 @@ def gen_counting_conditions(n, r, positions_of_ones):
 
         if l < num_tree_levels - 1:
             num_vars += t_k * repeats
+
+        if t_k != 2 * t_ki:
+            repeat_count_condition(count_condition_l, t_ki, t_k, repeats)
         counting_conditions.append(count_condition_l)
+        
+
 
     last_level_condition = Condition(list(), False)
     t_k = min(r, 2) # only two nodes below each node on the second to last level
@@ -233,7 +268,7 @@ def gen_counting_conditions(n, r, positions_of_ones):
         for j in range(0, 2): #only two leaves per pre-terminal node
             for i in range(0, 2):
                 last_level_clause = list()
-                b_i_2k = -1 * (n * n * n + n * n + k * t_k + 1)
+                b_i_2k = -1 * (grid_size * n + grid_size + k * t_k + 1)
                 b_j_2k = b_i_2k - 1
                 b_r_k = num_vars + k * t_k + i + j
 
@@ -261,8 +296,8 @@ def gen_counting_conditions(n, r, positions_of_ones):
     count_condition_2 = Condition(list(), False)
 
     # there's another way to do this beside doing two nested loops, but is it better?
-    for i in range(0, t_2 + 1):
-        for j in range(0, t_2 + 1):
+    for i in range(1, t_2 + 1):
+        for j in range(1, t_2 + 1):
             count_clause = list()
             if i + j < r + 1:
                 continue
@@ -296,20 +331,20 @@ def write_conditions(num_vars, num_clauses, conditions, file):
         for c in conditions:
             c.write_condition(f)
 
-def gen_cnf_file(string, k, embedding_conditions, contact_conditions, outfile):
+def gen_cnf_file(string, grid_width, k, embedding_conditions, contact_conditions, outfile):
     n = len(string)
-
+    grid_size = pow(grid_width, 2)
     positions_of_ones = get_positions_of_ones(string)
     num_adjacent_ones = get_num_adjacent_ones(positions_of_ones)
-    r = 2 * pow(n, 2) - (num_adjacent_ones + k)
-    counting_conditions_num_vars = gen_counting_conditions(n, r, positions_of_ones)
+    r = 2 * grid_size - (num_adjacent_ones + k)
+    counting_conditions_num_vars = gen_counting_conditions(n, grid_width, r)
     counting_conditions = counting_conditions_num_vars[0]
     num_vars = counting_conditions_num_vars[1]
     conditions = embedding_conditions + contact_conditions + counting_conditions
     num_clauses = get_num_clauses(n, conditions)
     write_conditions(num_vars, num_clauses, conditions, outfile)
 
-def bin_search(string, min_k, max_k, embedding_conditions, contact_conditions, outfile, time_elapsed, k_vals_tried = dict()):
+def bin_search(string, grid_width, min_k, max_k, embedding_conditions, contact_conditions, outfile, time_elapsed, k_vals_tried = dict()):
     k = math.ceil((min_k + max_k) / 2)
 
 
@@ -320,13 +355,13 @@ def bin_search(string, min_k, max_k, embedding_conditions, contact_conditions, o
         if k_vals_tried[k]:
             if min_k == max_k:
                 return k
-            return bin_search(string, k, max_k, embedding_conditions, contact_conditions, time_elapsed, k_vals_tried)
+            return bin_search(string, grid_width, k, max_k, embedding_conditions, contact_conditions, outfile, time_elapsed, k_vals_tried)
         else:
-            return bin_search(string, min_k, k - 1, embedding_conditions, contact_conditions, time_elapsed, k_vals_tried)
+            return bin_search(string, grid_width, min_k, k - 1, embedding_conditions, contact_conditions, outfile, time_elapsed, k_vals_tried)
 
     else:
         print("Trying with k =", k)
-        gen_cnf_file(string, k, embedding_conditions, contact_conditions, outfile)
+        gen_cnf_file(string, grid_width, k, embedding_conditions, contact_conditions, outfile)
         print("Calling lingeling")
         start = time.time()
         result = subprocess.run(["./lingeling/lingeling", outfile], capture_output=True)
@@ -341,19 +376,21 @@ def bin_search(string, min_k, max_k, embedding_conditions, contact_conditions, o
             if (min_k == max_k):
                 return k
             k_vals_tried[k] = True
-            return bin_search(string, k, max_k, embedding_conditions, contact_conditions, outfile, time_elapsed, k_vals_tried)
+            return bin_search(string, grid_width, k, max_k, embedding_conditions, contact_conditions, outfile, time_elapsed, k_vals_tried)
         elif result.returncode == 20:
+            if (k == 6):
+                print(result.stdout)
             k_vals_tried[k] = False
-            return bin_search(string, min_k, k-1, embedding_conditions, contact_conditions, outfile, time_elapsed, k_vals_tried)
+            return bin_search(string, grid_width, min_k, k-1, embedding_conditions, contact_conditions, outfile, time_elapsed, k_vals_tried)
         else:
             print("I found a bug! Unaccounted for return code: " + result.returncode)
     
-def maximize_contacts(string, k, embedding_conditions, contact_conditions, outfile, time_elapsed, k_vals_tried=dict()):
+def maximize_contacts(string, grid_width, k, embedding_conditions, contact_conditions, outfile, time_elapsed, k_vals_tried=dict()):
     if k == 0:
         return 0
 
     print("Generating file with k =", k)
-    gen_cnf_file(string, k, embedding_conditions, contact_conditions, outfile)
+    gen_cnf_file(string, grid_width, k, embedding_conditions, contact_conditions, outfile)
     print("File generated")
     start = time.time()
     result = subprocess.run(["./lingeling/lingeling", outfile], capture_output=True)
@@ -366,17 +403,22 @@ def maximize_contacts(string, k, embedding_conditions, contact_conditions, outfi
         return
     elif result.returncode == 10:
         k_vals_tried[k] = True
-        return maximize_contacts(string, 2 * k, embedding_conditions, contact_conditions, outfile, time_elapsed, k_vals_tried)
+        return maximize_contacts(string, grid_width, 2 * k, embedding_conditions, contact_conditions, outfile, time_elapsed, k_vals_tried)
     elif result.returncode == 20:
         k_vals_tried[k] = False
-        return bin_search(string, k // 2, k-1, embedding_conditions, contact_conditions, outfile, time_elapsed, k_vals_tried)
+        return bin_search(string, grid_width, k // 2, k-1, embedding_conditions, contact_conditions, outfile, time_elapsed, k_vals_tried)
     else:
         print("I found a bug! Unaccounted for return code: " + result.returncode)
 
-def maximize_with_gurobi(file, time_elapsed):
+def maximize_with_gurobi(file, time_elapsed, flag):
     sol_file = "./gurobi_output/" + file + ".sol"
     lp_file = "./input/" + file + ".lp"
-    subprocess.run(["perl", "./HPb.pl", "./input/" + file])
+
+    if (flag != "-o"):
+        subprocess.run(["perl", "./HPb.pl", "./input/" + file])
+    else:
+        subprocess.run(["perl", "./HPb1.pl", "./input/" + file])
+
     start = time.time()
     result = subprocess.run(["gurobi_cl", "ResultFile=" + sol_file, lp_file], capture_output=True)
     end = time.time()
@@ -396,14 +438,21 @@ def maximize_with_gurobi(file, time_elapsed):
             return contacts_found
 
 def main(argv):
-    if len(argv) < 2 or len(argv) > 3:
-        print("ERROR: wrong number of arguments given\n\tUsage: main.py {list of input files} {output directory}")
+    flag = "-n"
+    if len(argv) < 2 or len(argv) > 4:
+        print("ERROR: wrong number of arguments given\n\tUsage: main.py {list of input files} {output directory} { flag}")
+        print("\t options: -n (nxn grid) -o (n/4xn/4 grid)")
         return
     elif len(argv) == 2:
         outdir = "./lingeling/output/"
-
+    elif len(argv) == 3:
+        if argv[2][0] != "-":
+            outdir = argv[2]
+        else:
+            flag = argv[2]
     else:
         outdir = argv[2]
+        flag = argv[3]
     
     files = argv[1]
 
@@ -415,23 +464,28 @@ def main(argv):
             continue
 
         n = len(string)
+
+        if flag == "-o" and n >= 16:
+            grid_width = 1 + n//4
+        else:
+            grid_width = n
         k = 1 # start by looking for only one contact
         ling_output_file = "./lingeling/input/" + file_name + ".cnf"
-        embedding_conditions = gen_embedding_conditions(n)
+        embedding_conditions = gen_embedding_conditions(n, grid_width)
         positions_of_ones = get_positions_of_ones(string)
-        contact_conditions = gen_contact_conditions(n, positions_of_ones)
+        contact_conditions = gen_contact_conditions(n, grid_width, positions_of_ones)
         ling_time_elapsed = [0,0]
         gurobi_time_elapsed = [0]
-        lingeling_max_contacts = maximize_contacts(string, k, embedding_conditions, contact_conditions, ling_output_file, ling_time_elapsed)
-        gurobi_max_contacts = maximize_with_gurobi(file_name, gurobi_time_elapsed)
 
-
+        lingeling_max_contacts = maximize_contacts(string, grid_width, k, embedding_conditions, contact_conditions, ling_output_file, ling_time_elapsed, dict())
         print("Maximum contacts found for", string, "using Lingeling:", lingeling_max_contacts)
         print("Lingeling time taken:", ling_time_elapsed[0])
         print("Lingeling runs required:", ling_time_elapsed[1])
+
+        gurobi_max_contacts = maximize_with_gurobi(file_name, gurobi_time_elapsed, flag)
         print("Maximum contacts found for", string, "using gurobi:", gurobi_max_contacts)
         print("Gurobi time taken:", gurobi_time_elapsed[0])
 
 
 
-main(["main.py", ["1pspA1","1pspB1", "1gd2J0", "2bbvF0", "1i4oD0", "1f8vF0", "1byyA0"]])
+main(["main.py", ["1f8vF0"], "-o"])
