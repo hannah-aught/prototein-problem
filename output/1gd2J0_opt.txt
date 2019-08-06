@@ -1,0 +1,12 @@
+
+Maximum contacts found for 0011010010 using Lingeling: 2
+Lingeling time taken: 4.87327766418457
+Lingeling runs required: 4
+Maximum contacts found for 0011010010 using gurobi: 2
+Gurobi time taken: 1.235764980316162
+
+Maximum contacts found for 0011010010 using Lingeling: 2
+Lingeling time taken: 1.768345594406128
+Lingeling runs required: 4
+Maximum contacts found for 0011010010 using gurobi: 2
+Gurobi time taken: 1.2964861392974854
