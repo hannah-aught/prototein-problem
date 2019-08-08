@@ -40,18 +40,6 @@ def is_binary_string(string):
 
     return True
 
-#n is the length for the binary string that will be produced
-"""def gen_test_str(n):
-    if n <= 0 or n == None:
-        raise Exception("String length must be > 0. Please try again")
-    else:
-        test_str = str()
-        while len(test_str) < n:
-            test_str += str(random.randint(0, 1))
-
-        return test_str
-"""
-
 def repeat_count_condition(count_condition, t_ki, t_k, repeats):
     clauses = list(count_condition.clauses)
 
@@ -347,9 +335,9 @@ def bin_search(string, grid_width, min_k, max_k, embedding_conditions, contact_c
             return bin_search(string, grid_width, min_k, k - 1, embedding_conditions, contact_conditions, outfile, time_elapsed, k_vals_tried)
 
     else:
-        print("Trying with k =", k)
+        print("Generating file with k =", k)
         gen_cnf_file(string, grid_width, k, embedding_conditions, contact_conditions, outfile)
-        print("Calling lingeling")
+        print("Calling plingeling")
         start = time.time()
         result = subprocess.run(["./lingeling/plingeling", outfile], capture_output=True)
         end = time.time()
@@ -376,7 +364,7 @@ def maximize_contacts(string, grid_width, k, embedding_conditions, contact_condi
 
     print("Generating file with k =", k)
     gen_cnf_file(string, grid_width, k, embedding_conditions, contact_conditions, outfile)
-    print("File generated")
+    print("Calling plingeling")
     start = time.time()
     result = subprocess.run(["./lingeling/plingeling", outfile], capture_output=True)
     end = time.time()
@@ -395,14 +383,14 @@ def maximize_contacts(string, grid_width, k, embedding_conditions, contact_condi
     else:
         print("I found a bug! Unaccounted for return code: " + result.returncode)
 
-def maximize_with_gurobi(file, time_elapsed, flag):
+def maximize_with_gurobi(file, time_elapsed, n):
     sol_file = "./gurobi_output/" + file + ".sol"
     lp_file = "./input/" + file + ".lp"
 
-    if (flag != "-o"):
-        subprocess.run(["perl", "./HPb.pl", "./input/" + file])
-    else:
+    if (n >= 12):
         subprocess.run(["perl", "./HPb1.pl", "./input/" + file])
+    else:
+        subprocess.run(["perl", "./HPb.pl", "./input/" + file])
 
     start = time.time()
     result = subprocess.run(["gurobi_cl", "ResultFile=" + sol_file, lp_file], capture_output=True)
@@ -423,23 +411,14 @@ def maximize_with_gurobi(file, time_elapsed, flag):
             return contacts_found
 
 def main(argv):
-    flag = "-n"
-    if len(argv) < 2 or len(argv) > 4:
-        print("ERROR: wrong number of arguments given\n\tUsage: main.py {list of input files} {output directory} { flag}")
-        print("\t options: -n (nxn grid) -o (n/4xn/4 grid)")
+    if len(argv) <= 2:
+        print("ERROR: wrong number of arguments given\n\tUsage: main.py {list of input files} -o {output directory}")
         return
-    elif len(argv) == 2:
-        outdir = "./lingeling/output/"
-    elif len(argv) == 3:
-        if argv[2][0] != "-":
-            outdir = argv[2]
-        else:
-            flag = argv[2]
     else:
-        outdir = argv[2]
-        flag = argv[3]
+        outdir_index = argv.index("-o") + 1
+        outdir = argv[outdir_index]
     
-    files = argv[1]
+    files = argv[1:outdir_index - 1]
 
     for file_name in files:
         string = read_data("./input/" + file_name)
@@ -450,19 +429,17 @@ def main(argv):
 
         n = len(string)
 
-        if flag == "-o" and n >= 12:
+        if n >= 12:
             grid_width = 1 + n//4
         else:
             grid_width = n
+
         k = 1 # start by looking for only one contact
         ling_output_file = "./lingeling/input/" + file_name + ".cnf"
         embedding_conditions = gen_embedding_conditions(n, grid_width)
         positions_of_ones = get_positions_of_ones(string)
         contact_conditions = gen_contact_conditions(n, grid_width, positions_of_ones)
-        if (flag != "-o"):
-            outfile = outdir + "/" + file_name + ".txt"
-        else:
-            outfile = outdir + "/" + file_name + "_opt.txt"
+        outfile = outdir + "/" + file_name + "_opt.txt"
         ling_time_elapsed = [0,0]
         gurobi_time_elapsed = [0]
 
@@ -472,15 +449,14 @@ def main(argv):
             print("plingeling time taken:", ling_time_elapsed[0], file=out)
             print("plingeling runs required:", ling_time_elapsed[1], file=out)
 
-        if flag == "-o" and n >= 12:
-            gurobi_max_contacts = maximize_with_gurobi(file_name, gurobi_time_elapsed, "-o")
-        else:
-            gurobi_max_contacts = maximize_with_gurobi(file_name, gurobi_time_elapsed, "-n")
+        gurobi_max_contacts = maximize_with_gurobi(file_name, gurobi_time_elapsed, n)
 
         with open(outfile, "a+") as out:
             print("Maximum contacts found for", string, "using gurobi:", gurobi_max_contacts, file=out)
             print("Gurobi time taken:", gurobi_time_elapsed[0], file=out)
 
 
+main(sys.argv)
 
-main(["main.py", ["1meyF2", "1bbo01", "1a1iA3", "1ubdC2", "1ubdC1", "1aym40", "2drpD2", "2gliA5", "2adr01", "1a1iA1", "1rmd02", "1tf3A2", "1tf3A1", "1b0nB0", "1dp5B0", "1d4vA2"], "./output","-o"])
+#main(["HPsat.py", "1gd2J0", "1pspA1", "-o", "./output"])
+#main(["main.py", ["1meyF2", "1bbo01", "1a1iA3", "1ubdC2", "1ubdC1", "1aym40", "2drpD2", "2gliA5", "2adr01", "1a1iA1", "1rmd02", "1tf3A2", "1tf3A1", "1b0nB0", "1dp5B0", "1d4vA2"], "./output","-o"])
