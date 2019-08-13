@@ -439,15 +439,15 @@ def main(argv):
 
         lingeling_max_contacts = maximize_contacts(string, grid_width, k, embedding_conditions, contact_conditions, ling_output_file, ling_time_elapsed, dict())
         with open(outfile, "a+") as out:
-            print("\nMaximum contacts found for", string, "using Lingeling:", lingeling_max_contacts)#, file=out)
-            print("plingeling time taken:", ling_time_elapsed[0])#, file=out)
-            print("plingeling runs required:", ling_time_elapsed[1])#, file=out)
+            print("\nMaximum contacts found for", string, "using Lingeling:", lingeling_max_contacts, file=out)
+            print("plingeling time taken:", ling_time_elapsed[0], file=out)
+            print("plingeling runs required:", ling_time_elapsed[1], file=out)
 
         gurobi_max_contacts = maximize_with_gurobi(file_name, gurobi_time_elapsed)
 
         with open(outfile, "a+") as out:
-            print("Maximum contacts found for", string, "using gurobi:", gurobi_max_contacts)#, file=out)
-            print("Gurobi time taken:", gurobi_time_elapsed[0])#, file=out)
+            print("Maximum contacts found for", string, "using gurobi:", gurobi_max_contacts, file=out)
+            print("Gurobi time taken:", gurobi_time_elapsed[0], file=out)
 
     return 0
 
