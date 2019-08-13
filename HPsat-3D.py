@@ -222,7 +222,7 @@ def gen_counting_conditions(n, grid_width, r):
         counting_conditions.append(count_condition_l)
         
 
-
+    # TODO: The number of counting variables isn't guaranteed to be even in 3D
     last_level_condition = Condition(list(), False)
     t_k = min(r, 2) # only two nodes below each node on the second to last level
     repeats = pow(2, num_tree_levels - 1)
