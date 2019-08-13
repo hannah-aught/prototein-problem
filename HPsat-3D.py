@@ -240,15 +240,22 @@ def gen_counting_conditions(n, grid_width, r):
                 if i + j == 0:
                     continue
 
-                if (i > 0 and b_i_2k >= -1 * num_existing_vars):
-                    last_level_clause.append(-1 * b_i_2k)
-                if (j > 0 and b_j_2k >= -1 * num_existing_vars):
-                    last_level_clause.append(-1 * b_j_2k)
-
-                if (b_i_2k < -1 * num_existing_vars or b_j_2k < -1 * num_existing_vars):
+                if (b_i_2k < -1 * num_existing_vars or b_j_2k < -1 * num_existing_vars) and i + j == 2:
                     last_level_clause.append(-1 * b_r_k)
+                    if last_level_clause not in last_level_condition.clauses:
+                        last_level_condition.add_clause(last_level_clause)
+                    continue
+                elif b_i_2k < -1 * num_existing_vars and i == 1:
+                    continue
+                elif b_j_2k < -1 * num_existing_vars and j == 1:
+                    continue
                 else:
                     last_level_clause.append(b_r_k)
+
+                if i > 0 and b_i_2k >= -1 * num_existing_vars:
+                    last_level_clause.append(-1 * b_i_2k)
+                if j > 0 and b_j_2k >= -1 * num_existing_vars:
+                    last_level_clause.append(-1 * b_j_2k)
                 
                 if len(last_level_clause) > 0 and last_level_clause not in last_level_condition.clauses:
                     last_level_condition.add_clause(last_level_clause)
@@ -444,5 +451,5 @@ def main(argv):
 
     return 0
 
-main(['HPsat-3D.py', '1pspB1', '-o', './output'])
-#main(sys.argv)
+#main(['HPsat-3D.py', '1pspB1', '-o', './output'])
+main(sys.argv)
