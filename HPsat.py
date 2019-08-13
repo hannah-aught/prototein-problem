@@ -14,7 +14,6 @@ def read_data(file):
         
         return data[0].strip()
 
-
 def get_positions_of_ones(s):
     positions_of_ones = list()
 
@@ -71,14 +70,14 @@ def gen_embedding_conditions(n, grid_width):
     grid_size = pow(grid_width, 2)
 
     # embedding condition 1 (every x_ij is somewhere)
-    embed_condition_1 = Condition([range(1, grid_size + 1)], True, n, grid_size )
+    embed_condition_1 = Condition([range(1, grid_size + 1)], True, n, grid_size)
     embedding_conditions.append(embed_condition_1)
 
     # embedding condition 2 (every x_ij can only be true for one j)
-    embed_condition_2 = Condition(list(), True, n, grid_size )
+    embed_condition_2 = Condition(list(), True, n, grid_size)
 
     for i in range(1, grid_size ):
-        for j in range (i+1, grid_size + 1):
+        for j in range (i + 1, grid_size + 1):
             embed_condition_2.add_clause([-1 * i,-1 * j])
     
     embedding_conditions.append(embed_condition_2)
@@ -96,7 +95,7 @@ def gen_embedding_conditions(n, grid_width):
 
     # embedding condition 4
     embed_condition_4 = Condition(list(), True, n - 1, grid_size)
-    
+
     for i in range(1, grid_size + 1):
         if i == 1:
             # condition 4f
@@ -138,7 +137,7 @@ def gen_contact_conditions(n, grid_width, positions_of_ones):
     contact_condition_1 = Condition(list(), True, grid_size, 1)
 
     for x in positions_of_ones:
-        contact_condition_1.add_clause([offset + 1, (-1 * x * grid_size ) - 1])
+        contact_condition_1.add_clause([offset + 1, (-1 * x * grid_size) - 1])
 
     last_clause = [(-1 * offset) - 1]
     last_clause.extend(map(lambda x: (x * grid_size) + 1, positions_of_ones))
@@ -454,7 +453,6 @@ def main(argv):
         with open(outfile, "a+") as out:
             print("Maximum contacts found for", string, "using gurobi:", gurobi_max_contacts, file=out)
             print("Gurobi time taken:", gurobi_time_elapsed[0], file=out)
-
 
 main(sys.argv)
 
