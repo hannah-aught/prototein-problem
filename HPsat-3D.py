@@ -331,9 +331,9 @@ def bin_search(string, grid_width, min_k, max_k, embedding_conditions, contact_c
     else:
         print("Trying with k =", k)
         gen_cnf_file(string, grid_width, k, embedding_conditions, contact_conditions, outfile)
-        print("Calling lingeling")
+        print("Calling plingeling")
         start = time.time()
-        result = subprocess.run(["./lingeling/lingeling", outfile], capture_output=True)
+        result = subprocess.run(["./lingeling/plingeling", outfile], stdout=subprocess.PIPE, stderr=subprocess.PIPE) #capture_output=True)
         end = time.time()
         time_elapsed[0] += end - start
         time_elapsed[1] += 1 #another try
@@ -360,7 +360,8 @@ def maximize_contacts(string, grid_width, k, embedding_conditions, contact_condi
     gen_cnf_file(string, grid_width, k, embedding_conditions, contact_conditions, outfile)
     print("File generated")
     start = time.time()
-    result = subprocess.run(["./lingeling/lingeling", outfile], capture_output=True)
+    #result = subprocess.run(["./lingeling/lingeling", outfile], capture_output=True)
+    result = subprocess.run(["./lingeling/plingeling", outfile], stdout=subprocess.PIPE, stderr=subprocess.PIPE) #capture_output=True)
     end = time.time()
     time_elapsed[0] += end - start
     time_elapsed[1] += 1
@@ -384,7 +385,7 @@ def maximize_with_gurobi(file, time_elapsed):
     subprocess.run(["python3", "./HPb1-3D.py", "./input/" + file, lp_file])
 
     start = time.time()
-    result = subprocess.run(["gurobi_cl", "ResultFile=" + sol_file, lp_file], capture_output=True)
+    result = subprocess.run(["gurobi_cl", "ResultFile=" + sol_file, lp_file], stdout=subprocess.PIPE, stderr=subprocess.PIPE)#capture_output=True)
     end = time.time()
 
     if (result.returncode == 1):
@@ -409,7 +410,7 @@ def main(argv):
         outdir_index = argv.index("-o") + 1
         outdir = argv[outdir_index]
     else:
-        outdir_index = argv.length
+        outdir_index = len(argv)
         outdir = "./output"
     
     files = argv[1:outdir_index - 1]
@@ -439,7 +440,7 @@ def main(argv):
 
         lingeling_max_contacts = maximize_contacts(string, grid_width, k, embedding_conditions, contact_conditions, ling_output_file, ling_time_elapsed, dict())
         with open(outfile, "a+") as out:
-            print("\nMaximum contacts found for", string, "using Lingeling:", lingeling_max_contacts, file=out)
+            print("\nMaximum contacts found for", string, "using pLingeling:", lingeling_max_contacts, file=out)
             print("plingeling time taken:", ling_time_elapsed[0], file=out)
             print("plingeling runs required:", ling_time_elapsed[1], file=out)
 

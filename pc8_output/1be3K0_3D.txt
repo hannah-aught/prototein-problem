@@ -1,0 +1,4 @@
+
+Maximum contacts found for 001110101111111111101 using pLingeling: 16
+plingeling time taken: 37787.46515798569
+plingeling runs required: 10
