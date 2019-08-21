@@ -1,6 +1,7 @@
 import random
 import sys
 import math
+import subprocess
 import re
 import time
 from Condition import Condition
@@ -28,7 +29,6 @@ def get_num_adjacent_ones(positions_of_ones):
             num_adjacent_ones += 1
     
     return num_adjacent_ones
-
 
 def is_binary_string(string):
     for x in string:
@@ -314,49 +314,143 @@ def gen_cnf_file(string, grid_width, k, embedding_conditions, contact_conditions
     num_clauses = get_num_clauses(n, conditions)
     write_conditions(num_vars, num_clauses, conditions, outfile)
 
-def main(argv):
-    if len(argv) <= 3 or len(argv) > 4:
-        print("ERROR: wrong number of arguments given\n\tUsage: main.py {input file} {goal number of contacts} {optional output directory}")
+def bin_search(string, grid_width, min_k, max_k, embedding_conditions, contact_conditions, outfile, time_elapsed, k_vals_tried = dict()):
+    k = math.ceil((min_k + max_k) / 2)
+
+    if k == 0:
+        return 0
+
+    if k in k_vals_tried:
+        if k_vals_tried[k]:
+            if min_k == max_k:
+                return k
+            return bin_search(string, grid_width, k, max_k, embedding_conditions, contact_conditions, outfile, time_elapsed, k_vals_tried)
+        else:
+            return bin_search(string, grid_width, min_k, k - 1, embedding_conditions, contact_conditions, outfile, time_elapsed, k_vals_tried)
+
+    else:
+        print("Trying with k =", k)
+        gen_cnf_file(string, grid_width, k, embedding_conditions, contact_conditions, outfile)
+        print("Calling plingeling")
+        start = time.time()
+        result = subprocess.run(["./lingeling/plingeling", outfile], stdout=subprocess.PIPE, stderr=subprocess.PIPE) #capture_output=True)
+        end = time.time()
+        time_elapsed[0] += end - start
+        time_elapsed[1] += 1 #another try
+
+        if result.returncode < 10:
+            print(result.stderr)
+            return 0
+        elif result.returncode == 10:
+            if (min_k == max_k):
+                return k
+            k_vals_tried[k] = True
+            return bin_search(string, grid_width, k, max_k, embedding_conditions, contact_conditions, outfile, time_elapsed, k_vals_tried)
+        elif result.returncode == 20:
+            k_vals_tried[k] = False
+            return bin_search(string, grid_width, min_k, k-1, embedding_conditions, contact_conditions, outfile, time_elapsed, k_vals_tried)
+        else:
+            print("I found a bug! Unaccounted for return code: " + result.returncode)
+    
+def maximize_contacts(string, grid_width, k, embedding_conditions, contact_conditions, outfile, time_elapsed, k_vals_tried=dict()):
+    if k == 0:
+        return 0
+
+    print("Generating file with k =", k)
+    gen_cnf_file(string, grid_width, k, embedding_conditions, contact_conditions, outfile)
+    print("File generated")
+    start = time.time()
+    #result = subprocess.run(["./lingeling/lingeling", outfile], capture_output=True)
+    result = subprocess.run(["./lingeling/plingeling", outfile], stdout=subprocess.PIPE, stderr=subprocess.PIPE) #capture_output=True)
+    end = time.time()
+    time_elapsed[0] += end - start
+    time_elapsed[1] += 1
+
+    if result.returncode < 10:
+        print(result.stderr)
         return
-    elif len(argv) == 4:
-        outdir = argv[3]
+    elif result.returncode == 10:
+        k_vals_tried[k] = True
+        return maximize_contacts(string, grid_width, 2 * k, embedding_conditions, contact_conditions, outfile, time_elapsed, k_vals_tried)
+    elif result.returncode == 20:
+        k_vals_tried[k] = False
+        return bin_search(string, grid_width, k // 2, k-1, embedding_conditions, contact_conditions, outfile, time_elapsed, k_vals_tried)
     else:
-        outdir = "."
+        print("I found a bug! Unaccounted for return code: " + result.returncode)
 
-    file_name = argv[1]
+def maximize_with_gurobi(file, time_elapsed):
+    sol_file = "./gurobi_output/" + file + ".sol"
+    lp_file = "./gurobi_input/" + file + ".lp"
 
-    string = read_data("./input/" + file_name)
+    subprocess.run(["python3", "./HPb1-3D.py", "./input/" + file, lp_file])
 
-    if not is_binary_string(string):
-        print("Error:", string, "is not a binary string")
-        return 1
+    start = time.time()
+    result = subprocess.run(["gurobi_cl", "ResultFile=" + sol_file, lp_file], stdout=subprocess.PIPE, stderr=subprocess.PIPE)#capture_output=True)
+    end = time.time()
 
-    n = len(string)
-
-    if n >= 20:
-        grid_width = 2 + n//8
+    if (result.returncode == 1):
+        print(str(result.stdout))
+        return
     else:
-        grid_width = 2 + n//4
+        with open("./gurobi_output/" + file + ".sol") as f:
+            lines = f.readlines()
+            if "value =" in lines[0]:
+                contacts_found = re.search(r"\d+", lines[0]).group()
+            else:
+                contacts_found = 0
+                
+            time_elapsed[0] = end - start
+            return contacts_found
 
-    outfile = outdir + "/" + file_name + ".cnf"
-    k = int(argv[2]) # start by looking for only one contact
-    r = 3 * (grid_width ** 3) - k
-    positions_of_ones = get_positions_of_ones(string)
-    embedding_conditions = gen_embedding_conditions(n, grid_width)
-    contact_conditions = gen_contact_conditions(n, grid_width, positions_of_ones)
-    counting_conditions_num_vars = gen_counting_conditions(n, grid_width, r)
-    counting_conditions = counting_conditions_num_vars[0]
-    num_vars = counting_conditions_num_vars[1]
-    conditions = embedding_conditions + contact_conditions + counting_conditions
-    num_clauses = get_num_clauses(n, conditions)
-    print("string:", string)
-    print("length:", n)
-    print("grid diameter:", grid_width)
-    print("goal contacts:", k)
-    print("using r =", r)
-    write_conditions(num_vars, num_clauses, conditions, outfile)
-    print("cnf file for", file_name, "written to", outfile)
+def main(argv):
+    if len(argv) <= 2:
+        print("ERROR: wrong number of arguments given\n\tUsage: main.py {list of input files} -o {output directory}")
+        return
+    elif "-o" in argv:
+        outdir_index = argv.index("-o") + 1
+        outdir = argv[outdir_index]
+    else:
+        outdir_index = len(argv)
+        outdir = "./output"
+    
+    files = argv[1:outdir_index - 1]
+
+    for file_name in files:
+        string = read_data("./input/" + file_name)
+
+        if not is_binary_string(string):
+            print("Error:", string, " is not a binary string")
+            continue
+
+        n = len(string)
+
+        if n >= 20:
+            grid_width = 2 + n//8
+        else:
+            grid_width = 2 + n//4
+
+        k = 1 # start by looking for only one contact
+        ling_output_file = "./lingeling/input/" + file_name + ".cnf"
+        embedding_conditions = gen_embedding_conditions(n, grid_width)
+        positions_of_ones = get_positions_of_ones(string)
+        contact_conditions = gen_contact_conditions(n, grid_width, positions_of_ones)
+        outfile = outdir + "/" + file_name + "_3D.txt"
+        ling_time_elapsed = [0,0]
+        gurobi_time_elapsed = [0]
+
+        lingeling_max_contacts = maximize_contacts(string, grid_width, k, embedding_conditions, contact_conditions, ling_output_file, ling_time_elapsed, dict())
+        with open(outfile, "a+") as out:
+            print("\nMaximum contacts found for", string, "using pLingeling:", lingeling_max_contacts, file=out)
+            print("plingeling time taken:", ling_time_elapsed[0], file=out)
+            print("plingeling runs required:", ling_time_elapsed[1], file=out)
+
+        gurobi_max_contacts = maximize_with_gurobi(file_name, gurobi_time_elapsed)
+
+        with open(outfile, "a+") as out:
+            print("Maximum contacts found for", string, "using gurobi:", gurobi_max_contacts, file=out)
+            print("Gurobi time taken:", gurobi_time_elapsed[0], file=out)
 
     return 0
 
+#main(['HPsat-3D.py', '1pspB1', '-o', './output'])
 main(sys.argv)
