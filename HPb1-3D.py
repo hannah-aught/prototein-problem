@@ -138,7 +138,8 @@ for plane in range(2, diam):       # middle planes
         gridbase += diam
 #        OUT.write ("After row: the gridbase is now %d \n" % gridbase)
 #    gridbase += diamsquared   # DG July 13. I think this is wrong
-    gridbase = plane * diamsquared + diam + 2    # DG July 13
+# HB August 27. Needs to be (plane - 1) rather than (plane)
+    gridbase = (plane - 1) * diamsquared + diam + 2    # DG July 13
 #    OUT.write ("After plane: the gridbase is now %d \n" % gridbase)
 
 
