@@ -30,6 +30,7 @@ def get_num_adjacent_ones(positions_of_ones):
     
     return num_adjacent_ones
 
+
 def is_binary_string(string):
     for x in string:
         if x != "1" and x != "0":
@@ -69,7 +70,7 @@ def gen_embedding_conditions(n, grid_width):
     grid_vol = grid_area * grid_width
 
     # embedding condition 1
-    embedding_condition_1 = Condition([range(1, grid_vol)], True, n, grid_vol)
+    embedding_condition_1 = Condition([range(1, grid_vol + 1)], True, n, grid_vol)
     embedding_conditions.append(embedding_condition_1)
 
     # embedding condition 2
@@ -102,9 +103,9 @@ def gen_embedding_conditions(n, grid_width):
             clause.append(j + grid_vol + 1)
         if j % grid_width != 1:
             clause.append(j + grid_vol - 1)
-        if j % grid_area <= grid_area - grid_width:
+        if (j % grid_area <= grid_area - grid_width) and j % grid_area != 0:
             clause.append(j + grid_vol + grid_width)
-        if j % grid_area > grid_width:
+        if j % grid_area > grid_width or j % grid_area == 0:
             clause.append(j + grid_vol - grid_width)
         if j <= (grid_width - 1) * grid_area:
             clause.append(j + grid_vol + grid_area)
@@ -245,6 +246,8 @@ def gen_counting_conditions(n, grid_width, r):
                     if last_level_clause not in last_level_condition.clauses:
                         last_level_condition.add_clause(last_level_clause)
                     continue
+                elif b_i_2k < -1 * num_existing_vars and b_j_2k < -1 * num_existing_vars:
+                    last_level_clause.append(-1 * b_r_k)
                 elif b_i_2k < -1 * num_existing_vars and i == 1:
                     continue
                 elif b_j_2k < -1 * num_existing_vars and j == 1:
@@ -452,5 +455,5 @@ def main(argv):
 
     return 0
 
-#main(['HPsat-3D.py', '1pspB1', '-o', './output'])
-main(sys.argv)
+main(['HPsat-3D.py', '1f8vf0', '-o', './output'])
+#main(sys.argv)

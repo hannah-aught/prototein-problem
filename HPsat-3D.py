@@ -361,5 +361,5 @@ def main(argv):
 
     return 0
 
-#main(sys.argv)
-main(["HPsat-3D.py", "1f8vF0", "10", "./test_output"])
+main(sys.argv)
+#main(["HPsat-3D.py", "1f8vF0", "10", "./test_output"])
