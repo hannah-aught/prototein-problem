@@ -341,9 +341,10 @@ def main(argv):
         grid_width = 2 + n//4
 
     outfile = outdir + "/" + file_name + ".cnf"
-    k = int(argv[2]) # start by looking for only one contact
-    r = 3 * (grid_width ** 3) - k
     positions_of_ones = get_positions_of_ones(string)
+    num_adjacent_ones = get_num_adjacent_ones(positions_of_ones)
+    k = int(argv[2]) # start by looking for only one contact
+    r = 3 * (grid_width ** 3) - (num_adjacent_ones + k)
     embedding_conditions = gen_embedding_conditions(n, grid_width)
     contact_conditions = gen_contact_conditions(n, grid_width, positions_of_ones)
     counting_conditions_num_vars = gen_counting_conditions(n, grid_width, r)
