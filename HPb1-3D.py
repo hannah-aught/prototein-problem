@@ -18,10 +18,11 @@
 # call this program on a command line in a terminal window as:
 # python HPb1-3D.py data-file-name ilpfile-name
 import sys
+import math
 
 
-arg1 = sys.argv[1]
-arg2 = sys.argv[2]
+arg1 = "./input/1f8vf0" # sys.argv[1]
+arg2 = "./ILP/1f8vf0.lp" # sys.argv[2]
 
 INFILE = open(arg1, "r")  # open the file specified by the value of arg1, to read from the file.
 OUT = open(arg2, "w")     # open the file specified by the value of arg2, to write to the file.
@@ -85,7 +86,8 @@ for z  in range(1, diam+1):
     print('z: %d k: %d' % (z,k-1))
     #k += 1   # increment k to account for the last node in each row.
 
-midpoint = (diam/2) * diamsquared + diamsquared/2  # DG added July 13, 2019 in order to try to speed up the ILP
+# HB modified midpoint calculation below 8/29 
+midpoint = math.ceil(diam/2) * diamsquared - (diam//2 - 1) * (diam + 1)  # DG added July 13, 2019 in order to try to speed up the ILP
 
 # DG, July 2019. Actually the first position of the string should go in the center of the cube only if that position is an H (hydrophobic).
 # Also, in looking at the 3-D solutions in Backhoffen's HPstruck, the first point is rarely in the center, so it is
@@ -139,7 +141,7 @@ for plane in range(2, diam):       # middle planes
 #        OUT.write ("After row: the gridbase is now %d \n" % gridbase)
 #    gridbase += diamsquared   # DG July 13. I think this is wrong
 # HB August 27. Needs to be (plane - 1) rather than (plane)
-    gridbase = (plane - 1) * diamsquared + diam + 2    # DG July 13
+    gridbase = plane * diamsquared + diam + 2    # DG July 13
 #    OUT.write ("After plane: the gridbase is now %d \n" % gridbase)
 
 
