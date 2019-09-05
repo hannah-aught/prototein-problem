@@ -1,0 +1,30 @@
+
+Maximum contacts found for 001000 using pLingeling: 0
+plingeling time taken: 0.02478814125061035
+plingeling runs required: 1
+Maximum contacts found for 001000 using gurobi: 0
+Gurobi time taken: 0.014974832534790039
+
+Maximum contacts found for 001000 using pLingeling: 0
+plingeling time taken: 0.02588820457458496
+plingeling runs required: 1
+Maximum contacts found for 001000 using gurobi: 0
+Gurobi time taken: 0.014963865280151367
+
+Maximum contacts found for 001000 using pLingeling: 0
+plingeling time taken: 0.02484726905822754
+plingeling runs required: 1
+Maximum contacts found for 001000 using gurobi: 0
+Gurobi time taken: 0.01507425308227539
+
+Maximum contacts found for 001000 using pLingeling: 0
+plingeling time taken: 0.025597810745239258
+plingeling runs required: 1
+Maximum contacts found for 001000 using gurobi: 0
+Gurobi time taken: 0.014942169189453125
+
+Maximum contacts found for 001000 using pLingeling: 0
+plingeling time taken: 0.025506258010864258
+plingeling runs required: 1
+Maximum contacts found for 001000 using gurobi: 0
+Gurobi time taken: 0.015032052993774414

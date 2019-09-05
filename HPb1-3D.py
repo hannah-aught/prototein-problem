@@ -21,8 +21,8 @@ import sys
 import math
 
 
-arg1 = "./input/1f8vf0" # sys.argv[1]
-arg2 = "./ILP/1f8vf0.lp" # sys.argv[2]
+arg1 = sys.argv[1]
+arg2 = sys.argv[2]
 
 INFILE = open(arg1, "r")  # open the file specified by the value of arg1, to read from the file.
 OUT = open(arg2, "w")     # open the file specified by the value of arg2, to write to the file.
