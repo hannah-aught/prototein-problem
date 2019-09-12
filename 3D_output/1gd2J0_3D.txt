@@ -10,3 +10,21 @@ plingeling time taken: 2.1977438926696777
 plingeling runs required: 4
 Maximum contacts found for 0011010010 using gurobi: 2
 Gurobi time taken: 0.9624321460723877
+
+Maximum contacts found for 0011010010 using pLingeling: 2
+plingeling time taken: 2.30651593208313
+plingeling runs required: 4
+Maximum contacts found for 0011010010 using gurobi: 2
+Gurobi time taken: 0.9934580326080322
+
+Maximum contacts found for 0011010010 using pLingeling: 2
+plingeling time taken: 2.306199550628662
+plingeling runs required: 4
+Maximum contacts found for 0011010010 using gurobi: 2
+Gurobi time taken: 0.9838988780975342
+
+Maximum contacts found for 0011010010 using pLingeling: 2
+plingeling time taken: 2.3590149879455566
+plingeling runs required: 4
+Maximum contacts found for 0011010010 using gurobi: 2
+Gurobi time taken: 0.9825801849365234

@@ -1,0 +1,30 @@
+
+Maximum contacts found for 101100100 using pLingeling: 2
+plingeling time taken: 1.6711785793304443
+plingeling runs required: 4
+Maximum contacts found for 101100100 using gurobi: 2
+Gurobi time taken: 0.5295050144195557
+
+Maximum contacts found for 101100100 using pLingeling: 2
+plingeling time taken: 1.658228874206543
+plingeling runs required: 4
+Maximum contacts found for 101100100 using gurobi: 2
+Gurobi time taken: 0.5235841274261475
+
+Maximum contacts found for 101100100 using pLingeling: 2
+plingeling time taken: 1.6535608768463135
+plingeling runs required: 4
+Maximum contacts found for 101100100 using gurobi: 2
+Gurobi time taken: 0.527289867401123
+
+Maximum contacts found for 101100100 using pLingeling: 2
+plingeling time taken: 1.6744091510772705
+plingeling runs required: 4
+Maximum contacts found for 101100100 using gurobi: 2
+Gurobi time taken: 0.5252208709716797
+
+Maximum contacts found for 101100100 using pLingeling: 2
+plingeling time taken: 1.6220612525939941
+plingeling runs required: 4
+Maximum contacts found for 101100100 using gurobi: 2
+Gurobi time taken: 0.5249848365783691

@@ -1,0 +1,30 @@
+
+Maximum contacts found for 11011111011 using pLingeling: 6
+plingeling time taken: 295.5825047492981
+plingeling runs required: 6
+Maximum contacts found for 11011111011 using gurobi: 6
+Gurobi time taken: 3.213286876678467
+
+Maximum contacts found for 11011111011 using pLingeling: 6
+plingeling time taken: 317.2109851837158
+plingeling runs required: 6
+Maximum contacts found for 11011111011 using gurobi: 6
+Gurobi time taken: 3.1944491863250732
+
+Maximum contacts found for 11011111011 using pLingeling: 6
+plingeling time taken: 285.0345878601074
+plingeling runs required: 6
+Maximum contacts found for 11011111011 using gurobi: 6
+Gurobi time taken: 3.198270082473755
+
+Maximum contacts found for 11011111011 using pLingeling: 6
+plingeling time taken: 285.4809453487396
+plingeling runs required: 6
+Maximum contacts found for 11011111011 using gurobi: 6
+Gurobi time taken: 3.2112998962402344
+
+Maximum contacts found for 11011111011 using pLingeling: 6
+plingeling time taken: 284.6001567840576
+plingeling runs required: 6
+Maximum contacts found for 11011111011 using gurobi: 6
+Gurobi time taken: 3.1805267333984375

@@ -10,3 +10,9 @@ plingeling time taken: 0.05781984329223633
 plingeling runs required: 2
 Maximum contacts found for 010010 using gurobi: 1
 Gurobi time taken: 0.08672690391540527
+
+Maximum contacts found for 010010 using pLingeling: 1
+plingeling time taken: 0.06427907943725586
+plingeling runs required: 2
+Maximum contacts found for 010010 using gurobi: 1
+Gurobi time taken: 0.08977317810058594

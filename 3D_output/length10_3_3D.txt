@@ -1,0 +1,30 @@
+
+Maximum contacts found for 0010011100 using pLingeling: 2
+plingeling time taken: 1.3959629535675049
+plingeling runs required: 4
+Maximum contacts found for 0010011100 using gurobi: 2
+Gurobi time taken: 0.9133288860321045
+
+Maximum contacts found for 0010011100 using pLingeling: 2
+plingeling time taken: 1.3526663780212402
+plingeling runs required: 4
+Maximum contacts found for 0010011100 using gurobi: 2
+Gurobi time taken: 0.8957419395446777
+
+Maximum contacts found for 0010011100 using pLingeling: 2
+plingeling time taken: 1.3464930057525635
+plingeling runs required: 4
+Maximum contacts found for 0010011100 using gurobi: 2
+Gurobi time taken: 0.9045548439025879
+
+Maximum contacts found for 0010011100 using pLingeling: 2
+plingeling time taken: 1.3783137798309326
+plingeling runs required: 4
+Maximum contacts found for 0010011100 using gurobi: 2
+Gurobi time taken: 0.9005670547485352
+
+Maximum contacts found for 0010011100 using pLingeling: 2
+plingeling time taken: 1.5026359558105469
+plingeling runs required: 4
+Maximum contacts found for 0010011100 using gurobi: 2
+Gurobi time taken: 0.897240161895752
