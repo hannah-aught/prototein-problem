@@ -1,0 +1,6 @@
+
+Maximum contacts found for 11011011111 using Lingeling: 5
+plingeling time taken: 71.57787990570068
+plingeling runs required: 6
+Maximum contacts found for 11011011111 using gurobi: 5
+Gurobi time taken: 7.006346940994263

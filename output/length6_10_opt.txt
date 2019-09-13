@@ -1,0 +1,30 @@
+
+Maximum contacts found for 010011 using Lingeling: 1
+plingeling time taken: 0.08847808837890625
+plingeling runs required: 2
+Maximum contacts found for 010011 using gurobi: 1
+Gurobi time taken: 0.11279797554016113
+
+Maximum contacts found for 010011 using Lingeling: 1
+plingeling time taken: 0.08791112899780273
+plingeling runs required: 2
+Maximum contacts found for 010011 using gurobi: 1
+Gurobi time taken: 0.11370682716369629
+
+Maximum contacts found for 010011 using Lingeling: 1
+plingeling time taken: 0.0881352424621582
+plingeling runs required: 2
+Maximum contacts found for 010011 using gurobi: 1
+Gurobi time taken: 0.11238884925842285
+
+Maximum contacts found for 010011 using Lingeling: 1
+plingeling time taken: 0.08968997001647949
+plingeling runs required: 2
+Maximum contacts found for 010011 using gurobi: 1
+Gurobi time taken: 0.1140279769897461
+
+Maximum contacts found for 010011 using Lingeling: 1
+plingeling time taken: 0.08668279647827148
+plingeling runs required: 2
+Maximum contacts found for 010011 using gurobi: 1
+Gurobi time taken: 0.11260199546813965

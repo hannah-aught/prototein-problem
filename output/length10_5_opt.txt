@@ -1,0 +1,30 @@
+
+Maximum contacts found for 0100111010 using Lingeling: 3
+plingeling time taken: 1.545806646347046
+plingeling runs required: 4
+Maximum contacts found for 0100111010 using gurobi: 3
+Gurobi time taken: 1.035189151763916
+
+Maximum contacts found for 0100111010 using Lingeling: 3
+plingeling time taken: 1.575378179550171
+plingeling runs required: 4
+Maximum contacts found for 0100111010 using gurobi: 3
+Gurobi time taken: 1.0206327438354492
+
+Maximum contacts found for 0100111010 using Lingeling: 3
+plingeling time taken: 1.5736541748046875
+plingeling runs required: 4
+Maximum contacts found for 0100111010 using gurobi: 3
+Gurobi time taken: 1.0110578536987305
+
+Maximum contacts found for 0100111010 using Lingeling: 3
+plingeling time taken: 1.5625770092010498
+plingeling runs required: 4
+Maximum contacts found for 0100111010 using gurobi: 3
+Gurobi time taken: 1.0267322063446045
+
+Maximum contacts found for 0100111010 using Lingeling: 3
+plingeling time taken: 1.5877528190612793
+plingeling runs required: 4
+Maximum contacts found for 0100111010 using gurobi: 3
+Gurobi time taken: 1.018571138381958

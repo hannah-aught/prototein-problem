@@ -1,0 +1,30 @@
+
+Maximum contacts found for 1011111 using Lingeling: 2
+plingeling time taken: 0.5955703258514404
+plingeling runs required: 4
+Maximum contacts found for 1011111 using gurobi: 2
+Gurobi time taken: 0.42331576347351074
+
+Maximum contacts found for 1011111 using Lingeling: 2
+plingeling time taken: 0.568047046661377
+plingeling runs required: 4
+Maximum contacts found for 1011111 using gurobi: 2
+Gurobi time taken: 0.4100000858306885
+
+Maximum contacts found for 1011111 using Lingeling: 2
+plingeling time taken: 0.5908236503601074
+plingeling runs required: 4
+Maximum contacts found for 1011111 using gurobi: 2
+Gurobi time taken: 0.41599225997924805
+
+Maximum contacts found for 1011111 using Lingeling: 2
+plingeling time taken: 0.5827007293701172
+plingeling runs required: 4
+Maximum contacts found for 1011111 using gurobi: 2
+Gurobi time taken: 0.4147768020629883
+
+Maximum contacts found for 1011111 using Lingeling: 2
+plingeling time taken: 0.5852899551391602
+plingeling runs required: 4
+Maximum contacts found for 1011111 using gurobi: 2
+Gurobi time taken: 0.41626691818237305

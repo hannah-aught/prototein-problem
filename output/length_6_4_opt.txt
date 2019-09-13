@@ -1,0 +1,30 @@
+
+Maximum contacts found for 001001 using Lingeling: 1
+plingeling time taken: 0.06358695030212402
+plingeling runs required: 2
+Maximum contacts found for 001001 using gurobi: 1
+Gurobi time taken: 0.07242393493652344
+
+Maximum contacts found for 001001 using Lingeling: 1
+plingeling time taken: 0.06514406204223633
+plingeling runs required: 2
+Maximum contacts found for 001001 using gurobi: 1
+Gurobi time taken: 0.0724649429321289
+
+Maximum contacts found for 001001 using Lingeling: 1
+plingeling time taken: 0.06525731086730957
+plingeling runs required: 2
+Maximum contacts found for 001001 using gurobi: 1
+Gurobi time taken: 0.07242488861083984
+
+Maximum contacts found for 001001 using Lingeling: 1
+plingeling time taken: 0.0650320053100586
+plingeling runs required: 2
+Maximum contacts found for 001001 using gurobi: 1
+Gurobi time taken: 0.07203793525695801
+
+Maximum contacts found for 001001 using Lingeling: 1
+plingeling time taken: 0.06331920623779297
+plingeling runs required: 2
+Maximum contacts found for 001001 using gurobi: 1
+Gurobi time taken: 0.07177519798278809

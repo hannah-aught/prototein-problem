@@ -1,0 +1,30 @@
+
+Maximum contacts found for 0111100 using Lingeling: 1
+plingeling time taken: 0.17659306526184082
+plingeling runs required: 2
+Maximum contacts found for 0111100 using gurobi: 1
+Gurobi time taken: 0.15784025192260742
+
+Maximum contacts found for 0111100 using Lingeling: 1
+plingeling time taken: 0.1738300323486328
+plingeling runs required: 2
+Maximum contacts found for 0111100 using gurobi: 1
+Gurobi time taken: 0.1585700511932373
+
+Maximum contacts found for 0111100 using Lingeling: 1
+plingeling time taken: 0.17244195938110352
+plingeling runs required: 2
+Maximum contacts found for 0111100 using gurobi: 1
+Gurobi time taken: 0.15600109100341797
+
+Maximum contacts found for 0111100 using Lingeling: 1
+plingeling time taken: 0.17164206504821777
+plingeling runs required: 2
+Maximum contacts found for 0111100 using gurobi: 1
+Gurobi time taken: 0.155487060546875
+
+Maximum contacts found for 0111100 using Lingeling: 1
+plingeling time taken: 0.17686223983764648
+plingeling runs required: 2
+Maximum contacts found for 0111100 using gurobi: 1
+Gurobi time taken: 0.1553490161895752
