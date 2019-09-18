@@ -1,30 +1,30 @@
 
-Maximum contacts found for 10000111000000000 using Lingeling: 2
-plingeling time taken: 0.18766450881958008
-plingeling runs required: 4
-Maximum contacts found for 10000111000000000 using gurobi: 2
-Gurobi time taken: 0.42600083351135254
+Maximum contacts found for 00111110111011110 using Lingeling: 7
+plingeling time taken: 0.9742069244384766
+plingeling runs required: 6
+Maximum contacts found for 00111110111011110 using gurobi: 7
+Gurobi time taken: 0.7072670459747314
 
-Maximum contacts found for 10000111000000000 using Lingeling: 2
-plingeling time taken: 0.1933143138885498
-plingeling runs required: 4
-Maximum contacts found for 10000111000000000 using gurobi: 2
-Gurobi time taken: 0.4327099323272705
+Maximum contacts found for 00111110111011110 using Lingeling: 7
+plingeling time taken: 0.9252481460571289
+plingeling runs required: 6
+Maximum contacts found for 00111110111011110 using gurobi: 7
+Gurobi time taken: 0.694317102432251
 
-Maximum contacts found for 10000111000000000 using Lingeling: 2
-plingeling time taken: 0.1882467269897461
-plingeling runs required: 4
-Maximum contacts found for 10000111000000000 using gurobi: 2
-Gurobi time taken: 0.4357178211212158
+Maximum contacts found for 00111110111011110 using Lingeling: 7
+plingeling time taken: 0.9381434917449951
+plingeling runs required: 6
+Maximum contacts found for 00111110111011110 using gurobi: 7
+Gurobi time taken: 0.6841299533843994
 
-Maximum contacts found for 10000111000000000 using Lingeling: 2
-plingeling time taken: 0.1896803379058838
-plingeling runs required: 4
-Maximum contacts found for 10000111000000000 using gurobi: 2
-Gurobi time taken: 0.42851686477661133
+Maximum contacts found for 00111110111011110 using Lingeling: 7
+plingeling time taken: 0.9999098777770996
+plingeling runs required: 6
+Maximum contacts found for 00111110111011110 using gurobi: 7
+Gurobi time taken: 0.6916379928588867
 
-Maximum contacts found for 10000111000000000 using Lingeling: 2
-plingeling time taken: 0.1878213882446289
-plingeling runs required: 4
-Maximum contacts found for 10000111000000000 using gurobi: 2
-Gurobi time taken: 0.4288766384124756
+Maximum contacts found for 00111110111011110 using Lingeling: 7
+plingeling time taken: 0.9650568962097168
+plingeling runs required: 6
+Maximum contacts found for 00111110111011110 using gurobi: 7
+Gurobi time taken: 0.6908490657806396
