@@ -428,7 +428,7 @@ def main(argv):
 
         n = len(string)
 
-        if n >= 12:
+        if n >= 4:
             grid_width = 1 + n//4
         else:
             grid_width = n
