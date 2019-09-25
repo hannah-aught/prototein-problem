@@ -1,0 +1,2180 @@
+
+filename: length_23_5.cnf 
+  Number of clauses: 29727 
+  Number of literals: 357844 
+  Number of variables:  1704
+
+filename: length14_2.cnf 
+  Number of clauses: 4013 
+  Number of literals: 43913 
+  Number of variables:  400
+
+filename: length_18_3.cnf 
+  Number of clauses: 11245 
+  Number of literals: 127367 
+  Number of variables:  845
+
+filename: length7_4.cnf 
+  Number of clauses: 14992 
+  Number of literals: 179551 
+  Number of variables:  1258
+
+filename: length_21_7.cnf 
+  Number of clauses: 26846 
+  Number of literals: 324119 
+  Number of variables:  1632
+
+filename: length23_9.cnf 
+  Number of clauses: 29917 
+  Number of literals: 360086 
+  Number of variables:  1684
+
+filename: length_12_8.cnf 
+  Number of clauses: 3233 
+  Number of literals: 34961 
+  Number of variables:  368
+
+filename: length_27_1.cnf 
+  Number of clauses: 56085 
+  Number of literals: 682407 
+  Number of variables:  2238
+
+filename: length10_6.cnf 
+  Number of clauses: 74354 
+  Number of literals: 937263 
+  Number of variables:  3092
+
+filename: length_21_10.cnf 
+  Number of clauses: 26809 
+  Number of literals: 323658 
+  Number of variables:  1632
+
+filename: length_25_3.cnf 
+  Number of clauses: 50828 
+  Number of literals: 614020 
+  Number of variables:  2140
+
+filename: length12_4.cnf 
+  Number of clauses: 3339 
+  Number of literals: 36395 
+  Number of variables:  368
+
+filename: 1ubdC1.cnf 
+  Number of clauses: 55985 
+  Number of literals: 680851 
+  Number of variables:  2238
+
+filename: length12_5.cnf 
+  Number of clauses: 3302 
+  Number of literals: 35874 
+  Number of variables:  368
+
+filename: length_25_2.cnf 
+  Number of clauses: 51035 
+  Number of literals: 617159 
+  Number of variables:  2140
+
+filename: length_17_10.cnf 
+  Number of clauses: 10625 
+  Number of literals: 120745 
+  Number of variables:  820
+
+filename: length_6_1.cnf 
+  Number of clauses: 9709 
+  Number of literals: 119720 
+  Number of variables:  1092
+
+filename: length10_7.cnf 
+  Number of clauses: 74354 
+  Number of literals: 937047 
+  Number of variables:  3092
+
+filename: length_12_9.cnf 
+  Number of clauses: 3198 
+  Number of literals: 34544 
+  Number of variables:  368
+
+filename: length7_10.cnf 
+  Number of clauses: 14841 
+  Number of literals: 177565 
+  Number of variables:  1258
+
+filename: length16_1.cnf 
+  Number of clauses: 9928 
+  Number of literals: 112810 
+  Number of variables:  795
+
+filename: length23_8.cnf 
+  Number of clauses: 29864 
+  Number of literals: 358729 
+  Number of variables:  1674
+
+filename: length_21_6.cnf 
+  Number of clauses: 26772 
+  Number of literals: 323089 
+  Number of variables:  1632
+
+filename: length7_5.cnf 
+  Number of clauses: 14941 
+  Number of literals: 178941 
+  Number of variables:  1258
+
+filename: length_18_2.cnf 
+  Number of clauses: 11405 
+  Number of literals: 129529 
+  Number of variables:  845
+
+filename: length14_3.cnf 
+  Number of clauses: 3995 
+  Number of literals: 43743 
+  Number of variables:  400
+
+filename: length_23_4.cnf 
+  Number of clauses: 29727 
+  Number of literals: 357880 
+  Number of variables:  1704
+
+filename: length_23_6.cnf 
+  Number of clauses: 29764 
+  Number of literals: 358360 
+  Number of variables:  1704
+
+filename: length9_8.cnf 
+  Number of clauses: 51851 
+  Number of literals: 684531 
+  Number of variables:  2764
+
+filename: length14_1.cnf 
+  Number of clauses: 3994 
+  Number of literals: 43682 
+  Number of variables:  400
+
+filename: length21_8.cnf 
+  Number of clauses: 26939 
+  Number of literals: 323689 
+  Number of variables:  1604
+
+filename: 1aym40.cnf 
+  Number of clauses: 88525 
+  Number of literals: 1095465 
+  Number of variables:  2752
+
+filename: length13_10.cnf 
+  Number of clauses: 3668 
+  Number of literals: 40022 
+  Number of variables:  384
+
+filename: length7_7.cnf 
+  Number of clauses: 14892 
+  Number of literals: 178373 
+  Number of variables:  1258
+
+filename: length_21_4.cnf 
+  Number of clauses: 26809 
+  Number of literals: 323496 
+  Number of variables:  1632
+
+filename: length16_3.cnf 
+  Number of clauses: 9901 
+  Number of literals: 112538 
+  Number of variables:  795
+
+filename: length_27_2.cnf 
+  Number of clauses: 55680 
+  Number of literals: 676300 
+  Number of variables:  2238
+
+filename: length_6_3.cnf 
+  Number of clauses: 9710 
+  Number of literals: 119821 
+  Number of variables:  1092
+
+filename: length10_5.cnf 
+  Number of clauses: 74151 
+  Number of literals: 934222 
+  Number of variables:  3092
+
+filename: length_10_9.cnf 
+  Number of clauses: 73948 
+  Number of literals: 931183 
+  Number of variables:  3092
+
+filename: length12_7.cnf 
+  Number of clauses: 3304 
+  Number of literals: 35928 
+  Number of variables:  368
+
+filename: 1ubdC2.cnf 
+  Number of clauses: 53485 
+  Number of literals: 648681 
+  Number of variables:  2189
+
+filename: length12_6.cnf 
+  Number of clauses: 3303 
+  Number of literals: 35859 
+  Number of variables:  368
+
+filename: length_10_8.cnf 
+  Number of clauses: 74150 
+  Number of literals: 933995 
+  Number of variables:  3092
+
+filename: length_25_1.cnf 
+  Number of clauses: 50631 
+  Number of literals: 611123 
+  Number of variables:  2140
+
+filename: length10_4.cnf 
+  Number of clauses: 74455 
+  Number of literals: 938560 
+  Number of variables:  3092
+
+filename: length_6_2.cnf 
+  Number of clauses: 9598 
+  Number of literals: 118337 
+  Number of variables:  1092
+
+filename: length_27_3.cnf 
+  Number of clauses: 55732 
+  Number of literals: 677116 
+  Number of variables:  2238
+
+filename: length16_2.cnf 
+  Number of clauses: 9954 
+  Number of literals: 113289 
+  Number of variables:  795
+
+filename: length_21_5.cnf 
+  Number of clauses: 26771 
+  Number of literals: 323132 
+  Number of variables:  1632
+
+filename: length7_6.cnf 
+  Number of clauses: 14992 
+  Number of literals: 179649 
+  Number of variables:  1258
+
+filename: length_18_1.cnf 
+  Number of clauses: 11351 
+  Number of literals: 128883 
+  Number of variables:  845
+
+filename: length21_9.cnf 
+  Number of clauses: 26991 
+  Number of literals: 324611 
+  Number of variables:  1608
+
+filename: length9_9.cnf 
+  Number of clauses: 51852 
+  Number of literals: 684544 
+  Number of variables:  2764
+
+filename: length_23_7.cnf 
+  Number of clauses: 29690 
+  Number of literals: 357346 
+  Number of variables:  1704
+
+filename: length_23_3.cnf 
+  Number of clauses: 29691 
+  Number of literals: 357430 
+  Number of variables:  1704
+
+filename: length7_2.cnf 
+  Number of clauses: 14891 
+  Number of literals: 178148 
+  Number of variables:  1258
+
+filename: length14_4.cnf 
+  Number of clauses: 3995 
+  Number of literals: 43629 
+  Number of variables:  400
+
+filename: length_18_5.cnf 
+  Number of clauses: 11324 
+  Number of literals: 128343 
+  Number of variables:  845
+
+filename: length_14_8.cnf 
+  Number of clauses: 3854 
+  Number of literals: 41878 
+  Number of variables:  400
+
+filename: length18_9.cnf 
+  Number of clauses: 11459 
+  Number of literals: 130155 
+  Number of variables:  845
+
+filename: length_21_1.cnf 
+  Number of clauses: 26806 
+  Number of literals: 323625 
+  Number of variables:  1632
+
+filename: length16_6.cnf 
+  Number of clauses: 9927 
+  Number of literals: 112917 
+  Number of variables:  795
+
+filename: length_27_7.cnf 
+  Number of clauses: 55730 
+  Number of literals: 676930 
+  Number of variables:  2238
+
+filename: length_8_9.cnf 
+  Number of clauses: 23786 
+  Number of literals: 280217 
+  Number of variables:  1472
+
+filename: length_6_6.cnf 
+  Number of clauses: 9598 
+  Number of literals: 118391 
+  Number of variables:  1092
+
+filename: length_25_5.cnf 
+  Number of clauses: 50881 
+  Number of literals: 614961 
+  Number of variables:  2140
+
+filename: length11_10.cnf 
+  Number of clauses: 107571 
+  Number of literals: 1351459 
+  Number of variables:  3486
+
+filename: length12_2.cnf 
+  Number of clauses: 3285 
+  Number of literals: 35753 
+  Number of variables:  368
+
+filename: length12_3.cnf 
+  Number of clauses: 3267 
+  Number of literals: 35425 
+  Number of variables:  368
+
+filename: length_25_4.cnf 
+  Number of clauses: 50883 
+  Number of literals: 614887 
+  Number of variables:  2140
+
+filename: length10_1.cnf 
+  Number of clauses: 74456 
+  Number of literals: 938573 
+  Number of variables:  3092
+
+filename: length_6_7.cnf 
+  Number of clauses: 9635 
+  Number of literals: 118816 
+  Number of variables:  1092
+
+filename: length_8_8.cnf 
+  Number of clauses: 23786 
+  Number of literals: 280217 
+  Number of variables:  1472
+
+filename: length_27_6.cnf 
+  Number of clauses: 55933 
+  Number of literals: 680119 
+  Number of variables:  2238
+
+filename: length16_7.cnf 
+  Number of clauses: 9900 
+  Number of literals: 112527 
+  Number of variables:  795
+
+filename: length18_8.cnf 
+  Number of clauses: 11403 
+  Number of literals: 129439 
+  Number of variables:  845
+
+filename: length_14_9.cnf 
+  Number of clauses: 3907 
+  Number of literals: 42573 
+  Number of variables:  400
+
+filename: 1byyA0.cnf 
+  Number of clauses: 25523 
+  Number of literals: 307592 
+  Number of variables:  1590
+
+filename: length_18_4.cnf 
+  Number of clauses: 11269 
+  Number of literals: 127706 
+  Number of variables:  845
+
+filename: length14_5.cnf 
+  Number of clauses: 3960 
+  Number of literals: 43218 
+  Number of variables:  400
+
+filename: length7_3.cnf 
+  Number of clauses: 15043 
+  Number of literals: 180259 
+  Number of variables:  1258
+
+filename: length_23_2.cnf 
+  Number of clauses: 29653 
+  Number of literals: 356902 
+  Number of variables:  1704
+
+filename: length_16_9.cnf 
+  Number of clauses: 9874 
+  Number of literals: 112282 
+  Number of variables:  795
+
+filename: length7_1.cnf 
+  Number of clauses: 14942 
+  Number of literals: 178970 
+  Number of variables:  1258
+
+filename: length14_7.cnf 
+  Number of clauses: 3977 
+  Number of literals: 43447 
+  Number of variables:  400
+
+filename: length_18_6.cnf 
+  Number of clauses: 11351 
+  Number of literals: 128783 
+  Number of variables:  845
+
+filename: length_21_2.cnf 
+  Number of clauses: 26809 
+  Number of literals: 323514 
+  Number of variables:  1632
+
+filename: length_23_10.cnf 
+  Number of clauses: 29800 
+  Number of literals: 358889 
+  Number of variables:  1702
+
+filename: length16_5.cnf 
+  Number of clauses: 9955 
+  Number of literals: 113182 
+  Number of variables:  795
+
+filename: length_27_4.cnf 
+  Number of clauses: 55880 
+  Number of literals: 679350 
+  Number of variables:  2238
+
+filename: length10_3.cnf 
+  Number of clauses: 74050 
+  Number of literals: 932709 
+  Number of variables:  3092
+
+filename: length_6_5.cnf 
+  Number of clauses: 9634 
+  Number of literals: 118895 
+  Number of variables:  1092
+
+filename: length_25_6.cnf 
+  Number of clauses: 50933 
+  Number of literals: 615539 
+  Number of variables:  2140
+
+filename: length12_1.cnf 
+  Number of clauses: 3285 
+  Number of literals: 35645 
+  Number of variables:  368
+
+filename: length_25_7.cnf 
+  Number of clauses: 50832 
+  Number of literals: 614090 
+  Number of variables:  2140
+
+filename: length_19_10.cnf 
+  Number of clauses: 11995 
+  Number of literals: 135769 
+  Number of variables:  870
+
+filename: length_6_4.cnf 
+  Number of clauses: 9635 
+  Number of literals: 118852 
+  Number of variables:  1092
+
+filename: length10_2.cnf 
+  Number of clauses: 74455 
+  Number of literals: 938560 
+  Number of variables:  3092
+
+filename: length_27_5.cnf 
+  Number of clauses: 55731 
+  Number of literals: 677219 
+  Number of variables:  2238
+
+filename: length16_4.cnf 
+  Number of clauses: 10029 
+  Number of literals: 114265 
+  Number of variables:  791
+
+filename: length9_10.cnf 
+  Number of clauses: 51767 
+  Number of literals: 683214 
+  Number of variables:  2764
+
+filename: length_21_3.cnf 
+  Number of clauses: 26733 
+  Number of literals: 322606 
+  Number of variables:  1632
+
+filename: length_18_7.cnf 
+  Number of clauses: 11351 
+  Number of literals: 128667 
+  Number of variables:  845
+
+filename: length14_6.cnf 
+  Number of clauses: 3975 
+  Number of literals: 43431 
+  Number of variables:  400
+
+filename: length_16_8.cnf 
+  Number of clauses: 9843 
+  Number of literals: 111798 
+  Number of variables:  795
+
+filename: length_23_1.cnf 
+  Number of clauses: 29812 
+  Number of literals: 358779 
+  Number of variables:  1694
+
+filename: length_15_10.cnf 
+  Number of clauses: 4303 
+  Number of literals: 46995 
+  Number of variables:  416
+
+filename: length_11_9.cnf 
+  Number of clauses: 107449 
+  Number of literals: 1349389 
+  Number of variables:  3486
+
+filename: length13_7.cnf 
+  Number of clauses: 3614 
+  Number of literals: 39354 
+  Number of variables:  384
+
+filename: length_26_2.cnf 
+  Number of clauses: 53228 
+  Number of literals: 644654 
+  Number of variables:  2189
+
+filename: length_7_3.cnf 
+  Number of clauses: 14891 
+  Number of literals: 178264 
+  Number of variables:  1258
+
+filename: length11_5.cnf 
+  Number of clauses: 107694 
+  Number of literals: 1353300 
+  Number of variables:  3486
+
+filename: length_20_4.cnf 
+  Number of clauses: 25459 
+  Number of literals: 307072 
+  Number of variables:  1596
+
+filename: length17_3.cnf 
+  Number of clauses: 10654 
+  Number of literals: 120973 
+  Number of variables:  820
+
+filename: length_22_6.cnf 
+  Number of clauses: 28302 
+  Number of literals: 341189 
+  Number of variables:  1664
+
+filename: length23_10.cnf 
+  Number of clauses: 29860 
+  Number of literals: 359199 
+  Number of variables:  1682
+
+filename: length8_8.cnf 
+  Number of clauses: 24114 
+  Number of literals: 284569 
+  Number of variables:  1472
+
+filename: length15_1.cnf 
+  Number of clauses: 4373 
+  Number of literals: 47963 
+  Number of variables:  416
+
+filename: length20_8.cnf 
+  Number of clauses: 25559 
+  Number of literals: 306503 
+  Number of variables:  1566
+
+filename: length6_7.cnf 
+  Number of clauses: 9709 
+  Number of literals: 119720 
+  Number of variables:  1092
+
+filename: length6_6.cnf 
+  Number of clauses: 9709 
+  Number of literals: 119792 
+  Number of variables:  1092
+
+filename: length20_9.cnf 
+  Number of clauses: 25579 
+  Number of literals: 308073 
+  Number of variables:  1586
+
+filename: length_19_1.cnf 
+  Number of clauses: 12235 
+  Number of literals: 139036 
+  Number of variables:  870
+
+filename: 1tf3A2.cnf 
+  Number of clauses: 92203 
+  Number of literals: 1142614 
+  Number of variables:  2816
+
+filename: length8_9.cnf 
+  Number of clauses: 23983 
+  Number of literals: 282960 
+  Number of variables:  1472
+
+filename: length_22_7.cnf 
+  Number of clauses: 28156 
+  Number of literals: 339315 
+  Number of variables:  1668
+
+filename: length15_10.cnf 
+  Number of clauses: 4355 
+  Number of literals: 47711 
+  Number of variables:  416
+
+filename: 2gliA5.cnf 
+  Number of clauses: 88461 
+  Number of literals: 1094345 
+  Number of variables:  2752
+
+filename: length17_2.cnf 
+  Number of clauses: 10652 
+  Number of literals: 121001 
+  Number of variables:  820
+
+filename: length_20_5.cnf 
+  Number of clauses: 25422 
+  Number of literals: 306503 
+  Number of variables:  1596
+
+filename: length11_4.cnf 
+  Number of clauses: 107693 
+  Number of literals: 1353287 
+  Number of variables:  3486
+
+filename: length_7_2.cnf 
+  Number of clauses: 14892 
+  Number of literals: 178273 
+  Number of variables:  1258
+
+filename: length19_10.cnf 
+  Number of clauses: 12205 
+  Number of literals: 138513 
+  Number of variables:  870
+
+filename: length_26_3.cnf 
+  Number of clauses: 53132 
+  Number of literals: 643368 
+  Number of variables:  2189
+
+filename: length13_6.cnf 
+  Number of clauses: 3630 
+  Number of literals: 39572 
+  Number of variables:  384
+
+filename: length_11_8.cnf 
+  Number of clauses: 106959 
+  Number of literals: 1341629 
+  Number of variables:  3486
+
+filename: length_24_1.cnf 
+  Number of clauses: 48428 
+  Number of literals: 582988 
+  Number of variables:  2091
+
+filename: length_24_3.cnf 
+  Number of clauses: 48277 
+  Number of literals: 580831 
+  Number of variables:  2091
+
+filename: length13_4.cnf 
+  Number of clauses: 3597 
+  Number of literals: 39195 
+  Number of variables:  384
+
+filename: length_13_8.cnf 
+  Number of clauses: 3527 
+  Number of literals: 38297 
+  Number of variables:  384
+
+filename: length_11_10.cnf 
+  Number of clauses: 107081 
+  Number of literals: 1344095 
+  Number of variables:  3486
+
+filename: length_26_1.cnf 
+  Number of clauses: 53031 
+  Number of literals: 641897 
+  Number of variables:  2189
+
+filename: length11_6.cnf 
+  Number of clauses: 107571 
+  Number of literals: 1351037 
+  Number of variables:  3486
+
+filename: length_20_7.cnf 
+  Number of clauses: 25559 
+  Number of literals: 308006 
+  Number of variables:  1590
+
+filename: length_8_10.cnf 
+  Number of clauses: 23656 
+  Number of literals: 278257 
+  Number of variables:  1472
+
+filename: length22_9.cnf 
+  Number of clauses: 28422 
+  Number of literals: 342503 
+  Number of variables:  1652
+
+filename: length_22_5.cnf 
+  Number of clauses: 28270 
+  Number of literals: 340677 
+  Number of variables:  1668
+
+filename: length15_2.cnf 
+  Number of clauses: 4337 
+  Number of literals: 47465 
+  Number of variables:  416
+
+filename: length_19_3.cnf 
+  Number of clauses: 12048 
+  Number of literals: 136452 
+  Number of variables:  870
+
+filename: length6_4.cnf 
+  Number of clauses: 9747 
+  Number of literals: 120318 
+  Number of variables:  1092
+
+filename: length6_5.cnf 
+  Number of clauses: 9672 
+  Number of literals: 119331 
+  Number of variables:  1092
+
+filename: length_19_2.cnf 
+  Number of clauses: 12048 
+  Number of literals: 136502 
+  Number of variables:  870
+
+filename: length15_3.cnf 
+  Number of clauses: 4373 
+  Number of literals: 47925 
+  Number of variables:  416
+
+filename: 1tf3A1.cnf 
+  Number of clauses: 92462 
+  Number of literals: 1146475 
+  Number of variables:  2816
+
+filename: length_22_4.cnf 
+  Number of clauses: 28338 
+  Number of literals: 341711 
+  Number of variables:  1664
+
+filename: length17_1.cnf 
+  Number of clauses: 10733 
+  Number of literals: 122067 
+  Number of variables:  820
+
+filename: length22_8.cnf 
+  Number of clauses: 28386 
+  Number of literals: 341891 
+  Number of variables:  1652
+
+filename: length_20_6.cnf 
+  Number of clauses: 25528 
+  Number of literals: 307830 
+  Number of variables:  1592
+
+filename: length_7_1.cnf 
+  Number of clauses: 14841 
+  Number of literals: 177663 
+  Number of variables:  1258
+
+filename: length11_7.cnf 
+  Number of clauses: 107695 
+  Number of literals: 1352829 
+  Number of variables:  3486
+
+filename: length_13_9.cnf 
+  Number of clauses: 3493 
+  Number of literals: 37833 
+  Number of variables:  384
+
+filename: length_27_10.cnf 
+  Number of clauses: 55833 
+  Number of literals: 678681 
+  Number of variables:  2238
+
+filename: length13_5.cnf 
+  Number of clauses: 3648 
+  Number of literals: 39818 
+  Number of variables:  384
+
+filename: length_24_2.cnf 
+  Number of clauses: 48380 
+  Number of literals: 582366 
+  Number of variables:  2091
+
+filename: length_24_6.cnf 
+  Number of clauses: 48477 
+  Number of literals: 583939 
+  Number of variables:  2091
+
+filename: length13_1.cnf 
+  Number of clauses: 3615 
+  Number of literals: 39327 
+  Number of variables:  384
+
+filename: length_26_4.cnf 
+  Number of clauses: 53229 
+  Number of literals: 644825 
+  Number of variables:  2189
+
+filename: length11_3.cnf 
+  Number of clauses: 107326 
+  Number of literals: 1347610 
+  Number of variables:  3486
+
+filename: length_7_5.cnf 
+  Number of clauses: 14741 
+  Number of literals: 176271 
+  Number of variables:  1258
+
+filename: length_6_10.cnf 
+  Number of clauses: 9598 
+  Number of literals: 118301 
+  Number of variables:  1092
+
+filename: length_20_2.cnf 
+  Number of clauses: 25495 
+  Number of literals: 307421 
+  Number of variables:  1594
+
+filename: length_13_10.cnf 
+  Number of clauses: 3527 
+  Number of literals: 38239 
+  Number of variables:  384
+
+filename: length17_5.cnf 
+  Number of clauses: 10707 
+  Number of literals: 121806 
+  Number of variables:  820
+
+filename: length_17_9.cnf 
+  Number of clauses: 10573 
+  Number of literals: 119925 
+  Number of variables:  820
+
+filename: length6_1.cnf 
+  Number of clauses: 9785 
+  Number of literals: 120772 
+  Number of variables:  1092
+
+filename: length15_7.cnf 
+  Number of clauses: 4391 
+  Number of literals: 48171 
+  Number of variables:  416
+
+filename: length_19_6.cnf 
+  Number of clauses: 11969 
+  Number of literals: 135340 
+  Number of variables:  870
+
+filename: length_19_7.cnf 
+  Number of clauses: 12074 
+  Number of literals: 136813 
+  Number of variables:  870
+
+filename: length15_6.cnf 
+  Number of clauses: 4337 
+  Number of literals: 47471 
+  Number of variables:  416
+
+filename: length_25_10.cnf 
+  Number of clauses: 50828 
+  Number of literals: 613958 
+  Number of variables:  2140
+
+filename: length_17_8.cnf 
+  Number of clauses: 10468 
+  Number of literals: 118550 
+  Number of variables:  820
+
+filename: length_22_1.cnf 
+  Number of clauses: 28194 
+  Number of literals: 339841 
+  Number of variables:  1668
+
+filename: length17_4.cnf 
+  Number of clauses: 10707 
+  Number of literals: 121756 
+  Number of variables:  820
+
+filename: length_20_3.cnf 
+  Number of clauses: 25460 
+  Number of literals: 307083 
+  Number of variables:  1596
+
+filename: 1bbo01.cnf 
+  Number of clauses: 50983 
+  Number of literals: 616247 
+  Number of variables:  2140
+
+filename: length_7_4.cnf 
+  Number of clauses: 14791 
+  Number of literals: 176966 
+  Number of variables:  1258
+
+filename: length11_2.cnf 
+  Number of clauses: 107694 
+  Number of literals: 1353120 
+  Number of variables:  3486
+
+filename: length_26_5.cnf 
+  Number of clauses: 53434 
+  Number of literals: 647900 
+  Number of variables:  2189
+
+filename: length_24_7.cnf 
+  Number of clauses: 48430 
+  Number of literals: 583424 
+  Number of variables:  2091
+
+filename: length21_10.cnf 
+  Number of clauses: 26999 
+  Number of literals: 324960 
+  Number of variables:  1612
+
+filename: length_24_5.cnf 
+  Number of clauses: 48682 
+  Number of literals: 586780 
+  Number of variables:  2091
+
+filename: length13_2.cnf 
+  Number of clauses: 3596 
+  Number of literals: 39158 
+  Number of variables:  384
+
+filename: length_26_7.cnf 
+  Number of clauses: 53080 
+  Number of literals: 642632 
+  Number of variables:  2189
+
+filename: length_9_9.cnf 
+  Number of clauses: 51359 
+  Number of literals: 677685 
+  Number of variables:  2764
+
+filename: length_7_6.cnf 
+  Number of clauses: 14741 
+  Number of literals: 176269 
+  Number of variables:  1258
+
+filename: length24_9.cnf 
+  Number of clauses: 48833 
+  Number of literals: 589391 
+  Number of variables:  2091
+
+filename: length_15_8.cnf 
+  Number of clauses: 4249 
+  Number of literals: 46345 
+  Number of variables:  416
+
+filename: length_20_1.cnf 
+  Number of clauses: 25567 
+  Number of literals: 308429 
+  Number of variables:  1594
+
+filename: length19_9.cnf 
+  Number of clauses: 12232 
+  Number of literals: 138933 
+  Number of variables:  870
+
+filename: length17_6.cnf 
+  Number of clauses: 10653 
+  Number of literals: 120962 
+  Number of variables:  820
+
+filename: length_22_3.cnf 
+  Number of clauses: 28083 
+  Number of literals: 338296 
+  Number of variables:  1668
+
+filename: length6_2.cnf 
+  Number of clauses: 9747 
+  Number of literals: 120336 
+  Number of variables:  1092
+
+filename: length15_4.cnf 
+  Number of clauses: 4373 
+  Number of literals: 47925 
+  Number of variables:  416
+
+filename: length_19_5.cnf 
+  Number of clauses: 12045 
+  Number of literals: 136371 
+  Number of variables:  870
+
+filename: 1pspA1.cnf 
+  Number of clauses: 9635 
+  Number of literals: 118834 
+  Number of variables:  1092
+
+filename: length_19_4.cnf 
+  Number of clauses: 12073 
+  Number of literals: 136852 
+  Number of variables:  870
+
+filename: length15_5.cnf 
+  Number of clauses: 4373 
+  Number of literals: 47931 
+  Number of variables:  416
+
+filename: length6_3.cnf 
+  Number of clauses: 9709 
+  Number of literals: 119792 
+  Number of variables:  1092
+
+filename: length_22_2.cnf 
+  Number of clauses: 28305 
+  Number of literals: 341292 
+  Number of variables:  1666
+
+filename: length17_7.cnf 
+  Number of clauses: 10681 
+  Number of literals: 121445 
+  Number of variables:  820
+
+filename: length19_8.cnf 
+  Number of clauses: 12206 
+  Number of literals: 138642 
+  Number of variables:  870
+
+filename: length_15_9.cnf 
+  Number of clauses: 4267 
+  Number of literals: 46591 
+  Number of variables:  416
+
+filename: length11_1.cnf 
+  Number of clauses: 107203 
+  Number of literals: 1345465 
+  Number of variables:  3486
+
+filename: length24_8.cnf 
+  Number of clauses: 48937 
+  Number of literals: 590585 
+  Number of variables:  2091
+
+filename: length_7_7.cnf 
+  Number of clauses: 14741 
+  Number of literals: 176271 
+  Number of variables:  1258
+
+filename: length17_10.cnf 
+  Number of clauses: 10707 
+  Number of literals: 121824 
+  Number of variables:  820
+
+filename: length_9_8.cnf 
+  Number of clauses: 51521 
+  Number of literals: 679917 
+  Number of variables:  2764
+
+filename: length_26_6.cnf 
+  Number of clauses: 53280 
+  Number of literals: 645586 
+  Number of variables:  2189
+
+filename: length13_3.cnf 
+  Number of clauses: 3650 
+  Number of literals: 39808 
+  Number of variables:  384
+
+filename: length_24_4.cnf 
+  Number of clauses: 48378 
+  Number of literals: 582418 
+  Number of variables:  2091
+
+filename: length_24_9.cnf 
+  Number of clauses: 48429 
+  Number of literals: 583177 
+  Number of variables:  2091
+
+filename: length_9_5.cnf 
+  Number of clauses: 51769 
+  Number of literals: 683204 
+  Number of variables:  2764
+
+filename: length_13_2.cnf 
+  Number of clauses: 3544 
+  Number of literals: 38424 
+  Number of variables:  384
+
+filename: 1i4oD0.cnf 
+  Number of clauses: 9873 
+  Number of literals: 112223 
+  Number of variables:  795
+
+filename: length_28_4.cnf 
+  Number of clauses: 88196 
+  Number of literals: 1090714 
+  Number of variables:  2752
+
+filename: length24_5.cnf 
+  Number of clauses: 48988 
+  Number of literals: 591544 
+  Number of variables:  2091
+
+filename: length19_5.cnf 
+  Number of clauses: 12260 
+  Number of literals: 139268 
+  Number of variables:  870
+
+filename: length_15_4.cnf 
+  Number of clauses: 4233 
+  Number of literals: 46121 
+  Number of variables:  416
+
+filename: length22_3.cnf 
+  Number of clauses: 28398 
+  Number of literals: 341405 
+  Number of variables:  1640
+
+filename: length8_1.cnf 
+  Number of clauses: 23851 
+  Number of literals: 281124 
+  Number of variables:  1472
+
+filename: length24_10.cnf 
+  Number of clauses: 48886 
+  Number of literals: 590038 
+  Number of variables:  2091
+
+filename: length_17_6.cnf 
+  Number of clauses: 10546 
+  Number of literals: 119701 
+  Number of variables:  820
+
+filename: 1pspB1.cnf 
+  Number of clauses: 9635 
+  Number of literals: 118834 
+  Number of variables:  1092
+
+filename: 1meyF2.cnf 
+  Number of clauses: 50831 
+  Number of literals: 614015 
+  Number of variables:  2140
+
+filename: length_19_9.cnf 
+  Number of clauses: 12048 
+  Number of literals: 136502 
+  Number of variables:  870
+
+filename: length20_1.cnf 
+  Number of clauses: 25591 
+  Number of literals: 307988 
+  Number of variables:  1582
+
+filename: length15_8.cnf 
+  Number of clauses: 4356 
+  Number of literals: 47754 
+  Number of variables:  416
+
+filename: length15_9.cnf 
+  Number of clauses: 4356 
+  Number of literals: 47772 
+  Number of variables:  416
+
+filename: length_19_8.cnf 
+  Number of clauses: 11995 
+  Number of literals: 135721 
+  Number of variables:  870
+
+filename: length_17_7.cnf 
+  Number of clauses: 10466 
+  Number of literals: 118528 
+  Number of variables:  820
+
+filename: length22_2.cnf 
+  Number of clauses: 28425 
+  Number of literals: 342728 
+  Number of variables:  1658
+
+filename: length12_10.cnf 
+  Number of clauses: 3302 
+  Number of literals: 35906 
+  Number of variables:  368
+
+filename: length_15_5.cnf 
+  Number of clauses: 4250 
+  Number of literals: 46370 
+  Number of variables:  416
+
+filename: length19_4.cnf 
+  Number of clauses: 12261 
+  Number of literals: 139277 
+  Number of variables:  870
+
+filename: length24_4.cnf 
+  Number of clauses: 48937 
+  Number of literals: 590841 
+  Number of variables:  2091
+
+filename: length_28_5.cnf 
+  Number of clauses: 88134 
+  Number of literals: 1089652 
+  Number of variables:  2752
+
+filename: length_13_3.cnf 
+  Number of clauses: 3527 
+  Number of literals: 38221 
+  Number of variables:  384
+
+filename: length_9_4.cnf 
+  Number of clauses: 51768 
+  Number of literals: 683227 
+  Number of variables:  2764
+
+filename: length_24_8.cnf 
+  Number of clauses: 48427 
+  Number of literals: 583191 
+  Number of variables:  2091
+
+filename: length_11_1.cnf 
+  Number of clauses: 107204 
+  Number of literals: 1345694 
+  Number of variables:  3486
+
+filename: length_11_3.cnf 
+  Number of clauses: 107082 
+  Number of literals: 1343712 
+  Number of variables:  3486
+
+filename: length_26_8.cnf 
+  Number of clauses: 53483 
+  Number of literals: 648697 
+  Number of variables:  2189
+
+filename: length_13_1.cnf 
+  Number of clauses: 3525 
+  Number of literals: 38243 
+  Number of variables:  384
+
+filename: length_16_10.cnf 
+  Number of clauses: 9768 
+  Number of literals: 110816 
+  Number of variables:  795
+
+filename: length_9_6.cnf 
+  Number of clauses: 51768 
+  Number of literals: 683407 
+  Number of variables:  2764
+
+filename: length_7_9.cnf 
+  Number of clauses: 14791 
+  Number of literals: 176870 
+  Number of variables:  1258
+
+filename: length24_6.cnf 
+  Number of clauses: 48783 
+  Number of literals: 588389 
+  Number of variables:  2091
+
+filename: length19_6.cnf 
+  Number of clauses: 12206 
+  Number of literals: 138524 
+  Number of variables:  870
+
+filename: length_15_7.cnf 
+  Number of clauses: 4301 
+  Number of literals: 46973 
+  Number of variables:  416
+
+filename: length17_9.cnf 
+  Number of clauses: 10755 
+  Number of literals: 122360 
+  Number of variables:  816
+
+filename: length8_2.cnf 
+  Number of clauses: 23917 
+  Number of literals: 281896 
+  Number of variables:  1472
+
+filename: length_17_5.cnf 
+  Number of clauses: 10547 
+  Number of literals: 119664 
+  Number of variables:  820
+
+filename: length6_10.cnf 
+  Number of clauses: 9672 
+  Number of literals: 119349 
+  Number of variables:  1092
+
+filename: length20_2.cnf 
+  Number of clauses: 25595 
+  Number of literals: 307748 
+  Number of variables:  1578
+
+filename: length20_3.cnf 
+  Number of clauses: 25591 
+  Number of literals: 307487 
+  Number of variables:  1574
+
+filename: length_17_4.cnf 
+  Number of clauses: 10493 
+  Number of literals: 118900 
+  Number of variables:  820
+
+filename: length8_3.cnf 
+  Number of clauses: 23982 
+  Number of literals: 282803 
+  Number of variables:  1472
+
+filename: length22_1.cnf 
+  Number of clauses: 28333 
+  Number of literals: 341646 
+  Number of variables:  1662
+
+filename: length17_8.cnf 
+  Number of clauses: 10653 
+  Number of literals: 121062 
+  Number of variables:  820
+
+filename: length_15_6.cnf 
+  Number of clauses: 4267 
+  Number of literals: 46585 
+  Number of variables:  416
+
+filename: length19_7.cnf 
+  Number of clauses: 12302 
+  Number of literals: 139782 
+  Number of variables:  864
+
+filename: length24_7.cnf 
+  Number of clauses: 48887 
+  Number of literals: 590095 
+  Number of variables:  2091
+
+filename: length_7_8.cnf 
+  Number of clauses: 14841 
+  Number of literals: 177451 
+  Number of variables:  1258
+
+filename: length_9_7.cnf 
+  Number of clauses: 51604 
+  Number of literals: 681113 
+  Number of variables:  2764
+
+filename: length_26_9.cnf 
+  Number of clauses: 53435 
+  Number of literals: 648187 
+  Number of variables:  2189
+
+filename: length_20_10.cnf 
+  Number of clauses: 25348 
+  Number of literals: 305473 
+  Number of variables:  1596
+
+filename: length_11_2.cnf 
+  Number of clauses: 107202 
+  Number of literals: 1345514 
+  Number of variables:  3486
+
+filename: 1rmd02.cnf 
+  Number of clauses: 92202 
+  Number of literals: 1142307 
+  Number of variables:  2816
+
+filename: length_11_6.cnf 
+  Number of clauses: 107204 
+  Number of literals: 1345540 
+  Number of variables:  3486
+
+filename: length13_8.cnf 
+  Number of clauses: 3650 
+  Number of literals: 39776 
+  Number of variables:  384
+
+filename: length_13_4.cnf 
+  Number of clauses: 3527 
+  Number of literals: 38271 
+  Number of variables:  384
+
+filename: length_9_3.cnf 
+  Number of clauses: 51769 
+  Number of literals: 683204 
+  Number of variables:  2764
+
+filename: length_18_10.cnf 
+  Number of clauses: 11271 
+  Number of literals: 127778 
+  Number of variables:  845
+
+filename: length_28_2.cnf 
+  Number of clauses: 88395 
+  Number of literals: 1093359 
+  Number of variables:  2752
+
+filename: length24_3.cnf 
+  Number of clauses: 48836 
+  Number of literals: 589432 
+  Number of variables:  2091
+
+filename: length_14_10.cnf 
+  Number of clauses: 3924 
+  Number of literals: 42720 
+  Number of variables:  400
+
+filename: length19_3.cnf 
+  Number of clauses: 12285 
+  Number of literals: 139628 
+  Number of variables:  868
+
+filename: length_15_2.cnf 
+  Number of clauses: 4319 
+  Number of literals: 47237 
+  Number of variables:  416
+
+filename: length22_5.cnf 
+  Number of clauses: 28386 
+  Number of literals: 341891 
+  Number of variables:  1652
+
+filename: length_22_9.cnf 
+  Number of clauses: 28231 
+  Number of literals: 340212 
+  Number of variables:  1668
+
+filename: length8_7.cnf 
+  Number of clauses: 24048 
+  Number of literals: 283721 
+  Number of variables:  1472
+
+filename: length20_7.cnf 
+  Number of clauses: 25568 
+  Number of literals: 307712 
+  Number of variables:  1584
+
+filename: length8_10.cnf 
+  Number of clauses: 23852 
+  Number of literals: 280919 
+  Number of variables:  1472
+
+filename: length6_8.cnf 
+  Number of clauses: 9747 
+  Number of literals: 120246 
+  Number of variables:  1092
+
+filename: length6_9.cnf 
+  Number of clauses: 9709 
+  Number of literals: 119810 
+  Number of variables:  1092
+
+filename: length_22_10.cnf 
+  Number of clauses: 28194 
+  Number of literals: 339841 
+  Number of variables:  1668
+
+filename: length20_6.cnf 
+  Number of clauses: 25564 
+  Number of literals: 308262 
+  Number of variables:  1592
+
+filename: length8_6.cnf 
+  Number of clauses: 23917 
+  Number of literals: 281826 
+  Number of variables:  1472
+
+filename: length_22_8.cnf 
+  Number of clauses: 28192 
+  Number of literals: 339765 
+  Number of variables:  1668
+
+filename: length_17_1.cnf 
+  Number of clauses: 10520 
+  Number of literals: 119224 
+  Number of variables:  820
+
+filename: length22_4.cnf 
+  Number of clauses: 28261 
+  Number of literals: 338244 
+  Number of variables:  1626
+
+filename: length_15_3.cnf 
+  Number of clauses: 4199 
+  Number of literals: 45665 
+  Number of variables:  416
+
+filename: length19_2.cnf 
+  Number of clauses: 12260 
+  Number of literals: 139316 
+  Number of variables:  870
+
+filename: length24_2.cnf 
+  Number of clauses: 48988 
+  Number of literals: 591504 
+  Number of variables:  2091
+
+filename: length_28_3.cnf 
+  Number of clauses: 87936 
+  Number of literals: 1086310 
+  Number of variables:  2752
+
+filename: length_9_2.cnf 
+  Number of clauses: 51686 
+  Number of literals: 682260 
+  Number of variables:  2764
+
+filename: length_13_5.cnf 
+  Number of clauses: 3543 
+  Number of literals: 38445 
+  Number of variables:  384
+
+filename: length13_9.cnf 
+  Number of clauses: 3614 
+  Number of literals: 39398 
+  Number of variables:  384
+
+filename: length_11_7.cnf 
+  Number of clauses: 107204 
+  Number of literals: 1345514 
+  Number of variables:  3486
+
+filename: length_11_5.cnf 
+  Number of clauses: 107202 
+  Number of literals: 1345730 
+  Number of variables:  3486
+
+filename: length_13_7.cnf 
+  Number of clauses: 3562 
+  Number of literals: 38752 
+  Number of variables:  384
+
+filename: length11_9.cnf 
+  Number of clauses: 107570 
+  Number of literals: 1351446 
+  Number of variables:  3486
+
+filename: length_28_1.cnf 
+  Number of clauses: 88197 
+  Number of literals: 1090529 
+  Number of variables:  2752
+
+filename: length_20_8.cnf 
+  Number of clauses: 25419 
+  Number of literals: 306434 
+  Number of variables:  1596
+
+filename: length_15_1.cnf 
+  Number of clauses: 4249 
+  Number of literals: 46345 
+  Number of variables:  416
+
+filename: length22_6.cnf 
+  Number of clauses: 28437 
+  Number of literals: 342720 
+  Number of variables:  1654
+
+filename: length_17_3.cnf 
+  Number of clauses: 10519 
+  Number of literals: 119211 
+  Number of variables:  820
+
+filename: length8_4.cnf 
+  Number of clauses: 23916 
+  Number of literals: 281961 
+  Number of variables:  1472
+
+filename: length20_4.cnf 
+  Number of clauses: 25532 
+  Number of literals: 305639 
+  Number of variables:  1560
+
+filename: length20_5.cnf 
+  Number of clauses: 25552 
+  Number of literals: 306713 
+  Number of variables:  1568
+
+filename: length8_5.cnf 
+  Number of clauses: 23916 
+  Number of literals: 281885 
+  Number of variables:  1472
+
+filename: length_17_2.cnf 
+  Number of clauses: 10571 
+  Number of literals: 119951 
+  Number of variables:  820
+
+filename: length22_7.cnf 
+  Number of clauses: 28437 
+  Number of literals: 342774 
+  Number of variables:  1654
+
+filename: length19_1.cnf 
+  Number of clauses: 12320 
+  Number of literals: 140023 
+  Number of variables:  862
+
+filename: length_20_9.cnf 
+  Number of clauses: 25310 
+  Number of literals: 304911 
+  Number of variables:  1596
+
+filename: length10_10.cnf 
+  Number of clauses: 74455 
+  Number of literals: 938560 
+  Number of variables:  3092
+
+filename: length24_1.cnf 
+  Number of clauses: 48836 
+  Number of literals: 589234 
+  Number of variables:  2091
+
+filename: length11_8.cnf 
+  Number of clauses: 107203 
+  Number of literals: 1345527 
+  Number of variables:  3486
+
+filename: length_13_6.cnf 
+  Number of clauses: 3579 
+  Number of literals: 38923 
+  Number of variables:  384
+
+filename: length_9_1.cnf 
+  Number of clauses: 51521 
+  Number of literals: 679773 
+  Number of variables:  2764
+
+filename: length_11_4.cnf 
+  Number of clauses: 106715 
+  Number of literals: 1338189 
+  Number of variables:  3486
+
+filename: length9_2.cnf 
+  Number of clauses: 51851 
+  Number of literals: 684531 
+  Number of variables:  2764
+
+filename: length_16_5.cnf 
+  Number of clauses: 9794 
+  Number of literals: 111177 
+  Number of variables:  795
+
+filename: length21_2.cnf 
+  Number of clauses: 26951 
+  Number of literals: 323472 
+  Number of variables:  1600
+
+filename: length18_6.cnf 
+  Number of clauses: 11431 
+  Number of literals: 129870 
+  Number of variables:  845
+
+filename: length_14_7.cnf 
+  Number of clauses: 3890 
+  Number of literals: 42306 
+  Number of variables:  400
+
+filename: length16_9.cnf 
+  Number of clauses: 9954 
+  Number of literals: 113271 
+  Number of variables:  795
+
+filename: length_27_8.cnf 
+  Number of clauses: 55881 
+  Number of literals: 679561 
+  Number of variables:  2238
+
+filename: length_12_1.cnf 
+  Number of clauses: 3232 
+  Number of literals: 35064 
+  Number of variables:  368
+
+filename: length_8_6.cnf 
+  Number of clauses: 23784 
+  Number of literals: 280049 
+  Number of variables:  1472
+
+filename: length_26_10.cnf 
+  Number of clauses: 53382 
+  Number of literals: 647402 
+  Number of variables:  2189
+
+filename: length_6_9.cnf 
+  Number of clauses: 9562 
+  Number of literals: 117887 
+  Number of variables:  1092
+
+filename: 1a1iA3.cnf 
+  Number of clauses: 53385 
+  Number of literals: 647183 
+  Number of variables:  2189
+
+filename: length_10_3.cnf 
+  Number of clauses: 73847 
+  Number of literals: 929670 
+  Number of variables:  3092
+
+filename: length_10_10.cnf 
+  Number of clauses: 73948 
+  Number of literals: 931183 
+  Number of variables:  3092
+
+filename: length_10_2.cnf 
+  Number of clauses: 74151 
+  Number of literals: 934008 
+  Number of variables:  3092
+
+filename: length_6_8.cnf 
+  Number of clauses: 9747 
+  Number of literals: 120336 
+  Number of variables:  1092
+
+filename: length_8_7.cnf 
+  Number of clauses: 23851 
+  Number of literals: 281054 
+  Number of variables:  1472
+
+filename: length_27_9.cnf 
+  Number of clauses: 55931 
+  Number of literals: 680131 
+  Number of variables:  2238
+
+filename: length23_1.cnf 
+  Number of clauses: 29837 
+  Number of literals: 358744 
+  Number of variables:  1680
+
+filename: length16_8.cnf 
+  Number of clauses: 9955 
+  Number of literals: 113250 
+  Number of variables:  795
+
+filename: length_14_6.cnf 
+  Number of clauses: 3855 
+  Number of literals: 41915 
+  Number of variables:  400
+
+filename: length18_7.cnf 
+  Number of clauses: 11430 
+  Number of literals: 129879 
+  Number of variables:  845
+
+filename: length21_3.cnf 
+  Number of clauses: 26999 
+  Number of literals: 324888 
+  Number of variables:  1612
+
+filename: length_16_4.cnf 
+  Number of clauses: 9794 
+  Number of literals: 111079 
+  Number of variables:  795
+
+filename: length_9_10.cnf 
+  Number of clauses: 51522 
+  Number of literals: 679966 
+  Number of variables:  2764
+
+filename: length9_3.cnf 
+  Number of clauses: 52016 
+  Number of literals: 686656 
+  Number of variables:  2764
+
+filename: length9_1.cnf 
+  Number of clauses: 51934 
+  Number of literals: 685510 
+  Number of variables:  2764
+
+filename: length_16_6.cnf 
+  Number of clauses: 9768 
+  Number of literals: 110766 
+  Number of variables:  795
+
+filename: length14_10.cnf 
+  Number of clauses: 4012 
+  Number of literals: 43896 
+  Number of variables:  400
+
+filename: length21_1.cnf 
+  Number of clauses: 26978 
+  Number of literals: 324472 
+  Number of variables:  1610
+
+filename: length_18_9.cnf 
+  Number of clauses: 11377 
+  Number of literals: 129144 
+  Number of variables:  845
+
+filename: length14_8.cnf 
+  Number of clauses: 3976 
+  Number of literals: 43486 
+  Number of variables:  400
+
+filename: length18_5.cnf 
+  Number of clauses: 11485 
+  Number of literals: 130634 
+  Number of variables:  845
+
+filename: length_14_4.cnf 
+  Number of clauses: 3906 
+  Number of literals: 42562 
+  Number of variables:  400
+
+filename: length23_3.cnf 
+  Number of clauses: 29864 
+  Number of literals: 358657 
+  Number of variables:  1674
+
+filename: length_8_5.cnf 
+  Number of clauses: 23786 
+  Number of literals: 280217 
+  Number of variables:  1472
+
+filename: length_12_2.cnf 
+  Number of clauses: 3180 
+  Number of literals: 34348 
+  Number of variables:  368
+
+filename: length_25_9.cnf 
+  Number of clauses: 50879 
+  Number of literals: 614799 
+  Number of variables:  2140
+
+filename: length18_10.cnf 
+  Number of clauses: 11509 
+  Number of literals: 130895 
+  Number of variables:  843
+
+filename: length_25_8.cnf 
+  Number of clauses: 50779 
+  Number of literals: 613341 
+  Number of variables:  2140
+
+filename: length_10_1.cnf 
+  Number of clauses: 74049 
+  Number of literals: 932696 
+  Number of variables:  3092
+
+filename: 2drpD2.cnf 
+  Number of clauses: 88590 
+  Number of literals: 1096406 
+  Number of variables:  2752
+
+filename: 1a1iA1.cnf 
+  Number of clauses: 92331 
+  Number of literals: 1144720 
+  Number of variables:  2816
+
+filename: length_12_3.cnf 
+  Number of clauses: 3250 
+  Number of literals: 35228 
+  Number of variables:  368
+
+filename: length_8_4.cnf 
+  Number of clauses: 23721 
+  Number of literals: 279240 
+  Number of variables:  1472
+
+filename: length23_2.cnf 
+  Number of clauses: 29884 
+  Number of literals: 359243 
+  Number of variables:  1678
+
+filename: length_14_5.cnf 
+  Number of clauses: 3907 
+  Number of literals: 42523 
+  Number of variables:  400
+
+filename: length18_4.cnf 
+  Number of clauses: 11458 
+  Number of literals: 130144 
+  Number of variables:  845
+
+filename: length22_10.cnf 
+  Number of clauses: 28342 
+  Number of literals: 340001 
+  Number of variables:  1632
+
+filename: length14_9.cnf 
+  Number of clauses: 3994 
+  Number of literals: 43682 
+  Number of variables:  400
+
+filename: length_18_8.cnf 
+  Number of clauses: 11298 
+  Number of literals: 128034 
+  Number of variables:  845
+
+filename: length_16_7.cnf 
+  Number of clauses: 9819 
+  Number of literals: 111527 
+  Number of variables:  795
+
+filename: length_16_3.cnf 
+  Number of clauses: 9821 
+  Number of literals: 111481 
+  Number of variables:  795
+
+filename: length9_4.cnf 
+  Number of clauses: 51851 
+  Number of literals: 684531 
+  Number of variables:  2764
+
+filename: length21_4.cnf 
+  Number of clauses: 26952 
+  Number of literals: 325519 
+  Number of variables:  1632
+
+filename: length_21_8.cnf 
+  Number of clauses: 26807 
+  Number of literals: 323546 
+  Number of variables:  1632
+
+filename: length_14_1.cnf 
+  Number of clauses: 3872 
+  Number of literals: 42124 
+  Number of variables:  400
+
+filename: length23_6.cnf 
+  Number of clauses: 29857 
+  Number of literals: 358734 
+  Number of variables:  1676
+
+filename: 1gd2J0.cnf 
+  Number of clauses: 74049 
+  Number of literals: 932696 
+  Number of variables:  3092
+
+filename: length_12_7.cnf 
+  Number of clauses: 3216 
+  Number of literals: 34872 
+  Number of variables:  368
+
+filename: 2bbvF0.cnf 
+  Number of clauses: 4300 
+  Number of literals: 46994 
+  Number of variables:  416
+
+filename: length10_9.cnf 
+  Number of clauses: 74353 
+  Number of literals: 937250 
+  Number of variables:  3092
+
+filename: length_10_5.cnf 
+  Number of clauses: 74252 
+  Number of literals: 935735 
+  Number of variables:  3092
+
+filename: length16_10.cnf 
+  Number of clauses: 9926 
+  Number of literals: 112838 
+  Number of variables:  795
+
+filename: 1be3K0.cnf 
+  Number of clauses: 26975 
+  Number of literals: 324211 
+  Number of variables:  1604
+
+filename: length_10_4.cnf 
+  Number of clauses: 73946 
+  Number of literals: 930941 
+  Number of variables:  3092
+
+filename: length10_8.cnf 
+  Number of clauses: 74354 
+  Number of literals: 937047 
+  Number of variables:  3092
+
+filename: length20_10.cnf 
+  Number of clauses: 25568 
+  Number of literals: 307712 
+  Number of variables:  1584
+
+filename: length_12_6.cnf 
+  Number of clauses: 3250 
+  Number of literals: 35208 
+  Number of variables:  368
+
+filename: length_8_1.cnf 
+  Number of clauses: 23851 
+  Number of literals: 281054 
+  Number of variables:  1472
+
+filename: length23_7.cnf 
+  Number of clauses: 29936 
+  Number of literals: 360325 
+  Number of variables:  1686
+
+filename: length_21_9.cnf 
+  Number of clauses: 26846 
+  Number of literals: 324101 
+  Number of variables:  1632
+
+filename: length18_1.cnf 
+  Number of clauses: 11457 
+  Number of literals: 130183 
+  Number of variables:  845
+
+filename: 1f8vF0.cnf 
+  Number of clauses: 25600 
+  Number of literals: 308784 
+  Number of variables:  1592
+
+filename: length21_5.cnf 
+  Number of clauses: 26918 
+  Number of literals: 322858 
+  Number of variables:  1598
+
+filename: length9_5.cnf 
+  Number of clauses: 51686 
+  Number of literals: 682080 
+  Number of variables:  2764
+
+filename: length_16_2.cnf 
+  Number of clauses: 9821 
+  Number of literals: 111451 
+  Number of variables:  795
+
+filename: length_23_9.cnf 
+  Number of clauses: 29765 
+  Number of literals: 358462 
+  Number of variables:  1704
+
+filename: length9_7.cnf 
+  Number of clauses: 51851 
+  Number of literals: 684351 
+  Number of variables:  2764
+
+filename: length21_7.cnf 
+  Number of clauses: 26991 
+  Number of literals: 324593 
+  Number of variables:  1608
+
+filename: length7_8.cnf 
+  Number of clauses: 14841 
+  Number of literals: 177451 
+  Number of variables:  1258
+
+filename: length18_3.cnf 
+  Number of clauses: 11535 
+  Number of literals: 131219 
+  Number of variables:  835
+
+filename: length_14_2.cnf 
+  Number of clauses: 3855 
+  Number of literals: 41889 
+  Number of variables:  400
+
+filename: length_24_10.cnf 
+  Number of clauses: 48530 
+  Number of literals: 584724 
+  Number of variables:  2091
+
+filename: length23_5.cnf 
+  Number of clauses: 29896 
+  Number of literals: 359595 
+  Number of variables:  1682
+
+filename: 2adr01.cnf 
+  Number of clauses: 88264 
+  Number of literals: 1091214 
+  Number of variables:  2752
+
+filename: length_12_4.cnf 
+  Number of clauses: 3215 
+  Number of literals: 34773 
+  Number of variables:  368
+
+filename: length_8_3.cnf 
+  Number of clauses: 23721 
+  Number of literals: 279310 
+  Number of variables:  1472
+
+filename: length_10_6.cnf 
+  Number of clauses: 73746 
+  Number of literals: 928157 
+  Number of variables:  3092
+
+filename: length12_8.cnf 
+  Number of clauses: 3303 
+  Number of literals: 35917 
+  Number of variables:  368
+
+filename: length12_9.cnf 
+  Number of clauses: 3285 
+  Number of literals: 35689 
+  Number of variables:  368
+
+filename: length_10_7.cnf 
+  Number of clauses: 73948 
+  Number of literals: 931183 
+  Number of variables:  3092
+
+filename: length_8_2.cnf 
+  Number of clauses: 23983 
+  Number of literals: 282890 
+  Number of variables:  1472
+
+filename: length_12_5.cnf 
+  Number of clauses: 3250 
+  Number of literals: 35222 
+  Number of variables:  368
+
+filename: length23_4.cnf 
+  Number of clauses: 29860 
+  Number of literals: 359199 
+  Number of variables:  1682
+
+filename: length_14_3.cnf 
+  Number of clauses: 3924 
+  Number of literals: 42834 
+  Number of variables:  400
+
+filename: length18_2.cnf 
+  Number of clauses: 11403 
+  Number of literals: 129605 
+  Number of variables:  845
+
+filename: length7_9.cnf 
+  Number of clauses: 14841 
+  Number of literals: 177565 
+  Number of variables:  1258
+
+filename: length21_6.cnf 
+  Number of clauses: 26918 
+  Number of literals: 322768 
+  Number of variables:  1598
+
+filename: length9_6.cnf 
+  Number of clauses: 51769 
+  Number of literals: 683384 
+  Number of variables:  2764
+
+filename: length_7_10.cnf 
+  Number of clauses: 14790 
+  Number of literals: 176957 
+  Number of variables:  1258
+
+filename: length_12_10.cnf 
+  Number of clauses: 3180 
+  Number of literals: 34316 
+  Number of variables:  368
+
+filename: length_23_8.cnf 
+  Number of clauses: 29649 
+  Number of literals: 356854 
+  Number of variables:  1704
+
+filename: length_16_1.cnf 
+  Number of clauses: 9955 
+  Number of literals: 113300 
+  Number of variables:  795
