@@ -16,7 +16,9 @@ directory.
 
 ### Usage
 To call either program, use the following command:
+
 `python3 <program name> <input file name> <goal number of contacts> <path to output directory>`
+
 Note that all input files are assumed to be in a `./input` directory, so there
 is no need to specify a path.
 
@@ -38,7 +40,9 @@ should also be in the same directory as the pipeline program.
 
 ### Usage
 To call either program, use the following command:
+
 `python3 <program name> <list of input files> -o <path to output directory>`
+
 The ouput directory is an optional argument. If unspecified, it defaults to `./output`.
 Like the HPsat programs, the input directory is assumed to be `./input`, so there
 is no need to pass a path to the input files.
