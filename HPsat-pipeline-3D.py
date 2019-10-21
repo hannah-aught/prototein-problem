@@ -1,3 +1,8 @@
+# Hannah Brown, 10/20/19
+# Pipeline tester for the 3D version of the prototein problem.
+# Given a list of input files, generates the .cnf and .ilp files and reports the 
+# time taken by both Gurobi and pLingeling to maximize the number of contacts.
+
 import random
 import sys
 import math
@@ -407,7 +412,7 @@ def maximize_with_gurobi(file, time_elapsed):
 
 def main(argv):
     if len(argv) <= 2:
-        print("ERROR: wrong number of arguments given\n\tUsage: main.py {list of input files} -o {output directory}")
+        print("ERROR: wrong number of arguments given\n\tUsage: HPsat-pipeline-3D.py {list of input files} -o {output directory}")
         return
     elif "-o" in argv:
         outdir_index = argv.index("-o") + 1
@@ -455,5 +460,4 @@ def main(argv):
 
     return 0
 
-#main(['HPsat-3D.py', '1PSPB1', '-o', './output'])
 main(sys.argv)

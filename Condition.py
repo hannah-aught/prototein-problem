@@ -2,6 +2,7 @@ from enum import Enum
 
 
 """ 
+Hannah Brown, 10/20/19
  * A Condition represents a set of clauses representing one idea that may need
  * to be repeated for many different variables (for example, across all 
  * characters in a string)

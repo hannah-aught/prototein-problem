@@ -1,3 +1,8 @@
+# Hannah Brown, 10/20/19
+# HPsat.py
+# Generates a .cnf file for the 3D version of the prototein problem given
+# an input file containing a binary sequence
+
 import random
 import sys
 import math

@@ -1,12 +1,14 @@
+# Hannah Brown, 10/20/19
+# Pipeline tester for the 2D version of the prototein problem.
+# Given a list of input files, generates the .cnf and .ilp files and reports the 
+# time taken by both Gurobi and pLingeling to maximize the number of contacts.
+
 import sys
 import math
 import subprocess
 import re
 import time
 from Condition import Condition
-
-# Speedup for 3d. look at email for size of grid
-# Speedup: implement a better bound for k based on string
 
 def read_data(file):
     with open(file) as f:

@@ -1,3 +1,7 @@
+# Hannah Brown, 10/20/19
+# Generates a given number of length n binary sequence files, each with a given
+# percentage of ones.
+
 import random
 import sys
 
@@ -29,4 +33,3 @@ def main(argv):
                 print(strings[len(strings) - 1], file=f)
 
 main(sys.argv)   
-#main(["gen_random_sequences.py", "5", "5", ".333", "./output", "test"])
