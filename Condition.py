@@ -1,10 +1,19 @@
 from enum import Enum
 
+
+""" 
+ * A Condition represents a set of clauses representing one idea that may need
+ * to be repeated for many different variables (for example, across all 
+ * characters in a string)
+ * The num_repeats option and increment option in the class provide a way to
+ * describe this repition without having to construct all the clauses and  hold
+ * them in memory (it takes a lot of memory)
+"""
 class Condition:
     clauses = list() # this should now be a list of numbers to allow for easier printing
-    repeat = False
-    num_repeats = 1
-    increment = 0
+    repeat = False # Whether these clauses repeat or not
+    num_repeats = 1 # num_repeats = 1 means the condition doesn't repeat
+    increment = 0 # What to add to each variable when the clauses are repeated
 
     def __init__(self, clauses = list(), repeat = False,  num_repeats = 1, increment = 0):
         self.clauses = clauses
@@ -28,7 +37,7 @@ class Condition:
         self.clauses.append(clause)
 
     def write_condition(self, out_file):
-        # print the condition w/ proper repeats
+        # print the condition to a file w/ proper repeats
         # Loop over clauses, incrementing w/ first increment
         # then loop over clauses w/ subsequent increments until done
 

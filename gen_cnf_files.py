@@ -24,9 +24,9 @@ def main(argv):
             dash_index = len(x) - 7
             file_name = x[0:dash_index]
             num_contacts = get_num_contacts(file_data)
-            subprocess.run(["python3", "HPsat.py", file_name, num_contacts, result_file_dir])
+            subprocess.run(["python3", "HPsat-3D.py", file_name, num_contacts, result_file_dir])
 
     return
 
 
-main(["gen_cnf_files.py", "3D_output", "3D_lp_files"])#sys.argv)
+main(["gen_cnf_files.py", "3D_output", "3D_sat_files"])#sys.argv)

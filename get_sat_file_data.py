@@ -1,4 +1,3 @@
-from functools import reduce
 import sys
 from pathlib import Path
 import os
@@ -49,10 +48,10 @@ def main(argv):
                 num_literals = get_num_literals(clauses)
                 num_vars = get_num_variables(file_data)
                 print("\nfilename:", x, "\n  Number of clauses:", num_clauses, "\n  Number of literals:", num_literals,
-                "\n  Number of variables: ", num_vars, file = out)
+                "\n  Number of variables:", num_vars, file = out)
     return
 
-main(sys.argv)
+main(["get_sat_file_data.py", "3D_sat_files", "3D_sat_data.txt"])#sys.argv)
 
 
 

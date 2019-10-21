@@ -317,7 +317,7 @@ def gen_cnf_file(string, grid_width, k, embedding_conditions, contact_conditions
 
 def main(argv):
     if len(argv) <= 3 or len(argv) > 4:
-        print("ERROR: wrong number of arguments given\n\tUsage: python3 HPsat.py {input file} {goal number of contacts} {optional output directory}")
+        print("ERROR: wrong number of arguments given\n\tUsage: python3 HPsat.py {path to input file} {goal number of contacts} {optional output directory}")
         return
     elif len(argv) == 4:
         outdir = argv[3]
