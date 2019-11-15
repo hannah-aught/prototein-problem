@@ -1,3 +1,7 @@
+# Hannah Brown, 10/20/19
+# Generates binary sequence files for each file in the Dataset directory
+# These input files can later be used for the HPsat and pipeline programs
+
 import sys
 from pathlib import Path
 import os
