@@ -316,7 +316,7 @@ def gen_cnf_file(string, grid_width, k, embedding_conditions, contact_conditions
     write_conditions(num_vars, num_clauses, conditions, outfile)
 
 def main(argv):
-    if len(argv) <= 3 or len(argv) > 4:
+    if len(argv) < 3 or len(argv) >= 4:
         print("ERROR: wrong number of arguments given\n\tUsage: python3 HPsat.py {input file} {goal number of contacts} {optional output directory}")
         return
     elif len(argv) == 4:
@@ -342,7 +342,7 @@ def main(argv):
     outfile = outdir + "/" + file_name + ".cnf"
     positions_of_ones = get_positions_of_ones(string)
     num_adjacent_ones = get_num_adjacent_ones(positions_of_ones)
-    k = int(argv[2]) # start by looking for only one contact
+    k = int(argv[2])
     r = 2 * (grid_width ** 2) - (num_adjacent_ones + k)
     embedding_conditions = gen_embedding_conditions(n, grid_width)
     contact_conditions = gen_contact_conditions(n, grid_width, positions_of_ones)
