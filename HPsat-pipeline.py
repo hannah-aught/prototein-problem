@@ -338,9 +338,9 @@ def bin_search(string, grid_width, min_k, max_k, embedding_conditions, contact_c
     else:
         print("Generating file with k =", k)
         gen_cnf_file(string, grid_width, k, embedding_conditions, contact_conditions, outfile)
-        print("Calling plingeling")
+        print("Calling glucose-syrup")
         start = time.time()
-        result = subprocess.run(["./lingeling/plingeling", outfile], capture_output=True)
+        result = subprocess.run(["./glucose-syrup/parallel/glucose-syrup", outfile])
         end = time.time()
         time_elapsed[0] += end - start
         time_elapsed[1] += 1 #another try
@@ -365,9 +365,9 @@ def maximize_contacts(string, grid_width, k, embedding_conditions, contact_condi
 
     print("Generating file with k =", k)
     gen_cnf_file(string, grid_width, k, embedding_conditions, contact_conditions, outfile)
-    print("Calling plingeling")
+    print("Calling glucose-syrup")
     start = time.time()
-    result = subprocess.run(["./lingeling/plingeling", outfile], capture_output=True)
+    result = subprocess.run(["./glucose-syrup/parallel/glucose-syrup", outfile])
     end = time.time()
     time_elapsed[0] += end - start
     time_elapsed[1] += 1
@@ -442,21 +442,21 @@ def main(argv):
         contact_conditions = gen_contact_conditions(n, grid_width, positions_of_ones)
         outfile = outdir + "/" + file_name + "_opt.txt"
         ling_time_elapsed = [0,0]
-        gurobi_time_elapsed = [0]
+        #gurobi_time_elapsed = [0]
 
         lingeling_max_contacts = maximize_contacts(string, grid_width, k, embedding_conditions, contact_conditions, ling_output_file, ling_time_elapsed, dict())
         with open(outfile, "a+") as out:
-            print("\nMaximum contacts found for", string, "using Lingeling:", lingeling_max_contacts, file=out)
-            print("plingeling time taken:", ling_time_elapsed[0], file=out)
-            print("plingeling runs required:", ling_time_elapsed[1], file=out)
+            print("\nMaximum contacts found for", string, "using glucose syrup:", lingeling_max_contacts, file=out)
+            print("glucose-syrup time taken:", ling_time_elapsed[0], file=out)
+            print("glucose-syrup runs required:", ling_time_elapsed[1], file=out)
 
-        gurobi_max_contacts = maximize_with_gurobi(file_name, gurobi_time_elapsed, n)
+        #gurobi_max_contacts = maximize_with_gurobi(file_name, gurobi_time_elapsed, n)
 
-        with open(outfile, "a+") as out:
-            print("Maximum contacts found for", string, "using gurobi:", gurobi_max_contacts, file=out)
-            print("Gurobi time taken:", gurobi_time_elapsed[0], file=out)
+        #with open(outfile, "a+") as out:
+        #    print("Maximum contacts found for", string, "using gurobi:", gurobi_max_contacts, file=out)
+        #    print("Gurobi time taken:", gurobi_time_elapsed[0], file=out)
 
-main(sys.argv)
+#main(sys.argv)
 
-#main(["HPsat.py", "1gd2J0", "1pspA1", "-o", "./output"])
-#main(["main.py", ["1meyF2", "1bbo01", "1a1iA3", "1ubdC2", "1ubdC1", "1aym40", "2drpD2", "2gliA5", "2adr01", "1a1iA1", "1rmd02", "1tf3A2", "1tf3A1", "1b0nB0", "1dp5B0", "1d4vA2"], "./output","-o"])
+#main(["HPsat.py", "1gd2J0", "1pspA1", "-o", "./glucose-syrup-output"])
+main(["main.py", "1meyF2", "1bbo01", "1a1iA3", "1ubdC2", "1ubdC1", "1aym40", "2drpD2", "2gliA5", "2adr01", "1a1iA1", "1rmd02", "1tf3A2", "1tf3A1", "1b0nB0", "1dp5B0", "1d4vA2", "-o", "./glucose-syrup-output"])
