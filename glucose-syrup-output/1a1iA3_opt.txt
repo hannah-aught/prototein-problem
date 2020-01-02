@@ -1,8 +1,12 @@
 
 Maximum contacts found for 00111101110011000000000010 using glucose syrup: 7
-glucose-syrup time taken: 86.18949007987976
+glucose-syrup time taken: 75.54255390167236
 glucose-syrup runs required: 6
 
 Maximum contacts found for 00111101110011000000000010 using glucose syrup: 7
-glucose-syrup time taken: 75.54255390167236
+glucose-syrup time taken: 73.44624829292297
+glucose-syrup runs required: 6
+
+Maximum contacts found for 00111101110011000000000010 using glucose syrup: 7
+glucose-syrup time taken: 68.77828454971313
 glucose-syrup runs required: 6

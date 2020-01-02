@@ -1,0 +1,4 @@
+
+Maximum contacts found for 0011010010 using glucose syrup: 2
+glucose-syrup time taken: 1.1335809230804443
+glucose-syrup runs required: 4
