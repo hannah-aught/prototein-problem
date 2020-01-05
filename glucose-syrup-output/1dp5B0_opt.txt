@@ -6,3 +6,11 @@ glucose-syrup runs required: 8
 Maximum contacts found for 000000100110000001010101100111 using glucose syrup: 8
 glucose-syrup time taken: 394.14129757881165
 glucose-syrup runs required: 8
+
+Maximum contacts found for 000000100110000001010101100111 using glucose syrup: 8
+glucose-syrup time taken: 290.26905512809753
+glucose-syrup runs required: 8
+
+Maximum contacts found for 000000100110000001010101100111 using glucose syrup: 8
+glucose-syrup time taken: 309.32112979888916
+glucose-syrup runs required: 8

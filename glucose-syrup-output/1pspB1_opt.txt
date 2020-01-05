@@ -2,3 +2,23 @@
 Maximum contacts found for 010010 using glucose syrup: 1
 glucose-syrup time taken: 0.0390772819519043
 glucose-syrup runs required: 2
+
+Maximum contacts found for 010010 using glucose syrup: 1
+glucose-syrup time taken: 0.040244102478027344
+glucose-syrup runs required: 2
+
+Maximum contacts found for 010010 using glucose syrup: 1
+glucose-syrup time taken: 0.0384368896484375
+glucose-syrup runs required: 2
+
+Maximum contacts found for 010010 using glucose syrup: 1
+glucose-syrup time taken: 0.04222869873046875
+glucose-syrup runs required: 2
+
+Maximum contacts found for 010010 using glucose syrup: 1
+glucose-syrup time taken: 0.037400245666503906
+glucose-syrup runs required: 2
+
+Maximum contacts found for 010010 using glucose syrup: 1
+glucose-syrup time taken: 0.038317203521728516
+glucose-syrup runs required: 2

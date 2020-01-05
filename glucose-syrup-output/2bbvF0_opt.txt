@@ -2,3 +2,23 @@
 Maximum contacts found for 101100100110001 using glucose syrup: 3
 glucose-syrup time taken: 0.0680088996887207
 glucose-syrup runs required: 4
+
+Maximum contacts found for 101100100110001 using glucose syrup: 3
+glucose-syrup time taken: 0.06874966621398926
+glucose-syrup runs required: 4
+
+Maximum contacts found for 101100100110001 using glucose syrup: 3
+glucose-syrup time taken: 0.06762170791625977
+glucose-syrup runs required: 4
+
+Maximum contacts found for 101100100110001 using glucose syrup: 3
+glucose-syrup time taken: 0.06579089164733887
+glucose-syrup runs required: 4
+
+Maximum contacts found for 101100100110001 using glucose syrup: 3
+glucose-syrup time taken: 0.06458783149719238
+glucose-syrup runs required: 4
+
+Maximum contacts found for 101100100110001 using glucose syrup: 3
+glucose-syrup time taken: 0.06293082237243652
+glucose-syrup runs required: 4
