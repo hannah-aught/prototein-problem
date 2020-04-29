@@ -320,7 +320,7 @@ def gen_cnf_file(string, grid_width, k, embedding_conditions, contact_conditions
     num_clauses = get_num_clauses(n, conditions)
     write_conditions(num_vars, num_clauses, conditions, outfile)
 
-def bin_search(string, grid_width, min_k, max_k, embedding_conditions, contact_conditions, outfile, time_elapsed, k_vals_tried = dict()):
+'''def bin_search(string, grid_width, min_k, max_k, embedding_conditions, contact_conditions, outfile, time_elapsed, k_vals_tried = dict()):
     k = math.ceil((min_k + max_k) / 2)
 
 
@@ -357,15 +357,16 @@ def bin_search(string, grid_width, min_k, max_k, embedding_conditions, contact_c
             k_vals_tried[k] = False
             return bin_search(string, grid_width, min_k, k-1, embedding_conditions, contact_conditions, outfile, time_elapsed, k_vals_tried)
         else:
-            print("I found a bug! Unaccounted for return code: " + result.returncode)
+            print("I found a bug! Unaccounted for return code: " + result.returncode)'''
     
-def maximize_contacts(string, grid_width, k, embedding_conditions, contact_conditions, outfile, time_elapsed, k_vals_tried=dict()):
+def maximize_contacts(string, grid_width, k, embedding_conditions, contact_conditions, outfile, time_elapsed):
     if k == 0:
         return 0
 
     print("Generating file with k =", k)
     gen_cnf_file(string, grid_width, k, embedding_conditions, contact_conditions, outfile)
     print("Calling plingeling")
+    print("time so far:", time_elapsed[0])
     start = time.time()
     result = subprocess.run(["./lingeling/plingeling", outfile], capture_output=True)
     end = time.time()
@@ -376,11 +377,9 @@ def maximize_contacts(string, grid_width, k, embedding_conditions, contact_condi
         print(result.stderr)
         return
     elif result.returncode == 10:
-        k_vals_tried[k] = True
-        return maximize_contacts(string, grid_width, 2 * k, embedding_conditions, contact_conditions, outfile, time_elapsed, k_vals_tried)
+        return maximize_contacts(string, grid_width, k + 1, embedding_conditions, contact_conditions, outfile, time_elapsed)
     elif result.returncode == 20:
-        k_vals_tried[k] = False
-        return bin_search(string, grid_width, k // 2, k-1, embedding_conditions, contact_conditions, outfile, time_elapsed, k_vals_tried)
+        return k-1
     else:
         print("I found a bug! Unaccounted for return code: " + result.returncode)
 
@@ -444,7 +443,7 @@ def main(argv):
         ling_time_elapsed = [0,0]
         gurobi_time_elapsed = [0]
 
-        lingeling_max_contacts = maximize_contacts(string, grid_width, k, embedding_conditions, contact_conditions, ling_output_file, ling_time_elapsed, dict())
+        lingeling_max_contacts = maximize_contacts(string, grid_width, k, embedding_conditions, contact_conditions, ling_output_file, ling_time_elapsed)
         with open(outfile, "a+") as out:
             print("\nMaximum contacts found for", string, "using Lingeling:", lingeling_max_contacts, file=out)
             print("plingeling time taken:", ling_time_elapsed[0], file=out)
@@ -456,7 +455,7 @@ def main(argv):
             print("Maximum contacts found for", string, "using gurobi:", gurobi_max_contacts, file=out)
             print("Gurobi time taken:", gurobi_time_elapsed[0], file=out)
 
-main(sys.argv)
+#main(sys.argv)
 
 #main(["HPsat.py", "1gd2J0", "1pspA1", "-o", "./output"])
-#main(["main.py", ["1meyF2", "1bbo01", "1a1iA3", "1ubdC2", "1ubdC1", "1aym40", "2drpD2", "2gliA5", "2adr01", "1a1iA1", "1rmd02", "1tf3A2", "1tf3A1", "1b0nB0", "1dp5B0", "1d4vA2"], "./output","-o"])
+main(["main.py", "1bbo01", "1bbo01", "1bbo01", "1ubdC2", "1a1iA3", "1a1iA3", "1ubdC1", "2gliA5", "-o","./2D_iterative_output"])
