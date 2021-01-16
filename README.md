@@ -4,6 +4,12 @@ from binary sequences, as well as a set of pipeline testers which
 compare the results of running the SAT solver [pLingeling](http://fmv.jku.at/lingeling/) 
 and the ILP solver [Gurobi](https://www.gurobi.com/) on the same binary sequences.
 
+## Data
+
+The real protein sequence inputs used in the paper (and more) can be found in `Dataset.zip`.
+These same sequences encoded in binary form (which is the form the pipeline program takes input in)
+can be found in `input.zip`.
+
 ## HPsat Programs
 The `HPsat.py` and `HPsat-3D.py` programs are used produce the `.cnf` files for a given
 binary sequence file and a goal number of contacts.
